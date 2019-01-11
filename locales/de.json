@@ -1,0 +1,233 @@
+{
+  "app_title": "Koku",
+  "aws_dashboard": {
+    "compute_detail_label": "Hrs",
+    "compute_title": "Compute Instance Hours",
+    "compute_trend_title": "Month to Month Daily Instance Hours",
+    "cost_detail_label": "Total Cost",
+    "cost_title": "Total Cost",
+    "cost_trend_title": "Month to Month Daily Cost Comparison",
+    "empty_state_title": "Add an AWS Account",
+    "storage_detail_label": "GB",
+    "storage_title": "Storage Allocation",
+    "storage_trend_title": "Month to Month Daily Storage Usage",
+    "tabs": {
+      "accounts": "Top Accounts",
+      "instance_types": "Top Types",
+      "regions": "Top Regions",
+      "services": "Top Services"
+    },
+    "title": "Amazon Web Services",
+    "trend_group_legend": "$t(months.{{month}}) {{startDate}} - {{endDate}}",
+    "widget_subtitle": "$t(months.{{month}}) {{startDate}}",
+    "widget_subtitle_plural": "$t(months.{{month}}) {{startDate}} - $t(months.{{month}}) {{endDate}}"
+  },
+  "aws_details": {
+    "change_column_title": "Month Over Month Change",
+    "cost_column_subtitle": " (Total {{total}})",
+    "cost_column_title": "Cost",
+    "decrease_since_date": "{{value}} decrease since $t(months.{{month}}) {{date}}",
+    "decrease_since_last_month": "{{value}} decrease since last month",
+    "export_link": "Export",
+    "filter": {
+      "account_placeholder": "Filter by Account",
+      "account_select": "Account",
+      "region_placeholder": "Filter by Region",
+      "region_select": "Region",
+      "service_placeholder": "Filter by Service",
+      "service_select": "Service"
+    },
+    "increase_since_date": "{{value}} increase since $t(months.{{month}}) {{date}}",
+    "increase_since_last_month": "{{value}} increase since last month",
+    "name_column_title": "$t(group_by.values.{{groupBy}}) Names",
+    "no_change_since_date": "No change since $t(months.{{month}}) {{date}}",
+    "order": {
+      "cost": "Sort by: Cost",
+      "cost_delta": "Sort by: Cost Delta",
+      "name": "Sort by: Name"
+    },
+    "title": "Cloud (AWS) Cost",
+    "total_cost": "Total Cost"
+  },
+  "dashboard": "Dashboard",
+  "export": {
+    "aggregate_type": "Select aggregate type",
+    "cancel": "Cancel",
+    "confirm": "Generate & Download",
+    "daily": "Daily",
+    "heading": "Aggregates of the following {{groupBy}}s will be exported to a .csv file.",
+    "monthly": "Monthly",
+    "selected": "Selected {{groupBy}}s",
+    "title": "Export"
+  },
+  "group_by": {
+    "all": "All $t(group_by.values.{{groupBy}}, { 'count': 5 })",
+    "charges": "Group charges by",
+    "cost": "Group cost by",
+    "label": "Group cost by",
+    "top": "Top $t(group_by.values.{{groupBy}}, { 'count': 5 })",
+    "values": {
+      "account": "Account",
+      "account_plural": "Accounts",
+      "cluster": "Cluster",
+      "cluster_plural": "Clusters",
+      "instance_type": "Instance Type",
+      "instance_type_plural": "Instance Types",
+      "node": "Node",
+      "node_plural": "Nodes",
+      "pod": "Pod",
+      "pod_plural": "Pods",
+      "project": "Project",
+      "project_plural": "Projects",
+      "region": "Region",
+      "region_plural": "Regions",
+      "service": "Service",
+      "service_plural": "Services"
+    }
+  },
+  "loading": "Loading",
+  "login": {
+    "default_error": "Cannot connect to service.",
+    "password_label": "Password",
+    "submit": "Log In",
+    "title": "Login into your account",
+    "username_label": "Username"
+  },
+  "logout": "Log Out",
+  "months": [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ],
+  "navigation": {
+    "cloud_cost": "Cloud Cost",
+    "ocp_charges": "OpenShift Charges",
+    "overview": "Overview"
+  },
+  "navigation_toggle": "navigation toggle",
+  "ocp_dashboard": {
+    "charge_detail_label": "Total Charge",
+    "charge_title": "OpenShift Total Charge",
+    "charge_trend_title": "Month to Month Daily Charge Comparison",
+    "cpu_request_label": "Core-Hours Requested",
+    "cpu_requested_label": "{{date}} Requested",
+    "cpu_title": "OpenShift CPU Usage & Request",
+    "cpu_usage_label": "Core-Hours Used",
+    "cpu_used_label": "{{date}} Used",
+    "empty_state_title": "Add an AWS Account",
+    "memory_request_label": "GB-Hours Requested",
+    "memory_requested_label": "{{date}} Requested",
+    "memory_title": "OpenShift Memory Usage & Request",
+    "memory_usage_label": "GB-Hours Used",
+    "memory_used_label": "{{date}} Used",
+    "tabs": {
+      "clusters": "Top Clusters",
+      "nodes": "Top Nodes",
+      "pods": "Top Pods",
+      "projects": "Top Projects"
+    },
+    "title": "OpenShit Container Platform",
+    "trend_group_legend": "$t(months.{{month}}) {{startDate}} - {{endDate}}",
+    "widget_subtitle": "$t(months.{{month}}) {{startDate}}",
+    "widget_subtitle_plural": "$t(months.{{month}}) {{startDate}} - $t(months.{{month}}) {{endDate}}"
+  },
+  "ocp_details": {
+    "bullet": {
+      "cpu_capacity": "Capacity - {{value}} Core-Hours",
+      "cpu_label": "CPU",
+      "cpu_limit": "Limit - {{value}} Core-Hours",
+      "cpu_requests": "Requests - {{value}} Core-Hours",
+      "cpu_usage": "Usage - {{value}} Core-Hours",
+      "memory_capacity": "Capacity - {{value}} GB-Hours",
+      "memory_label": "Memory",
+      "memory_limit": "Limit - {{value}} GB-Hours",
+      "memory_requests": "Requests - {{value}} GB-Hours",
+      "memory_usage": "Usage - {{value}} GB-Hours"
+    },
+    "change_column_title": "Month Over Month Change",
+    "charge_column_subtitle": " (Total {{total}})",
+    "charge_column_title": "Charges",
+    "cluster_label": "Cluster",
+    "decrease_since_date": "{{value}} decrease since $t(months.{{month}}) {{date}}",
+    "decrease_since_last_month": "{{value}} decrease since last month",
+    "export_link": "Export",
+    "filter": {
+      "cluster_placeholder": "Filter by Cluster",
+      "cluster_select": "Cluster",
+      "node_placeholder": "Filter by Node",
+      "node_select": "Node",
+      "project_placeholder": "Filter by Project",
+      "project_select": "Project"
+    },
+    "historical": {
+      "charge_label": "Charge ($)",
+      "charge_title": "Month over Month Total $t(group_by.values.{{groupBy}}) Charge",
+      "cpu_capacity_label": "Capacity ({{date}})",
+      "cpu_label": "Core-Hours",
+      "cpu_limit_label": "Limity ({{date}})",
+      "cpu_requested_label": "Requested ({{date}})",
+      "cpu_title": "Month over Month Total $t(group_by.values.{{groupBy}}) CPU Usage, Request, Limit, and Capacity",
+      "cpu_usage_label": "Used ({{date}})",
+      "day_of_month_label": "Day of Month",
+      "memory_capacity_label": "Capacity ({{date}})",
+      "memory_label": "GB-Hours",
+      "memory_limit_label": "Limity ({{date}})",
+      "memory_requested_label": "Requested ({{date}})",
+      "memory_title": "Month over Month Total $t(group_by.values.{{groupBy}}) CPU Usage, Request, Limit, and Capacity",
+      "memory_usage_label": "Used ({{date}})",
+      "modal_title": "$t(group_by.values.{{groupBy}}) {{name}}'s Historical Data",
+      "project_title": "Top Projects"
+    },
+    "increase_since_date": "{{value}} increase since $t(months.{{month}}) {{date}}",
+    "increase_since_last_month": "{{value}} increase since last month",
+    "name_column_title": "$t(group_by.values.{{groupBy}}) Names",
+    "no_change_since_date": "No change since $t(months.{{month}}) {{date}}",
+    "order": {
+      "charge": "Sort by: Charges",
+      "charge_delta": "Sort by: Charges Delta",
+      "name": "Sort by: Name"
+    },
+    "tags_label": "Tags",
+    "title": "OpenShift Charges",
+    "total_charge": "Total Charge"
+  },
+  "overview": {
+    "aws": "Amazon Web Services",
+    "empty_state_desc": "Get started with tracking where your money is being spent by adding a source for this application. It can be found in Settings > Sources > Add a Source or Edit a Source OR by clicking on the shortcut button below.",
+    "empty_state_title": "No Money, No Problem!",
+    "ocp": "OpenShift Container Platform",
+    "title": "Cost Management Overview"
+  },
+  "percent": "{{value}}%",
+  "percent_of_charge": "% of Charge",
+  "percent_of_cost": "% of Cost",
+  "providers": {
+    "add_source": "Add a Source",
+    "bucket_error": "Bucket name cannot contain spaces, special chars and be more than 255 characters",
+    "bucket_label": "Bucket Name",
+    "cancel": "Cancel",
+    "cluster_id_error": "Cluster ID is invalid",
+    "cluster_id_label": "Cluster ID",
+    "confirm": "Confirm",
+    "default_error": "Cannot create account",
+    "name_error": "Provider name is invalid",
+    "name_label": "Provider Name",
+    "resource_name_error": "Provider resource name must begin with \"arn:aws:\"",
+    "resource_name_label": "Provider Resource Name",
+    "type_label": "Provider Type"
+  },
+  "since_date": "Since $t(months.{{month}}) {{date}}",
+  "units": {
+    "gb": "{{value}} GB",
+    "hrs": "{{value}} Hours"
+  }
+}
