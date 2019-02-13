@@ -24,8 +24,11 @@
   },
   "aws_details": {
     "change_column_title": "Month Over Month Change",
+    "chart_modal_title": "$t(group_by.values.{{groupBy}}) {{name}}'s {{localGroupBy}}s",
+    "cluster_label": "Cluster:",
     "cost_column_subtitle": " (Total {{total}})",
     "cost_column_title": "Cost",
+    "cost_value": "Cost: {{value}}",
     "decrease_since_date": "{{value}} decrease since $t(months.{{month}}) {{date}}",
     "decrease_since_last_month": "{{value}} decrease since last month",
     "export_link": "Export",
@@ -39,6 +42,7 @@
     },
     "increase_since_date": "{{value}} increase since $t(months.{{month}}) {{date}}",
     "increase_since_last_month": "{{value}} increase since last month",
+    "more_tags": ", {{value}} more...",
     "name_column_title": "$t(group_by.values.{{groupBy}}) Names",
     "no_change_since_date": "No change since $t(months.{{month}}) {{date}}",
     "order": {
@@ -46,7 +50,9 @@
       "cost_delta": "Sort by: Cost Delta",
       "name": "Sort by: Name"
     },
-    "title": "Cloud (AWS) Cost",
+    "show_more": "Show More",
+    "tags_label": "Related Tags:",
+    "title": "AWS Details",
     "total_cost": "Total Cost"
   },
   "chart": {
@@ -124,8 +130,8 @@
     "December"
   ],
   "navigation": {
-    "cloud_cost": "Cloud Cost",
-    "ocp_charges": "OpenShift Charges",
+    "cloud_cost": "AWS Details",
+    "ocp_charges": "OpenShift Details",
     "overview": "Overview"
   },
   "navigation_toggle": "navigation toggle",
@@ -173,9 +179,8 @@
       "memory_usage": "Usage - {{value}} GB-Hours"
     },
     "change_column_title": "Month Over Month Change",
-    "charge_column_subtitle": " (Total {{total}})",
-    "charge_column_title": "Charges",
-    "cluster_label": "Cluster",
+    "charge_column_title": "Charges (Total {{total}})",
+    "cluster_label": "Cluster:",
     "decrease_since_date": "{{value}} decrease since $t(months.{{month}}) {{date}}",
     "decrease_since_last_month": "{{value}} decrease since last month",
     "export_link": "Export",
@@ -204,10 +209,12 @@
       "memory_title": "Month over Month Total $t(group_by.values.{{groupBy}}) Memory Usage, Request, Limit, and Capacity",
       "memory_usage_label": "Used ({{date}})",
       "modal_title": "$t(group_by.values.{{groupBy}}) {{name}}'s Historical Data",
-      "project_title": "Top Projects"
+      "project_title": "Top Projects",
+      "view_data": "View Historical Data"
     },
     "increase_since_date": "{{value}} increase since $t(months.{{month}}) {{date}}",
     "increase_since_last_month": "{{value}} increase since last month",
+    "more_tags": ", {{value}} more...",
     "name_column_title": "$t(group_by.values.{{groupBy}}) Names",
     "no_change_since_date": "No change since $t(months.{{month}}) {{date}}",
     "order": {
@@ -215,20 +222,26 @@
       "charge_delta": "Sort by: Charges Delta",
       "name": "Sort by: Name"
     },
-    "tags_label": "Tags",
-    "title": "OpenShift Charges",
+    "tags_label": "Related Tags:",
+    "title": "OpenShift Details",
     "total_charge": "Total Charge"
   },
   "overview": {
     "aws": "Amazon Web Services",
     "empty_state_desc": "Get started with tracking where your money is being spent by adding a source for this application. It can be found in Settings > Sources > Add a Source or Edit a Source OR by clicking on the shortcut button below.",
     "empty_state_title": "No Money, No Problem!",
+    "error_unauthorized_desc": "You do not have permission to access cost data. Contact your administrator.",
+    "error_unauthorized_title": "Unauthorized!",
+    "error_unexpected_desc": "We encountered an unexpected error. Contact your administrator.",
+    "error_unexpected_title": "Oops!",
+    "loading_state_desc": "We are looking for your sources. Do not refresh the browser",
+    "loading_state_title": "Looking for sources...",
     "ocp": "OpenShift Container Platform",
     "title": "Cost Management Overview"
   },
   "percent": "{{value}}%",
-  "percent_of_charge": "% of Charge",
-  "percent_of_cost": "% of Cost",
+  "percent_of_charge": "{{value}} % of Charge",
+  "percent_of_cost": "{{value}} % of Cost",
   "providers": {
     "add_source": "Add a Source",
     "bucket_error": "Bucket name cannot contain spaces, special chars and be more than 255 characters",
