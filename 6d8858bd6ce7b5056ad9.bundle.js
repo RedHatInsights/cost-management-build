@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{667:function(n,t,a){"use strict";var c=a(1),e=a.n(c);t.a=(()=>e.a.createElement("div",null,"Not Found!"))},706:function(n,t,a){"use strict";a.r(t),function(n){var c=a(21),e=a(667);t.default=Object(c.hot)(n)(e.a)}.call(this,a(20)(n))}}]);
-//# sourceMappingURL=6d8858bd6ce7b5056ad9.bundle.js.map
