@@ -1,6 +1,6 @@
 {
   "app_name": "cost-management",
-  "src_hash": "ce49ec290299cdd3353a352acd4f96f7eb6a216f",
+  "src_hash": "358a5efa0871e63d90888ccbd6537d7f62dc63ce",
   "src_tag": "",
   "src_branch": "prod-stable",
   "npm_info": {
@@ -28,26 +28,26 @@
     "@fortawesome/free-solid-svg-icons": {
       "version": "5.1.0"
     },
-    "@patternfly/patternfly-next": {
-      "version": "1.0.129"
+    "@patternfly/patternfly": {
+      "version": "1.0.193"
     },
     "@patternfly/react-charts": {
-      "version": "1.2.7"
+      "version": "2.0.1"
     },
     "@patternfly/react-core": {
-      "version": "1.48.0"
+      "version": "2.1.5"
     },
     "@patternfly/react-icons": {
-      "version": "2.9.7"
+      "version": "3.0.0"
     },
     "@patternfly/react-styles": {
-      "version": "2.3.0"
+      "version": "2.3.2"
     },
     "@patternfly/react-table": {
-      "version": "1.0.7"
+      "version": "1.0.9"
     },
     "@patternfly/react-tokens": {
-      "version": "1.9.6"
+      "version": "2.0.0"
     },
     "@red-hat-insights/insights-frontend-components": {
       "version": "3.19.7"
@@ -193,6 +193,9 @@
     "react-i18next": {
       "version": "7.13.0"
     },
+    "react-merlin": {
+      "version": "0.3.0"
+    },
     "react-redux": {
       "version": "6.0.0"
     },
@@ -275,7 +278,7 @@
 },
   "travis": {
     "event_type": "push",
-    "build_number": "718",
-    "build_web_url": "https://travis-ci.org/project-koku/koku-ui/builds/492996651"
+    "build_number": "767",
+    "build_web_url": "https://travis-ci.org/project-koku/koku-ui/builds/496824101"
   }
 }
