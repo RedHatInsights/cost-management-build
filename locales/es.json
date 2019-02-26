@@ -31,6 +31,7 @@
     "cost_value": "Cost: {{value}}",
     "decrease_since_date": "{{value}} decrease since $t(months.{{month}}) {{date}}",
     "decrease_since_last_month": "{{value}} decrease since last month",
+    "empty_state": "Processing data to generate a list of all services that sums to a total cost...",
     "export_link": "Export",
     "filter": {
       "account_placeholder": "Filter by Account",
@@ -39,6 +40,17 @@
       "region_select": "Region",
       "service_placeholder": "Filter by Service",
       "service_select": "Service"
+    },
+    "historical": {
+      "cost_label": "Cost ($)",
+      "cost_title": "Month over Month Total $t(group_by.values.{{groupBy}}) Cost",
+      "day_of_month_label": "Day of Month",
+      "instance_label": "Hrs",
+      "instance_title": "Month over Month Total $t(group_by.values.{{groupBy}}) Instance Hours",
+      "modal_title": "$t(group_by.values.{{groupBy}}) {{name}}'s Historical Data",
+      "storage_label": "GB",
+      "storage_title": "Month over Month Total $t(group_by.values.{{groupBy}}) Storage",
+      "view_data": "View Historical Data"
     },
     "increase_since_date": "{{value}} increase since $t(months.{{month}}) {{date}}",
     "increase_since_last_month": "{{value}} increase since last month",
@@ -200,6 +212,7 @@
     "cluster_label": "Cluster:",
     "decrease_since_date": "{{value}} decrease since $t(months.{{month}}) {{date}}",
     "decrease_since_last_month": "{{value}} decrease since last month",
+    "empty_state": "Processing data to generate a list of all services that sums to a total cost...",
     "export_link": "Export",
     "filter": {
       "cluster_placeholder": "Filter by Cluster",
