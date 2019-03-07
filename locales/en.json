@@ -17,7 +17,7 @@
       "regions": "Top Regions",
       "services": "Top Services"
     },
-    "title": "Amazon Web Services",
+    "title": "AWS",
     "trend_group_legend": "$t(months.{{month}}) {{startDate}} - {{endDate}}",
     "widget_subtitle": "$t(months.{{month}}) {{startDate}}",
     "widget_subtitle_plural": "$t(months.{{month}}) {{startDate}} - $t(months.{{month}}) {{endDate}}"
@@ -107,11 +107,27 @@
   },
   "group_by": {
     "all": "All $t(group_by.values.{{groupBy}}, { 'count': 5 })",
-    "charges": "Group charges by",
     "cost": "Group cost by",
-    "label": "Group cost by",
     "tag": "Tag Key: {{key}}",
-    "top": "Top $t(group_by.values.{{groupBy}}, { 'count': 5 })",
+    "top": "Top $t(group_by.top_values.{{groupBy}}, { 'count': 5 })",
+    "top_values": {
+      "account": "account",
+      "account_plural": "accounts",
+      "cluster": "cluster",
+      "cluster_plural": "clusters",
+      "instance_type": "instance type",
+      "instance_type_plural": "instance types",
+      "node": "node",
+      "node_plural": "nodes",
+      "pod": "pod",
+      "pod_plural": "pods",
+      "project": "project",
+      "project_plural": "projects",
+      "region": "region",
+      "region_plural": "regions",
+      "service": "service",
+      "service_plural": "services"
+    },
     "values": {
       "account": "Account",
       "account_plural": "Accounts",
@@ -159,15 +175,15 @@
     "December"
   ],
   "navigation": {
-    "cloud_cost": "AWS Details",
-    "ocp_charges": "OpenShift Details",
+    "aws_details": "AWS Details",
+    "ocp_details": "OpenShift Details",
     "overview": "Overview"
   },
   "navigation_toggle": "navigation toggle",
   "ocp_dashboard": {
-    "charge_detail_label": "Total Charge",
-    "charge_title": "OpenShift Total Charge",
-    "charge_trend_title": "Month to Month Daily Charge Comparison",
+    "cost_detail_label": "Total Cost",
+    "cost_title": "OpenShift Total Cost",
+    "cost_trend_title": "Month to Month Daily Cost Comparison",
     "cpu_current_title": "{{date}} - Current",
     "cpu_previous_title": "{{startDate}} - {{endDate}}",
     "cpu_request_label": "Core-Hours Requested",
@@ -189,7 +205,7 @@
       "pods": "Top Pods",
       "projects": "Top Projects"
     },
-    "title": "OpenShit Container Platform",
+    "title": "OpenShift",
     "trend_group_legend": "$t(months.{{month}}) {{startDate}} - {{endDate}}",
     "widget_subtitle": "$t(months.{{month}}) {{startDate}}",
     "widget_subtitle_plural": "$t(months.{{month}}) {{startDate}} - $t(months.{{month}}) {{endDate}}"
@@ -208,8 +224,8 @@
       "memory_usage": "Usage - {{value}} GB-Hours"
     },
     "change_column_title": "Month Over Month Change",
-    "charge_column_title": "Charges (Total {{total}})",
     "cluster_label": "Cluster:",
+    "cost_column_title": "Cost (Total {{total}})",
     "decrease_since_date": "{{value}} decrease since $t(months.{{month}}) {{date}}",
     "decrease_since_last_month": "{{value}} decrease since last month",
     "empty_state": "Processing data to generate a list of all services that sums to a total cost...",
@@ -223,8 +239,8 @@
       "project_select": "Project"
     },
     "historical": {
-      "charge_label": "Charge ($)",
-      "charge_title": "Month over Month Total $t(group_by.values.{{groupBy}}) Charge",
+      "cost_label": "Cost ($)",
+      "cost_title": "Month over Month Total $t(group_by.values.{{groupBy}}) Cost",
       "cpu_capacity_label": "Capacity ({{date}})",
       "cpu_label": "Core-Hours",
       "cpu_limit_label": "Limit ({{date}})",
@@ -248,8 +264,8 @@
     "name_column_title": "$t(group_by.values.{{groupBy}}) Names",
     "no_change_since_date": "No change since $t(months.{{month}}) {{date}}",
     "order": {
-      "charge": "Sort by: Charges",
-      "charge_delta": "Sort by: Charges Delta",
+      "cost": "Sort by: Cost",
+      "cost_delta": "Sort by: Cost Delta",
       "name": "Sort by: Name"
     },
     "tags_label": "Related Tags:",
@@ -261,7 +277,39 @@
       "export": "Export",
       "results": "{{value}} Results"
     },
-    "total_charge": "Total Charge"
+    "total_cost": "Total Cost"
+  },
+  "ocp_on_aws_dashboard": {
+    "aws": {
+      "compute_detail_label": "Hrs",
+      "compute_title": "AWS compute instances",
+      "compute_trend_title": "Compute instance (hours), month over month",
+      "storage_detail_label": "GB",
+      "storage_title": "AWS storage services",
+      "storage_trend_title": "Storage usage (GB), month over month",
+      "widget_subtitle": "$t(months.{{month}}) {{startDate}}",
+      "widget_subtitle_plural": "$t(months.{{month}}) {{startDate}} - $t(months.{{month}}) {{endDate}}"
+    },
+    "ocp": {
+      "cost_title": "Total Cost",
+      "cost_trend_title": "Cost comparison ($USD), month over month",
+      "cpu_current_title": "{{date}} - Current",
+      "cpu_previous_title": "{{startDate}} - {{endDate}}",
+      "cpu_request_label": "Core-Hours Requested",
+      "cpu_requested_label": "{{date}} Requested",
+      "cpu_title": "OpenShift CPU usage and request",
+      "cpu_usage_label": "Core-Hours Used",
+      "cpu_used_label": "{{date}} Used",
+      "memory_current_title": "{{date}} - Current",
+      "memory_previous_title": "{{startDate}} - {{endDate}}",
+      "memory_request_label": "GB-Hours Requested",
+      "memory_requested_label": "Requested",
+      "memory_title": "OpenShift memory usage and request",
+      "memory_usage_label": "GB-Hours Used",
+      "memory_used_label": "{{date}} Used",
+      "widget_subtitle": "$t(months.{{month}}) {{startDate}}",
+      "widget_subtitle_plural": "$t(months.{{month}}) {{startDate}} - $t(months.{{month}}) {{endDate}}"
+    }
   },
   "onboarding": {
     "aws_configure": {
@@ -359,12 +407,12 @@
     }
   },
   "overview": {
-    "aws": "Amazon Web Services",
-    "ocp": "OpenShift Container Platform",
+    "aws": "AWS",
+    "ocp": "OpenShift",
+    "ocp_on_aws": "OpenShift on AWS",
     "title": "Cost Management Overview"
   },
   "percent": "{{value}}%",
-  "percent_of_charge": "{{value}} % of Charge",
   "percent_of_cost": "{{value}} % of Cost",
   "providers": {
     "add_source": "Add a Source",
