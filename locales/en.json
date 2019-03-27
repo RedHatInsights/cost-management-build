@@ -2,15 +2,19 @@
   "app_title": "Koku",
   "aws_dashboard": {
     "compute_detail_label": "Hrs",
-    "compute_title": "Compute Instance Hours",
-    "compute_trend_title": "Month to Month Daily Instance Hours",
+    "compute_title": "Compute (EC2) instances",
+    "compute_trend_title": "Compute cost comparison ($USD), month over month",
     "cost_detail_label": "Total Cost",
     "cost_title": "Total Cost",
-    "cost_trend_title": "Month to Month Daily Cost Comparison",
+    "cost_trend_title": "Cost comparison ($USD), month over month",
+    "database_title": "Database services",
+    "database_trend_title": "Database cost comparison ($USD), month over month",
     "empty_state_title": "Add an AWS Account",
+    "network_title": "Network services",
+    "network_trend_title": "Network cost comparison ($USD), month over month",
     "storage_detail_label": "GB",
-    "storage_title": "Storage Allocation",
-    "storage_trend_title": "Month to Month Daily Storage Usage",
+    "storage_title": "Storage services",
+    "storage_trend_title": "Storage cost comparison ($USD), month over month",
     "tabs": {
       "accounts": "Top Accounts",
       "instance_types": "Top Types",
@@ -39,7 +43,9 @@
       "region_placeholder": "Filter by Region",
       "region_select": "Region",
       "service_placeholder": "Filter by Service",
-      "service_select": "Service"
+      "service_select": "Service",
+      "tag_placeholder": "Filter by Tag",
+      "tag_select": "Tag"
     },
     "historical": {
       "cost_label": "Cost ($)",
@@ -63,6 +69,7 @@
       "name": "Sort by: Name"
     },
     "show_more": "Show More",
+    "tag_column_title": "Tag Names",
     "tags_label": "Related Tags:",
     "tags_modal_title": "$t(group_by.values.{{groupBy}}) {{name}}'s Related Tags",
     "title": "AWS Details",
@@ -103,6 +110,7 @@
     "heading": "Aggregates of the following {{groupBy}}s will be exported to a .csv file.",
     "monthly": "Monthly",
     "selected": "Selected {{groupBy}}s",
+    "selected_tags": "Selected tags",
     "title": "Export"
   },
   "group_by": {
@@ -110,6 +118,17 @@
     "cost": "Group cost by",
     "tag": "Tag Key: {{key}}",
     "top": "Top $t(group_by.top_values.{{groupBy}}, { 'count': 5 })",
+    "top_ocp_on_aws": "$t(group_by.top_ocp_on_aws_values.{{groupBy}}, { 'count': 3 })",
+    "top_ocp_on_aws_values": {
+      "account": "AWS account",
+      "account_plural": "AWS accounts",
+      "project": "OpenShift project",
+      "project_plural": "OpenShift projects",
+      "region": "AWS region",
+      "region_plural": "AWS regions",
+      "service": "AWS service",
+      "service_plural": "AWS services"
+    },
     "top_values": {
       "account": "account",
       "account_plural": "accounts",
@@ -175,8 +194,9 @@
     "December"
   ],
   "navigation": {
-    "aws_details": "AWS Details",
-    "ocp_details": "OpenShift Details",
+    "aws_details": "AWS details",
+    "ocp_details": "OpenShift details",
+    "ocp_on_aws_details": "OpenShift on AWS details",
     "overview": "Overview"
   },
   "navigation_toggle": "navigation toggle",
@@ -236,7 +256,9 @@
       "node_placeholder": "Filter by Node",
       "node_select": "Node",
       "project_placeholder": "Filter by Project",
-      "project_select": "Project"
+      "project_select": "Project",
+      "tag_placeholder": "Filter by Tag",
+      "tag_select": "Tag"
     },
     "historical": {
       "cost_label": "Cost ($)",
@@ -268,6 +290,7 @@
       "cost_delta": "Sort by: Cost Delta",
       "name": "Sort by: Name"
     },
+    "tag_column_title": "Tag Names",
     "tags_label": "Related Tags:",
     "tags_modal_title": "$t(group_by.values.{{groupBy}}) {{name}}'s Related Tags",
     "title": "OpenShift Details",
@@ -310,6 +333,81 @@
       "widget_subtitle": "$t(months.{{month}}) {{startDate}}",
       "widget_subtitle_plural": "$t(months.{{month}}) {{startDate}} - $t(months.{{month}}) {{endDate}}"
     }
+  },
+  "ocp_on_aws_details": {
+    "bullet": {
+      "cpu_capacity": "Capacity - {{value}} Core-Hours",
+      "cpu_label": "CPU",
+      "cpu_limit": "Limit - {{value}} Core-Hours",
+      "cpu_requests": "Requests - {{value}} Core-Hours",
+      "cpu_usage": "Usage - {{value}} Core-Hours",
+      "memory_capacity": "Capacity - {{value}} GB-Hours",
+      "memory_label": "Memory",
+      "memory_limit": "Limit - {{value}} GB-Hours",
+      "memory_requests": "Requests - {{value}} GB-Hours",
+      "memory_usage": "Usage - {{value}} GB-Hours"
+    },
+    "change_column_title": "Month Over Month Change",
+    "cluster_label": "Cluster:",
+    "cost_column_title": "Cost (Total {{total}})",
+    "cost_value": "Cost: {{value}}",
+    "decrease_since_date": "{{value}} decrease since $t(months.{{month}}) {{date}}",
+    "decrease_since_last_month": "{{value}} decrease since last month",
+    "empty_state": "Processing data to generate a list of all services that sums to a total cost...",
+    "export_link": "Export",
+    "filter": {
+      "cluster_placeholder": "Filter by Cluster",
+      "cluster_select": "Cluster",
+      "node_placeholder": "Filter by Node",
+      "node_select": "Node",
+      "project_placeholder": "Filter by Project",
+      "project_select": "Project",
+      "tag_placeholder": "Filter by Tag",
+      "tag_select": "Tag"
+    },
+    "historical": {
+      "cost_label": "Cost ($)",
+      "cost_title": "Month over Month Total $t(group_by.values.{{groupBy}}) Cost",
+      "cpu_capacity_label": "Capacity ({{date}})",
+      "cpu_label": "Core-Hours",
+      "cpu_limit_label": "Limit ({{date}})",
+      "cpu_requested_label": "Requested ({{date}})",
+      "cpu_title": "Month over Month Total $t(group_by.values.{{groupBy}}) CPU Usage, Request, Limit, and Capacity",
+      "cpu_usage_label": "Used ({{date}})",
+      "day_of_month_label": "Day of Month",
+      "memory_capacity_label": "Capacity ({{date}})",
+      "memory_label": "GB-Hours",
+      "memory_limit_label": "Limit ({{date}})",
+      "memory_requested_label": "Requested ({{date}})",
+      "memory_title": "Month over Month Total $t(group_by.values.{{groupBy}}) Memory Usage, Request, Limit, and Capacity",
+      "memory_usage_label": "Used ({{date}})",
+      "modal_title": "$t(group_by.values.{{groupBy}}) {{name}}'s Historical Data",
+      "project_title": "Top Projects",
+      "view_data": "View Historical Data"
+    },
+    "increase_since_date": "{{value}} increase since $t(months.{{month}}) {{date}}",
+    "increase_since_last_month": "{{value}} increase since last month",
+    "more_tags": ", {{value}} more...",
+    "name_column_title": "$t(group_by.values.{{groupBy}}) Names",
+    "no_change_since_date": "No change since $t(months.{{month}}) {{date}}",
+    "order": {
+      "cost": "Sort by: Cost",
+      "cost_delta": "Sort by: Cost Delta",
+      "name": "Sort by: Name"
+    },
+    "tag_column_title": "Tag Names",
+    "tags_label": "Related Tags:",
+    "tags_modal_title": "$t(group_by.values.{{groupBy}}) {{name}}'s Related Tags",
+    "title": "OpenShift on AWS details",
+    "toolbar": {
+      "active_filters": "Active Filters:",
+      "clear_filters": "Clear All Filters",
+      "export": "Export",
+      "results": "{{value}} Results"
+    },
+    "total_cost": "Total Cost",
+    "view_all": "View all {{value}}s",
+    "widget_modal_title": "$t(group_by.values.{{groupBy}}) {{name}}'s {{localGroupBy}}s"
   },
   "onboarding": {
     "aws_configure": {

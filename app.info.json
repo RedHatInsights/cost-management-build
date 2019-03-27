@@ -1,6 +1,6 @@
 {
   "app_name": "cost-management",
-  "src_hash": "74840462e4c81efc0c1e0dbf04ecf74bcc16c05e",
+  "src_hash": "447e0b36e9bebf66fd7247992a1e1d2e2d74c58a",
   "src_tag": "",
   "src_branch": "qa-beta",
   "npm_info": {
@@ -29,25 +29,25 @@
       "version": "5.1.0"
     },
     "@patternfly/patternfly": {
-      "version": "1.0.219"
+      "version": "1.0.234"
     },
     "@patternfly/react-charts": {
-      "version": "2.1.5"
+      "version": "2.1.10"
     },
     "@patternfly/react-core": {
-      "version": "2.3.4"
+      "version": "2.5.5"
     },
     "@patternfly/react-icons": {
-      "version": "3.1.1"
+      "version": "3.2.1"
     },
     "@patternfly/react-styles": {
-      "version": "2.3.5"
+      "version": "2.3.9"
     },
     "@patternfly/react-table": {
-      "version": "1.0.31"
+      "version": "1.2.3"
     },
     "@patternfly/react-tokens": {
-      "version": "2.0.4"
+      "version": "2.0.7"
     },
     "@red-hat-insights/insights-frontend-components": {
       "version": "3.38.0"
@@ -281,7 +281,7 @@
 },
   "travis": {
     "event_type": "push",
-    "build_number": "895",
-    "build_web_url": "https://travis-ci.org/project-koku/koku-ui/builds/503686337"
+    "build_number": "968",
+    "build_web_url": "https://travis-ci.org/project-koku/koku-ui/builds/511994828"
   }
 }
