@@ -21076,8 +21076,7 @@ table.dataTable th:active {
 /* stylelint-enable */
 
 html,
-body,
-#root {
+body {
   width: 100%;
   height: 100%;
 }
@@ -21100,4 +21099,4 @@ a {
 }
 
 
-/*# sourceMappingURL=2c8b35d618caf26fca63.css.map*/
+/*# sourceMappingURL=51e9fd9d325fdd900f2c.css.map*/
