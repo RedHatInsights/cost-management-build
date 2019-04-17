@@ -28,6 +28,12 @@
     "widget_subtitle_tooltip_plural": "{{startDate}}-{{endDate}} $t(months_abbr.{{month}}) {{year}}"
   },
   "aws_details": {
+    "actions": {
+      "accounts": "View all accounts",
+      "export": "Export data",
+      "historical_data": "View historical data",
+      "tags": "View all tags"
+    },
     "change_column_title": "Month over month change",
     "chart_modal_title": "$t(group_by.values.{{groupBy}}) {{name}}'s {{localGroupBy}}s",
     "cluster_label": "Cluster:",
@@ -75,27 +81,23 @@
       "export": "Export",
       "results": "{{value}} Results"
     },
-    "total_cost": "Total cost"
+    "total_cost": "Total cost",
+    "view_all": "View all {{value}}s",
+    "widget_modal_title": "$t(group_by.values.{{parentGroupBy}}) {{name}}'s {{groupBy}}s"
   },
   "chart": {
-    "cost": "Cost, $t(months.{{month}})",
-    "cost_infrastructure_legend_label": "Infrastructure cost ({{date}})",
+    "cost_infrastructure_legend_label": "Infrastructure cost, $t(months.{{month}})",
     "cost_infrastructure_tooltip": "{{value}} infrastructure cost",
-    "cost_legend_label": "Cost ({{date}})",
+    "cost_legend_label": "Cost, $t(months.{{month}})",
     "cost_tooltip": "{{value}} cost",
     "date_range": "{{startDate}} $t(months_abbr.{{month}}) {{year}}",
-    "date_range_plural": "{{startDate}} - {{endDate}} $t(months_abbr.{{month}}) {{year}}",
-    "historical_date_range": "$t(months_abbr.{{month}}) {{startDate}}",
-    "historical_date_range_plural": "$t(months_abbr.{{month}}) {{startDate}} - {{endDate}}",
-    "infrastructure_cost": "Infrastructure cost, $t(months.{{month}})",
-    "limit_legend_label": "Limit ({{date}})",
+    "date_range_plural": "{{startDate}}-{{endDate}} $t(months_abbr.{{month}}) {{year}}",
+    "limit_legend_label": "Limit, $t(months.{{month}})",
     "limit_tooltip": "{{value}} limit",
-    "month": "$t(months.{{month}})",
-    "requests": "Requests, $t(months.{{month}})",
-    "requests_legend_label": "Requests ({{date}})",
+    "month_legend_label": "$t(months.{{month}})",
+    "requests_legend_label": "Requests, $t(months.{{month}})",
     "requests_tooltip": "{{value}} requested",
-    "usage": "Usage, $t(months.{{month}})",
-    "usage_legend_label": "Usage ({{date}})",
+    "usage_legend_label": "Usage, $t(months.{{month}})",
     "usage_tooltip": "{{value}} used"
   },
   "cost_management": "Cost management",
@@ -251,6 +253,13 @@
     "widget_subtitle_tooltip_plural": "{{startDate}}-{{endDate}} $t(months_abbr.{{month}}) {{year}}"
   },
   "ocp_details": {
+    "actions": {
+      "export": "Export data",
+      "historical_data": "View historical data",
+      "price_list": "View all price list",
+      "projects": "View all projects",
+      "tags": "View all tags"
+    },
     "bullet": {
       "cpu_label": "CPU",
       "cpu_limit": "Limit - {{value}} {{units}}",
@@ -264,6 +273,7 @@
     "change_column_title": "Month over month change",
     "cluster_label": "Cluster:",
     "cost_column_title": "Cost",
+    "cost_value": "Cost: {{value}}",
     "decrease_since_date": "{{value}} decrease since $t(months.{{month}}) {{date}}",
     "decrease_since_last_month": "{{value}} decrease since last month",
     "derived_aria_label": "A description of infrastructure and derived cost",
@@ -301,6 +311,21 @@
     "more_tags": ", {{value}} more...",
     "name_column_title": "$t(group_by.values.{{groupBy}}) names",
     "no_change_since_date": "No change since $t(months.{{month}}) {{date}}",
+    "price_list": {
+      "modal": {
+        "cpu_core_request_per_hour": "CPU request per hour (core)",
+        "cpu_core_usage_per_hour": "CPU usage per hour (core)",
+        "memory_gb_request_per_hour": "Memory request per hour (GB)",
+        "memory_gb_usage_per_hour": "Memory usage per hour (GB)",
+        "metric": "Metric",
+        "no_match": "No rates were found",
+        "not_available": "N/A",
+        "title": "{{name}} cluster price list",
+        "usage_end": "Usage end",
+        "usage_start": "Usage start",
+        "value": "Value"
+      }
+    },
     "tag_column_title": "Tag names",
     "tags_label": "Related tags:",
     "tags_modal_title": "$t(group_by.values.{{groupBy}}) {{name}}'s related tags",
@@ -313,7 +338,8 @@
     },
     "total_cost": "Cost",
     "total_cost_tooltip": "This total cost is the sum of the infrastructure cost: {{infrastructureCost}} and derived cost: {{derivedCost}}",
-    "view_all": "View all {{value}}s"
+    "view_all": "View all {{value}}s",
+    "widget_modal_title": "$t(group_by.values.{{parentGroupBy}}) {{name}}'s {{groupBy}}s"
   },
   "ocp_on_aws_dashboard": {
     "compute_cost_label": "Cost",
@@ -349,6 +375,12 @@
     "widget_subtitle_tooltip_plural": "{{startDate}}-{{endDate}} $t(months_abbr.{{month}}) {{year}}"
   },
   "ocp_on_aws_details": {
+    "actions": {
+      "export": "Export data",
+      "historical_data": "View historical data",
+      "projects": "View all projects",
+      "tags": "View all tags"
+    },
     "bullet": {
       "cpu_label": "CPU",
       "cpu_limit": "Limit - {{value}} {{units}}",
@@ -413,7 +445,7 @@
     },
     "total_cost": "Total cost",
     "view_all": "View all {{value}}s",
-    "widget_modal_title": "$t(group_by.values.{{groupBy}}) {{name}}'s {{localGroupBy}}s"
+    "widget_modal_title": "$t(group_by.values.{{parentGroupBy}}) {{name}}'s {{groupBy}}s"
   },
   "onboarding": {
     "aws_configure": {
@@ -425,7 +457,7 @@
       "prefix": "Report path prefix: (leave blank)",
       "report_name": "Report name: koku",
       "s3_bucket_account": "Specify or create an Amazon S3 Bucket for your account.",
-      "s3_bucket_name_helper_text": "e.g. cost-usage-bucket",
+      "s3_bucket_name_helper_text": "For example, cost-usage-bucket",
       "s3_bucket_name_helper_text_invalid": "S3 bucket name must start with alphanumeric character and can contain underscore and hyphen",
       "s3_bucket_name_label": "S3 bucket name",
       "support": "Enable support for: RedShift, QuickSight",
@@ -442,7 +474,7 @@
       "note_title": "Note:"
     },
     "enable_account_access": {
-      "arn_helper_text": "e.g. arn:aws:iam:123456789:role/CostManagement",
+      "arn_helper_text": "For example, arn:aws:iam:123456789:role/CostManagement",
       "arn_helper_text_invalid": "ARN should have at least 10 characters and must start with arn:aws:",
       "arn_label": "ARN",
       "copy_arn": "From the Summary screen, copy the role ARN and paste it in the ARN field:",
@@ -484,8 +516,8 @@
       "post_installation": "When installation and configuration are complete, you receive confirmation message containing a cluster identifier. Enter that value in the cluster identifier field:"
     },
     "name_helper_invalid_text": "Please enter source name",
-    "name_helper_text": "e.g. OpenShift, AWS",
-    "name_label": "Source Name",
+    "name_helper_text": "For example, OpenShift, AWS",
+    "name_label": "Name",
     "obtain_login": {
       "instructions_title": "Obtain your login credentials",
       "intro": "To gather RHOCP metering data, you need to obtain the login token for your Operator Metering service account.",
@@ -505,7 +537,7 @@
       "instructions_text": "To import data for cost management, you need to connect to a data source. To begin, select the source you want to collect data from.",
       "instructions_title": "Select a source"
     },
-    "type_label": "Source type",
+    "type_label": "Type",
     "wizard": {
       "title": "Add a source"
     }
