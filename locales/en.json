@@ -246,7 +246,7 @@
     "total_cost_tooltip": "This total cost is the sum of the infrastructure cost {{infrastructureCost}} and derived cost {{derivedCost}}",
     "volume_requested_label": "{{units}} Requested",
     "volume_title": "OpenShift volume usage & requests",
-    "volume_trend_title": "Volume usage and requests comparison ({{value}})",
+    "volume_trend_title": "Volume usage and requests comparison ({{units}})",
     "volume_usage_label": "{{units}} Used",
     "widget_subtitle": "$t(months.{{month}}), month to date",
     "widget_subtitle_tooltip": "{{startDate}} $t(months_abbr.{{month}}) {{year}}",
@@ -313,16 +313,21 @@
     "no_change_since_date": "No change since $t(months.{{month}}) {{date}}",
     "price_list": {
       "modal": {
-        "cpu_core_request_per_hour": "CPU request per hour (core)",
-        "cpu_core_usage_per_hour": "CPU usage per hour (core)",
-        "memory_gb_request_per_hour": "Memory request per hour (GB)",
-        "memory_gb_usage_per_hour": "Memory usage per hour (GB)",
+        "Compute request rate": "Compute request rate tier {{ index }} ({{ unit }})",
+        "Compute usage rate": "Compute usage rate tier {{ index }} ({{ unit }})",
+        "Memory request rate": "Memory request rate tier {{ index }} ({{ unit }})",
+        "Memory usage rate": "Memory usage rate tier {{ index }} ({{ unit }})",
+        "Volume request rate": "Volume request rate tier {{ index }} ({{ unit }})",
+        "Volume usage rate": "Volume usage rate tier {{ index }} ({{ unit }})",
+        "applied_usage_date_range": "Applied usage date range",
+        "applied_usage_range": "Applied usage range",
+        "hours": "hourly",
         "metric": "Metric",
+        "months": "monthly",
         "no_match": "No rates were found",
+        "no_range_set": "No range set",
         "not_available": "N/A",
         "title": "{{name}} cluster price list",
-        "usage_end": "Usage end",
-        "usage_start": "Usage start",
         "value": "Value"
       }
     },
@@ -546,9 +551,9 @@
     "aws": "Cloud",
     "aws_desc": "Raw cost from cloud infrastructure.",
     "ocp": "OpenShift",
-    "ocp_desc": "Calculated platform cost (based on a price list) + cloud infrastructure cost.",
+    "ocp_desc": "Total cost for OpenShift Container Platform, comprising the infrastructure cost and cost calculated from metrics.",
     "ocp_on_aws": "OpenShift on cloud",
-    "ocp_on_aws_desc": "Calculated cost only: OpenShift Container Platform costs calculated using a price list. These metrics do not include the cloud infrastructure cost.",
+    "ocp_on_aws_desc": "Infrastructure cost attributed to OpenShift Container Platform, based on a subset of cloud cost data.",
     "title": "Cost Management Overview",
     "title_aria_label": "A description of OpenShift on AWS, OpenShift, and AWS"
   },
@@ -564,22 +569,23 @@
     "cluster_id_label": "Cluster ID",
     "confirm": "Confirm",
     "default_error": "Cannot create account",
-    "empty_state_desc": "Get started with tracking where your money is being spent by adding a source for this application. It can be found in Settings > Sources > 'Add a source' or 'Edit a source' or by clicking on the shortcut button below.",
-    "empty_state_title": "No money, no problem!",
+    "empty_state_desc": "Add a source, like an Amazon Web Services account, to see a total cost breakdown as well as usage information like instance counts and storage.",
+    "empty_state_title": "No cost data available yet",
     "name_error": "Provider name is invalid",
     "name_label": "Provider name",
     "resource_name_error": "Provider resource name must begin with \"arn:aws:\"",
     "resource_name_label": "Provider resource name",
-    "type_label": "Provider type"
+    "type_label": "Provider type",
+    "view_sources": "View all sources"
   },
   "setting": "Setting",
   "since_date": "Since $t(months.{{month}}) {{date}}",
   "source_details": {
-    "added_by": "Added by",
     "arn": "ARN",
     "cluster_id": "Cluster ID",
     "column": {
-      "last_contacted": "Last contacted",
+      "added_by": "Added by",
+      "date_added": "Date added",
       "name": "Name",
       "type": "Type"
     },
@@ -595,8 +601,18 @@
     "filter": {
       "placeholder": "Filter by source"
     },
+    "no_sources": {
+      "action": "Add source",
+      "desc": "To use Cost Management to manage your cloud costs, you must connect the application to at least one data source.",
+      "sub_desc": "Add an AWS account or an OpenShift Container Platform cluster to get started.",
+      "title": "No sources are configured"
+    },
     "remove_source": "Remove source",
-    "title": "Cost management sources"
+    "title": "Cost management sources",
+    "type": {
+      "AWS": "AWS",
+      "OCP": "Red Hat OpenShift"
+    }
   },
   "unit_tooltips": {
     "core-hours": "{{value}} core-hours",
