@@ -473,14 +473,18 @@
       "time_unit": "Time unit: hourly"
     },
     "configure": {
-      "create_entry": "The Usage Collector assumes that the default location for the OCP command line (oc) is /usr/bin/oc. If the oc command line is installed in a different location, supply the -e OCP_CLI=</path/to/oc> when you execute the ocp_usage.sh command.",
-      "create_entry_title": "Create an entry to run the OCP Usage collector every 45 minutes",
-      "edit_contrab": "The crontab user must have access to the file with metering operator token.",
-      "edit_contrab_title": "Edit the contrab",
-      "instructions_text": "To periodically upload data collected by the Usage Collector, you need to create a cron job using the following commands:",
-      "instructions_title": "Configure data collection",
-      "note": "The cron user will also need sudo authority to interact with the Red Hat Insights Client. Below is an example of the addition need to the /etc/sudoers file to provide password-less sudo for an example user ocpcollector:",
-      "note_title": "Note:"
+      "click_next": "Click Next to finish adding the OpenShift cluster as a source.",
+      "create_entry": "Create a crontab entry to run the Usage Collector every 45 minutes",
+      "cron_user_more": "To configure sudo access, add the following to the {{path}} file, substituting {{sub_text}} with the cron user:",
+      "cron_user_req_1": "Access to the file containing the {{metering_operator}} token",
+      "cron_user_req_2": "Sudo access to interact with the Red Hat Insights client",
+      "cron_user_reqs": "The cron user requires:",
+      "crontab_command": "command line to edit crontab",
+      "edit_contrab": "Open the crontab for the user that will execute this scheduled upload:",
+      "entry_description": "entry to run OCP Usage collector every 45 minutes",
+      "explain_more_about_cron": "more details about editing the crontab",
+      "instructions_text": "Create a cron job to regularly upload data collected by the Usage Collector to Cost Management.",
+      "instructions_title": "Configure data collection"
     },
     "enable_account_access": {
       "arn_helper_text": "For example, arn:aws:iam:123456789:role/CostManagement",
@@ -520,19 +524,6 @@
       "intro": "To delegate account access, create an IAM role to associate with your IAM policy.",
       "paste_account_id": "Select another AWS Account from the list of trusted entities and paste the following value into the Account ID field:"
     },
-    "korekuta": {
-      "checkbox_1": "OCP API endpoint (i.e. https://api.openshift-prod.mycompany.com)",
-      "checkbox_2": "OCP metering-operator (login) token file path",
-      "checkbox_3": "OCP Operator Metering namespace (i.e. metering)",
-      "checkbox_4": "Sudo password for installing dependencies",
-      "checklist_title": "You will need the following information in hand during the installation:",
-      "cluster_id_label": "Cluster identifier",
-      "download_and_install": "Download and install the {{korekuta}} on the same system where the Red Hat Insights client is installed.",
-      "for_example": "For Example:",
-      "instructions_text": "The Usage Collector connects to your cluster and collects the usage data needed for cost management.",
-      "instructions_title": "Download and configure the Usage Collector",
-      "post_installation": "When installation and configuration are complete, you receive confirmation message containing a cluster identifier. Enter that value in the cluster identifier field:"
-    },
     "name_helper_invalid_text": "Please enter source name",
     "name_helper_text": "For example, OpenShift, AWS",
     "name_label": "Name",
@@ -547,17 +538,39 @@
     },
     "select_type_label": "Choose platform",
     "source_kind": {
-      "checkbox_1": "You must be running OCP version 3.11 or newer.",
-      "checkbox_2": "You must install {{operator}} on your OCP cluster.",
-      "checkbox_3": "You must install and configure the {{insights}} on a system with network access to your OCP cluster.",
-      "checkbox_4": "You must install {{ansible}} and the {{epel}} on the system where the Red Hat Insights Client is installed.",
-      "checkbox_5": "You must install the {{oc}} on the system where the Red Hat Insights Client is installed.",
-      "checkbox_6": "Completed all the above",
-      "checklist_title": "Before you begin confirm you meet the following requirements:",
+      "ansible": "Ansible",
+      "checkbox_1": "On your OpenShift cluster, install:",
+      "checkbox_1_1": "OpenShift Container Platform 3.11 or newer",
+      "checkbox_1_2": "Operator Metering",
+      "checkbox_1_aria_label": "On your OpenShift cluster install: OpenShift Container Platform 3.11 or newer and Operator Metering.",
+      "checkbox_2": "On a system with network access to your OpenShift cluster, install:",
+      "checkbox_2_1": "Red Hat Insights Client",
+      "checkbox_2_2": "{{ansible}} and the {{epel}}",
+      "checkbox_2_3": "RHOCP commandline, oc",
+      "checkbox_2_aria_label": "On your OpenShift cluster install: OpenShift Container Platform 3.11 or newer and Operator Metering.",
+      "checklist_title": "Before you begin, install the following prerequisites if not present:",
+      "epel": "EPEL repository",
       "instructions_text": "Enter a descriptive name to identify the source, and select a source type. All fields are required.",
       "instructions_title": "Select a source"
     },
     "type_label": "Type",
+    "type_options": {
+      "aws": "Amazon Web Services (AWS)",
+      "ocp": "Red Hat OpenShift Container Platform"
+    },
+    "usage_collector": {
+      "cluster_id_label": "Cluster identifier",
+      "configuration_complete": "When configuration is complete, you will receive a confirmation message that contains a cluster identifier. Enter that value in the cluster identifier field.",
+      "download_and_install": "Download and install the {{usage_collector}} on the same system where the Red Hat Insights client is installed.",
+      "example_text": "Use the following example, substituting values for your OpenShift API endpoint, Operator Metering namespace, and metering-operator token file path:",
+      "instructions_text": "The Usage Collector connects to your cluster and collects the data required for cost management.",
+      "instructions_title": "Download and configure the Usage Collector",
+      "navigate": "Navigate to the korekuta-master directory to find the ocp_usage.sh script.",
+      "ocp_usage_collector": "OCP Usage Collector",
+      "popover_clusterid_content": "The cluster identifier value is stored in {{path}}",
+      "popover_cmd_content": "If the oc command line is installed in a different location from /usr/bin/oc on your system, specify the path using -e OCP_CLI=</path/to/oc> when executing the ocp_usage.sh command.",
+      "run": "Run the ocp_usage.sh script to configure the Usage Collector."
+    },
     "wizard": {
       "title": "Add a source"
     }
