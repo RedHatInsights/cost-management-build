@@ -1,0 +1,26 @@
+.popping {
+animation: pop-anim 0.5s linear;
+}
+
+@keyframes pop-anim {
+  0% {transform: scale(0.2);}
+  50% {transform: scale(1.5);}
+  100% {transform: scale(1);}
+}
+
+.in-progress {
+  animation: progress-spin infinite 0.8s ease-in-out;
+}
+
+@keyframes progress-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/*# sourceMappingURL=13.37e57b222594a7f85398.css.map*/
