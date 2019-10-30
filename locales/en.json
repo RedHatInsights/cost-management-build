@@ -196,6 +196,7 @@
   "cost_management": "Cost management",
   "cost_models_details": {
     "action_delete": "Delete",
+    "action_edit": "Edit",
     "action_unassign": "Unassign",
     "action_view": "View details",
     "add_rate": "Add rate",
@@ -211,7 +212,9 @@
       "cost_models": "Cost models",
       "source_type": "Source type"
     },
+    "edit_cost_model": "Edit {{ cost_model }} cost model",
     "edit_markup": "Edit {{cost_model}} markup",
+    "edit_markup_action": "Edit markup",
     "edit_rate": "Edit rate",
     "empty_state": {
       "desc": "Create a cost model to start calculating your hybrid cloud costs using custom price lists, markups, or both. Click on the \"Create a cost model\" button below to begin the journey.",
@@ -232,6 +235,7 @@
       "sub": "A cost model can be used for forecasting and budgeting purposes. A price list is used to calculate the base cost of resources. A markup on the base cost is used to define the calculated cost of resources.",
       "title": "Cost models"
     },
+    "save_button": "Save",
     "sources_filter_controller": "cost model sources filter toolbar",
     "sources_filter_results": "cost model sources filter results toolbar",
     "table": {
@@ -300,7 +304,7 @@
       "title": "Set a price list (optional)",
       "toolbar_top_aria_label": "Price list top toolbar - rates",
       "toolbar_top_results_aria_label": "results section",
-      "update_button": "Edit",
+      "update_button": "Edit rate",
       "usage": "Usage ({{units}})"
     },
     "review": {
