@@ -1,11 +1,11 @@
 {
   "app_name": "cost-management",
-  "src_hash": "3438fd188dce606d58591285c6e464efbfb80e3e",
+  "src_hash": "cb467d2a08c6769cfe976e5def7c12399cbcc6b9",
   "src_tag": "",
   "src_branch": "master",
   "travis": {
     "event_type": "push",
-    "build_number": "1721",
-    "build_web_url": "https://travis-ci.org/project-koku/koku-ui/builds/607735756"
+    "build_number": "1727",
+    "build_web_url": "https://travis-ci.org/project-koku/koku-ui/builds/610420898"
   }
 }
