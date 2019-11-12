@@ -1029,7 +1029,8 @@
     "gb-mo": "{{value}} GB-month",
     "hours": "{{value}} hours",
     "hrs": "{{value}} hours",
-    "usd": "{{value}}"
+    "usd": "{{value}}",
+    "vm-hours": "{{value}} VM-hours"
   },
   "units": {
     "": "",
@@ -1040,6 +1041,7 @@
     "hours": "hours",
     "hrs": "hours",
     "tag-mo": "Tag-month",
-    "usd": "$USD"
+    "usd": "$USD",
+    "vm-hours": "VM-hours"
   }
 }
