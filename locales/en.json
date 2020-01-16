@@ -265,6 +265,7 @@
         "desc": "Description",
         "last_modified": "Last modified",
         "name": "Name",
+        "source_type": "Source type",
         "sources": "Sources"
       }
     }
@@ -323,6 +324,7 @@
       "caption": "Select from the following {{ type }} sources:",
       "sub_title": "Select one or more source(s) to assign to this cost model. If the source already has a cost model assigned to it, this selection will override that assignment. You can also assign sources to your cost model at a later time.",
       "title_AWS": "Assign Amazon Web Service source(s) (optional)",
+      "title_AZURE": "Assign Microsoft Azure source(s) (optional)",
       "title_OCP": "Assign Red Hat OpenShift source(s) (optional)"
     },
     "source_table": {
@@ -571,19 +573,19 @@
       "cpu_limit": "Limit - {{value}} {{units}}",
       "cpu_requests": "Requests - {{value}} {{units}}",
       "cpu_requests_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
-      "cpu_requests_unused_label": "Un-requests CPU capacity",
+      "cpu_requests_unused_label": "Unrequested capacity",
       "cpu_usage": "Usage - {{value}} {{units}}",
       "cpu_usage_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
-      "cpu_usage_unused_label": "Unused CPU capacity",
+      "cpu_usage_unused_label": "Unused capacity",
       "memory_capacity": "Capacity - {{value}} {{units}}",
       "memory_label": "Memory",
       "memory_limit": "Limit - {{value}} {{units}}",
       "memory_requests": "Requests - {{value}} {{units}}",
       "memory_requests_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
-      "memory_requests_unused_label": "Un-requests memory capacity",
+      "memory_requests_unused_label": "Unrequested capacity",
       "memory_usage": "Usage - {{value}} {{units}}",
       "memory_usage_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
-      "memory_usage_unused_label": "Unused memory capacity"
+      "memory_usage_unused_label": "Unused capacity"
     },
     "change_column_title": "Month over month change",
     "cluster_label": "Cluster:",
@@ -687,19 +689,19 @@
       "cpu_limit": "Limit - {{value}} {{units}}",
       "cpu_requests": "Requests - {{value}} {{units}}",
       "cpu_requests_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
-      "cpu_requests_unused_label": "Un-requests CPU capacity",
+      "cpu_requests_unused_label": "Unrequested capacity",
       "cpu_usage": "Usage - {{value}} {{units}}",
       "cpu_usage_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
-      "cpu_usage_unused_label": "Unused CPU capacity",
+      "cpu_usage_unused_label": "Unused capacity",
       "memory_capacity": "Capacity - {{value}} {{units}}",
       "memory_label": "Memory",
       "memory_limit": "Limit - {{value}} {{units}}",
       "memory_requests": "Requests - {{value}} {{units}}",
       "memory_requests_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
-      "memory_requests_unused_label": "Un-requests memory capacity",
+      "memory_requests_unused_label": "Unrequested capacity",
       "memory_usage": "Usage - {{value}} {{units}}",
       "memory_usage_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
-      "memory_usage_unused_label": "Unused memory capacity"
+      "memory_usage_unused_label": "Unused capacity"
     },
     "change_column_title": "Month over month change",
     "cluster_label": "Cluster:",
