@@ -373,6 +373,9 @@
     "warning_override_source": "This selection will override the assignment of the {{ cost_model }} cost model",
     "warning_override_sources": "This selection will override the assignment of some cost models"
   },
+  "dashboard": {
+    "total_cost_tooltip": "This total cost is the sum of the infrastructure cost {{infrastructureCost}} and supplementary cost {{supplementaryCost}}"
+  },
   "details": {
     "clusters_modal_title": "$t(group_by.values.{{groupBy}}) {{name}} clusters",
     "more_clusters": ", {{value}} more...",
@@ -620,7 +623,6 @@
     "requests_label": "Requests",
     "storage_title": "Storage services usage",
     "storage_trend_title": "Daily usage comparison ({{units}})",
-    "total_cost_tooltip": "This total cost is the sum of the infrastructure cost: {{infrastructureCost}} and markup: {{markupCost}}",
     "usage_label": "Usage",
     "volume_title": "OpenShift volume usage and requests",
     "volume_trend_title": "Daily usage and requests comparison ({{units}})",
@@ -691,7 +693,7 @@
     "tags_modal_title": "$t(group_by.values.{{groupBy}}) {{name}} related tags",
     "title": "OpenShift cloud infrastructure details",
     "total_cost": "Total cost",
-    "total_cost_tooltip": "This total cost is the sum of the infrastructure cost: {{infrastructureCost}} and markup: {{markupCost}}",
+    "total_cost_tooltip": "This total cost is the sum of the infrastructure cost {{infrastructureCost}} and supplementary cost {{supplementaryCost}}",
     "view_all": "View all {{value}}s",
     "widget_modal_title": "{{name}} {{groupBy}}s"
   },
@@ -704,7 +706,6 @@
     "memory_title": "Memory usage and requests",
     "memory_trend_title": "Daily usage and requests comparison ({{units}})",
     "requests_label": "Requests",
-    "total_cost_tooltip": "This total cost is the sum of the infrastructure cost {{infrastructureCost}} and derived cost {{derivedCost}}",
     "usage_label": "Usage",
     "volume_title": "Volume usage and requests",
     "volume_trend_title": "Daily usage and requests comparison ({{units}})",
@@ -743,10 +744,6 @@
     "cluster_label": "Clusters:",
     "cost_column_title": "Cost",
     "cost_value": "Cost: {{value}}",
-    "derived_aria_label": "A description of infrastructure and derived cost",
-    "derived_cost_column_title": "Derived cost",
-    "derived_cost_desc": "The cost based on the user’s defined price list. Calculated as infrastructure_cost + markup, or on a premises without infrastructure, calculated as CPU usage * rate.",
-    "derived_cost_title": "Derived cost",
     "empty_state": "Processing data to generate a list of all services that sums to a total cost...",
     "export_link": "Export",
     "filter": {
@@ -800,12 +797,16 @@
         "volume usage rate": "Volume usage rate tier {{ index }} ({{ unit }})"
       }
     },
+    "supplementary_aria_label": "A description of infrastructure and supplementary cost",
+    "supplementary_cost_column_title": "Supplementary cost",
+    "supplementary_cost_desc": "All costs not directly attributed to the infrastructure. These costs are determined by applying a price list within a cost model to OpenShift cluster metrics.",
+    "supplementary_cost_title": "Supplementary cost",
     "tag_column_title": "Tag names",
     "tags_label": "Related tags:",
     "tags_modal_title": "$t(group_by.values.{{groupBy}}) {{name}} related tags",
     "title": "OpenShift details",
     "total_cost": "Cost",
-    "total_cost_tooltip": "This total cost is the sum of the infrastructure cost: {{infrastructureCost}} and derived cost: {{derivedCost}}",
+    "total_cost_tooltip": "This total cost is the sum of the infrastructure cost: {{infrastructureCost}} and supplementary cost: {{supplementaryCost}}",
     "view_all": "View all {{value}}s",
     "widget_modal_title": "{{name}} {{groupBy}}s"
   },
@@ -818,7 +819,6 @@
     "memory_title": "Memory usage and requests",
     "memory_trend_title": "Daily usage and requests comparison ({{units}})",
     "requests_label": "Requests",
-    "total_cost_tooltip": "This total cost is the sum of the infrastructure cost {{infrastructureCost}} and derived cost {{derivedCost}}",
     "usage_label": "Usage",
     "volume_title": "Volume usage and requests",
     "volume_trend_title": "Daily usage and requests comparison ({{units}})",
@@ -843,7 +843,6 @@
     "requests_label": "Requests",
     "storage_title": "Storage services usage",
     "storage_trend_title": "Daily usage comparison ({{units}})",
-    "total_cost_tooltip": "This total cost is the sum of the infrastructure cost: {{infrastructureCost}} and markup: {{markupCost}}",
     "usage_label": "Usage",
     "volume_title": "OpenShift volume usage and requests",
     "volume_trend_title": "Daily usage and requests comparison ({{units}})",
