@@ -35,17 +35,10 @@
     "widget_subtitle_plural": "{{startDate}}-{{endDate}} $t(months.{{month}})"
   },
   "aws_details": {
-    "actions": {
-      "accounts": "View all accounts",
-      "export": "Export data",
-      "historical_data": "View historical data",
-      "tags": "View all tags"
-    },
     "change_column_title": "Month over month change",
     "chart_modal_title": "{{name}} {{localGroupBy}}s",
     "cost_column_subtitle": " (Total {{total}})",
     "cost_column_title": "Cost",
-    "cost_value": "Cost: {{value}}",
     "empty_state": "Processing data to generate a list of all services that sums to a total cost...",
     "export_link": "Export",
     "filter": {
@@ -59,27 +52,13 @@
       "tag_placeholder": "Filter by tag",
       "tag_select": "Tag"
     },
-    "historical": {
-      "cost_label": "Cost ({{units}})",
-      "cost_title": "Cost comparison",
-      "day_of_month_label": "Day of month",
-      "instance_label": "Hours",
-      "instance_title": "Compute usage comparison",
-      "modal_title": "{{name}} daily usage comparison",
-      "storage_label": "GB-month",
-      "storage_title": "Storage usage comparison",
-      "view_data": "View historical data"
-    },
     "more_tags": ", {{value}} more...",
     "name_column_title": "$t(group_by.values.{{groupBy}}) names",
     "show_more": "Show more",
     "tag_column_title": "Tag names",
     "tags_label": "Related tags:",
-    "tags_modal_title": "$t(group_by.values.{{groupBy}}) {{name}} related tags",
     "title": "Amazon Web Services",
-    "total_cost": "Total cost",
-    "view_all": "View all {{value}}s",
-    "widget_modal_title": "{{name}} {{groupBy}}s"
+    "total_cost": "Total cost"
   },
   "azure_cloud_dashboard": {
     "compute_title": "Virtual machines usage",
@@ -116,18 +95,10 @@
     "widget_subtitle_plural": "{{startDate}}-{{endDate}} $t(months.{{month}})"
   },
   "azure_details": {
-    "actions": {
-      "accounts": "View all accounts",
-      "export": "Export data",
-      "historical_data": "View historical data",
-      "subscription_guids": "View all accounts",
-      "tags": "View all tags"
-    },
     "change_column_title": "Month over month change",
     "chart_modal_title": "{{name}} {{localGroupBy}}s",
     "cost_column_subtitle": " (Total {{total}})",
     "cost_column_title": "Cost",
-    "cost_value": "Cost: {{value}}",
     "empty_state": "Processing data to generate a list of all services that sums to a total cost...",
     "export_link": "Export",
     "filter": {
@@ -159,9 +130,7 @@
     "tags_label": "Related tags:",
     "tags_modal_title": "$t(group_by.values.{{groupBy}}) {{name}} related tags",
     "title": "Azure",
-    "total_cost": "Total cost",
-    "view_all": "View all {{value}}s",
-    "widget_modal_title": "{{name}} {{groupBy}}s"
+    "total_cost": "Total cost"
   },
   "chart": {
     "cost_infrastructure_legend_label": "Infrastructure cost ({{startDate}} $t(months_abbr.{{month}}))",
@@ -186,7 +155,8 @@
   "cost_management": "Cost management",
   "cost_models": {
     "CPU": "CPU",
-    "Currency": "Currency ({{units}})",
+    "Cluster": "Cluster",
+    "Currency": "Price ({{units}})",
     "GB-hours": "GB-hours",
     "GB-month": "GB-month",
     "Memory": "Memory",
@@ -204,14 +174,24 @@
     },
     "core-hours": "core-hours",
     "for_every": "${{rate}} per {{units}}",
+    "infra_cost_switch": "Use this rate to calculate infrastructure cost",
+    "infra_no": "No",
+    "infra_yes": "Yes",
+    "learn_more": "Learn more",
     "lowercase": {
-      "Currency": "currency ({{units}})",
+      "Currency": "price ({{units}})",
       "Request": "request ({{units}})",
       "Usage": "usage ({{units}})"
     },
     "node-month": "node-month",
     "read_only_tooltip": "You have read only permissions",
-    "remove_button": "Remove"
+    "remove_button": "Remove",
+    "table": {
+      "infra": "Use for infrastructure type",
+      "measurement": "Measurement",
+      "metric": "Metric",
+      "rate": "Rate"
+    }
   },
   "cost_models_details": {
     "action_assign": "Assign source(s)",
@@ -377,9 +357,77 @@
     "total_cost_tooltip": "This total cost is the sum of the infrastructure cost {{infrastructureCost}} and supplementary cost {{supplementaryCost}}"
   },
   "details": {
+    "actions": {
+      "account": "View all accounts",
+      "export": "Export data",
+      "historical_data": "View historical data",
+      "price_list": "View all price lists",
+      "project": "View all projects",
+      "subscription_guid": "View all accounts",
+      "tags": "View all tags"
+    },
+    "bullet": {
+      "cpu_capacity": "Capacity - {{value}} {{units}}",
+      "cpu_label": "CPU",
+      "cpu_limit": "Limit - {{value}} {{units}}",
+      "cpu_requests": "Requests - {{value}} {{units}}",
+      "cpu_requests_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
+      "cpu_requests_unused_label": "Unrequested capacity",
+      "cpu_usage": "Usage - {{value}} {{units}}",
+      "cpu_usage_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
+      "cpu_usage_unused_label": "Unused capacity",
+      "memory_capacity": "Capacity - {{value}} {{units}}",
+      "memory_label": "Memory",
+      "memory_limit": "Limit - {{value}} {{units}}",
+      "memory_requests": "Requests - {{value}} {{units}}",
+      "memory_requests_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
+      "memory_requests_unused_label": "Unrequested capacity",
+      "memory_usage": "Usage - {{value}} {{units}}",
+      "memory_usage_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
+      "memory_usage_unused_label": "Unused capacity"
+    },
     "clusters_modal_title": "$t(group_by.values.{{groupBy}}) {{name}} clusters",
+    "cost_value": "Cost: {{value}}",
+    "historical": {
+      "cost_label": "Cost ({{units}})",
+      "cost_title": "Cost comparison",
+      "day_of_month_label": "Day of month",
+      "instance_label": "Hours",
+      "instance_title": "Compute usage comparison",
+      "modal_title": "{{name}} daily usage comparison",
+      "storage_label": "GB-month",
+      "storage_title": "Storage usage comparison",
+      "view_data": "View historical data"
+    },
     "more_clusters": ", {{value}} more...",
-    "more_clusters_plural": ", show all..."
+    "more_clusters_plural": ", show all...",
+    "price_list": {
+      "modal": {
+        "applied_usage_date_range": "Applied usage date range",
+        "applied_usage_range": "Applied usage range",
+        "compute request rate": "Compute request rate tier {{ index }} ({{ unit }})",
+        "compute usage rate": "Compute usage rate tier {{ index }} ({{ unit }})",
+        "cpu request rate": "CPU request rate tier {{ index }} ({{ unit }})",
+        "cpu usage rate": "CPU usage rate tier {{ index }} ({{ unit }})",
+        "hours": "hourly",
+        "memory request rate": "Memory request rate tier {{ index }} ({{ unit }})",
+        "memory usage rate": "Memory usage rate tier {{ index }} ({{ unit }})",
+        "metric": "Metric",
+        "month": "monthly",
+        "no_match": "No rates were found",
+        "no_range_set": "No range set",
+        "not_available": "N/A",
+        "storage request rate": "Storage request rate tier {{ index }} ({{ unit }})",
+        "storage usage rate": "Storage usage rate tier {{ index }} ({{ unit }})",
+        "title": "{{name}} cluster price list",
+        "value": "Value",
+        "volume request rate": "Volume request rate tier {{ index }} ({{ unit }})",
+        "volume usage rate": "Volume usage rate tier {{ index }} ({{ unit }})"
+      }
+    },
+    "summary_modal_title": "{{name}} $t(group_by.top_values.{{groupBy}})s",
+    "tags_modal_title": "$t(group_by.values.{{groupBy}}) {{name}} related tags",
+    "view_all": "View all $t(group_by.top_values.{{groupBy}})s"
   },
   "dialog": {
     "cancel": "Cancel",
@@ -400,7 +448,8 @@
     },
     "rate": {
       "assigned": "which is assigned to the following sources:",
-      "body": "This action will remove {{rate.metric.label_metric}}-{{rate.metric.label_measurement}} ({{rate.metric.label_measurement_unit}}) rate from {{cm}} "
+      "body": "This action will remove {{rate.meta.label_metric}}-{{rate.meta.label_measurement}} ({{rate.meta.label_measurement_unit}}) rate from {{cm}} ",
+      "title": "Delete {{rate.meta.label_metric}}-{{rate.meta.label_measurement}} ({{rate.meta.label_measurement_unit}}) rate?"
     },
     "title": "Delete {{rate.metric.label_metric}}-{{rate.metric.label_measurement}} ({{rate.metric.label_measurement_unit}}) rate?"
   },
@@ -588,7 +637,10 @@
     "Dec"
   ],
   "navigation": {
+    "aws_details": "Amazon Web Services details",
+    "azure_details": "Microsoft Azure details",
     "cloud_details": "Cloud details",
+    "cost_models": "Cost models",
     "ocp_cloud_details": "OpenShift cloud infrastructure details",
     "ocp_details": "OpenShift details",
     "overview": "Overview",
@@ -630,32 +682,6 @@
     "widget_subtitle_plural": "{{startDate}}-{{endDate}} $t(months.{{month}})"
   },
   "ocp_cloud_details": {
-    "actions": {
-      "export": "Export data",
-      "historical_data": "View historical data",
-      "projects": "View all projects",
-      "tags": "View all tags"
-    },
-    "bullet": {
-      "cpu_capacity": "Capacity - {{value}} {{units}}",
-      "cpu_label": "CPU",
-      "cpu_limit": "Limit - {{value}} {{units}}",
-      "cpu_requests": "Requests - {{value}} {{units}}",
-      "cpu_requests_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
-      "cpu_requests_unused_label": "Unrequested capacity",
-      "cpu_usage": "Usage - {{value}} {{units}}",
-      "cpu_usage_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
-      "cpu_usage_unused_label": "Unused capacity",
-      "memory_capacity": "Capacity - {{value}} {{units}}",
-      "memory_label": "Memory",
-      "memory_limit": "Limit - {{value}} {{units}}",
-      "memory_requests": "Requests - {{value}} {{units}}",
-      "memory_requests_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
-      "memory_requests_unused_label": "Unrequested capacity",
-      "memory_usage": "Usage - {{value}} {{units}}",
-      "memory_usage_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
-      "memory_usage_unused_label": "Unused capacity"
-    },
     "change_column_title": "Month over month change",
     "cluster_label": "Clusters:",
     "cost_column_title": "Cost",
@@ -693,9 +719,7 @@
     "tags_modal_title": "$t(group_by.values.{{groupBy}}) {{name}} related tags",
     "title": "OpenShift cloud infrastructure details",
     "total_cost": "Total cost",
-    "total_cost_tooltip": "This total cost is the sum of the infrastructure cost {{infrastructureCost}} and supplementary cost {{supplementaryCost}}",
-    "view_all": "View all {{value}}s",
-    "widget_modal_title": "{{name}} {{groupBy}}s"
+    "total_cost_tooltip": "This total cost is the sum of the infrastructure cost {{infrastructureCost}} and supplementary cost {{supplementaryCost}}"
   },
   "ocp_dashboard": {
     "cost_title": "All OpenShift cost",
@@ -713,33 +737,6 @@
     "widget_subtitle_plural": "{{startDate}}-{{endDate}} $t(months.{{month}})"
   },
   "ocp_details": {
-    "actions": {
-      "export": "Export data",
-      "historical_data": "View historical data",
-      "price_list": "View all price lists",
-      "projects": "View all projects",
-      "tags": "View all tags"
-    },
-    "bullet": {
-      "cpu_capacity": "Capacity - {{value}} {{units}}",
-      "cpu_label": "CPU",
-      "cpu_limit": "Limit - {{value}} {{units}}",
-      "cpu_requests": "Requests - {{value}} {{units}}",
-      "cpu_requests_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
-      "cpu_requests_unused_label": "Unrequested capacity",
-      "cpu_usage": "Usage - {{value}} {{units}}",
-      "cpu_usage_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
-      "cpu_usage_unused_label": "Unused capacity",
-      "memory_capacity": "Capacity - {{value}} {{units}}",
-      "memory_label": "Memory",
-      "memory_limit": "Limit - {{value}} {{units}}",
-      "memory_requests": "Requests - {{value}} {{units}}",
-      "memory_requests_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
-      "memory_requests_unused_label": "Unrequested capacity",
-      "memory_usage": "Usage - {{value}} {{units}}",
-      "memory_usage_unused": "{{value}} {{units}} ({{percentage}}% of capacity)",
-      "memory_usage_unused_label": "Unused capacity"
-    },
     "change_column_title": "Month over month change",
     "cluster_label": "Clusters:",
     "cost_column_title": "Cost",
@@ -773,30 +770,6 @@
     "infrastructure_cost_title": "Infrastructure cost",
     "more_tags": ", {{value}} more...",
     "name_column_title": "$t(group_by.values.{{groupBy}}) names",
-    "price_list": {
-      "modal": {
-        "applied_usage_date_range": "Applied usage date range",
-        "applied_usage_range": "Applied usage range",
-        "compute request rate": "Compute request rate tier {{ index }} ({{ unit }})",
-        "compute usage rate": "Compute usage rate tier {{ index }} ({{ unit }})",
-        "cpu request rate": "CPU request rate tier {{ index }} ({{ unit }})",
-        "cpu usage rate": "CPU usage rate tier {{ index }} ({{ unit }})",
-        "hours": "hourly",
-        "memory request rate": "Memory request rate tier {{ index }} ({{ unit }})",
-        "memory usage rate": "Memory usage rate tier {{ index }} ({{ unit }})",
-        "metric": "Metric",
-        "month": "monthly",
-        "no_match": "No rates were found",
-        "no_range_set": "No range set",
-        "not_available": "N/A",
-        "storage request rate": "Storage request rate tier {{ index }} ({{ unit }})",
-        "storage usage rate": "Storage usage rate tier {{ index }} ({{ unit }})",
-        "title": "{{name}} cluster price list",
-        "value": "Value",
-        "volume request rate": "Volume request rate tier {{ index }} ({{ unit }})",
-        "volume usage rate": "Volume usage rate tier {{ index }} ({{ unit }})"
-      }
-    },
     "supplementary_aria_label": "A description of infrastructure and supplementary cost",
     "supplementary_cost_column_title": "Supplementary cost",
     "supplementary_cost_desc": "All costs not directly attributed to the infrastructure. These costs are determined by applying a price list within a cost model to OpenShift cluster metrics.",
@@ -806,9 +779,7 @@
     "tags_modal_title": "$t(group_by.values.{{groupBy}}) {{name}} related tags",
     "title": "OpenShift details",
     "total_cost": "Cost",
-    "total_cost_tooltip": "This total cost is the sum of the infrastructure cost: {{infrastructureCost}} and supplementary cost: {{supplementaryCost}}",
-    "view_all": "View all {{value}}s",
-    "widget_modal_title": "{{name}} {{groupBy}}s"
+    "total_cost_tooltip": "This total cost is the sum of the infrastructure cost: {{infrastructureCost}} and supplementary cost: {{supplementaryCost}}"
   },
   "ocp_supplementary_dashboard": {
     "cost_title": "OpenShift supplementary cost",
@@ -1033,7 +1004,7 @@
     "ocp_desc": "Total cost for OpenShift Container Platform, comprising the infrastructure cost and cost calculated from metrics.",
     "perspective": {
       "all": "All",
-      "all_cloud": "All filtered by OpenShift",
+      "all_cloud": "All cloud filtered by OpenShift",
       "aws": "Amazon Web Services",
       "aws_cloud": "Amazon Web Services filtered by OpenShift",
       "azure": "Microsoft Azure",
@@ -1079,7 +1050,7 @@
       "name": "Name",
       "type": "Type"
     },
-    "currency": "Currency",
+    "currency": "Price",
     "date_added": "Date added",
     "delete": {
       "cancel": "No, I would like to keep it",
@@ -1120,10 +1091,12 @@
     "filterby": "Filter by {{ name }}",
     "pricelist": {
       "add_rate": "Add rate",
-      "measurement_placeholder": "Measurement",
-      "metric_placeholder": "Metric",
+      "measurement": "Measurement",
+      "measurement_placeholder": "Filter by measurements",
+      "metric": "Metric",
+      "metric_placeholder": "Filter by metrics",
       "options": {
-        "Currency": "Currency",
+        "Currency": "Price",
         "Request": "Request",
         "Usage": "Usage"
       }
