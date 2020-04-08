@@ -138,6 +138,9 @@
     "cost_infrastructure_tooltip": "{{value}} infrastructure cost",
     "cost_legend_label": "Cost ({{startDate}} $t(months_abbr.{{month}}))",
     "cost_legend_label_plural": "Cost ({{startDate}}-{{endDate}} $t(months_abbr.{{month}}))",
+    "cost_supplementary_legend_label": "Supplementary cost ({{startDate}} $t(months_abbr.{{month}}))",
+    "cost_supplementary_legend_label_plural": "Supplementary cost ({{startDate}}-{{endDate}} $t(months_abbr.{{month}}))",
+    "cost_supplementary_tooltip": "{{value}} supplementary cost",
     "cost_tooltip": "{{value}} cost",
     "date_range": "{{startDate}} $t(months_abbr.{{month}}) {{year}}",
     "date_range_plural": "{{startDate}}-{{endDate}} $t(months_abbr.{{month}}) {{year}}",
@@ -641,8 +644,8 @@
   "navigation": {
     "aws_details": "Amazon Web Services details",
     "azure_details": "Microsoft Azure details",
-    "cloud_details": "Cloud details",
     "cost_models": "Cost models",
+    "infrastructure_details": "Infrastructure details",
     "ocp_cloud_details": "OpenShift cloud infrastructure details",
     "ocp_details": "OpenShift details",
     "overview": "Overview",
@@ -785,7 +788,7 @@
   },
   "ocp_supplementary_dashboard": {
     "cost_title": "OpenShift supplementary cost",
-    "cost_trend_title": "OpenShift non-infrastructure cumulative cost comparison ({{units}})",
+    "cost_trend_title": "OpenShift cumulative supplementary cost comparison ({{units}})",
     "cpu_title": "CPU usage and requests",
     "cpu_trend_title": "Daily usage and requests comparison ({{units}})",
     "cumulative_cost_label": "Cumulative cost",
