@@ -10445,30 +10445,6 @@ label.pf-c-radio, .pf-c-radio__label,
 .pf-l-stack.pf-m-gutter > *:not(:last-child) {
   margin-bottom: var(--pf-l-stack--m-gutter--MarginBottom); }
 
-.pf-l-toolbar {
-  --pf-l-toolbar__section--MarginTop: var(--pf-global--spacer--md);
-  --pf-l-toolbar__group--MarginRight: var(--pf-global--spacer--xl);
-  --pf-l-toolbar__group--MarginLeft: var(--pf-global--spacer--xl);
-  --pf-l-toolbar__item--MarginRight: var(--pf-global--spacer--md);
-  --pf-l-toolbar__item--MarginLeft: var(--pf-global--spacer--md); }
-
- .pf-l-toolbar,
-.pf-l-toolbar__section,
-.pf-l-toolbar__group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center; }
-
- .pf-l-toolbar__section {
-  flex-basis: 100%; }
-.pf-l-toolbar__section:not(:first-child) {
-  margin-top: var(--pf-l-toolbar__section--MarginTop); }
-
- .pf-l-toolbar__group:not(:last-child) {
-  margin-right: var(--pf-l-toolbar__group--MarginRight); }
-
- .pf-l-toolbar__item .pf-l-toolbar:not(:last-child) {
-  margin-right: var(--pf-l-toolbar__item--MarginRight); } 
 .pf-c-table {
   --pf-global--Color--100: var(--pf-global--Color--dark-100);
   --pf-global--Color--200: var(--pf-global--Color--dark-200);
@@ -11873,4 +11849,4 @@ label.pf-c-radio, .pf-c-radio__label,
   font-weight: var(--pf-c-inline-edit__label--m-bold--FontWeight); }
 
 
-/*# sourceMappingURL=0.f5c790b464530dfdf47d.css.map*/
+/*# sourceMappingURL=0.055e4892c93cca7cd6a1.css.map*/
