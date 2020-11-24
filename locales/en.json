@@ -132,6 +132,13 @@
     "usage_cost_title": "Usage cost"
   },
   "chart": {
+    "cost_forecast_cone_legend_label": "Cost confidence ({{startDate}} $t(months_abbr.{{month}}))",
+    "cost_forecast_cone_legend_label_plural": "Cost confidence ({{startDate}}-{{endDate}} $t(months_abbr.{{month}}))",
+    "cost_forecast_cone_legend_tooltip": "Cost confidence ($t(months_abbr.{{month}}))",
+    "cost_forecast_cone_tooltip": "{{value0}} - {{value1}}",
+    "cost_forecast_legend_label": "Cost forecast ({{startDate}} $t(months_abbr.{{month}}))",
+    "cost_forecast_legend_label_plural": "Cost forecast ({{startDate}}-{{endDate}} $t(months_abbr.{{month}}))",
+    "cost_forecast_legend_tooltip": "Cost forecast ($t(months_abbr.{{month}}))",
     "cost_infrastructure_legend_label": "Infrastructure cost ({{startDate}} $t(months_abbr.{{month}}))",
     "cost_infrastructure_legend_label_plural": "Infrastructure cost ({{startDate}}-{{endDate}} $t(months_abbr.{{month}}))",
     "cost_infrastructure_legend_tooltip": "Infrastructure cost ($t(months_abbr.{{month}}))",
@@ -143,7 +150,7 @@
     "cost_supplementary_legend_tooltip": "Supplementary cost ($t(months_abbr.{{month}}))",
     "date_range": "{{startDate}} $t(months_abbr.{{month}}) {{year}}",
     "date_range_plural": "{{startDate}}-{{endDate}} $t(months_abbr.{{month}}) {{year}}",
-    "day_of_month_title": "Day of the month: {{day}}",
+    "day_of_month_title": "Day {{day}}",
     "limit_legend_label": "Limit ({{startDate}} $t(months_abbr.{{month}}))",
     "limit_legend_label_plural": "Limit ({{startDate}}-{{endDate}} $t(months_abbr.{{month}}))",
     "limit_legend_tooltip": "Limit ($t(months_abbr.{{month}}))",
@@ -292,7 +299,7 @@
     }
   },
   "cost_models_router": {
-    "error_ttile": "Fail routing to cost model",
+    "error_title": "Fail routing to cost model",
     "no_match": "This source is not assigned to any cost model",
     "server_error": "Server error: could not get the cost model."
   },
@@ -754,23 +761,14 @@
     "cost_label": "Cost",
     "cost_title": "All cloud filtered by OpenShift cost",
     "cost_trend_title": "All cloud filtered by OpenShift cumulative cost comparison ({{units}})",
-    "cpu_title": "OpenShift CPU usage and requests",
-    "cpu_trend_title": "Daily usage and requests comparison ({{units}})",
     "cumulative_cost_label": "Cumulative cost",
     "database_title": "Database services cost",
     "database_trend_title": "Cumulative cost comparison ({{units}})",
-    "memory_title": "OpenShift memory usage and requests",
-    "memory_trend_title": "Daily usage and requests comparison ({{units}})",
     "network_title": "Network services cost",
     "network_trend_title": "Cumulative cost comparison ({{units}})",
-    "requests_label": "Requests",
     "storage_title": "Storage services usage",
     "storage_trend_title": "Daily usage comparison ({{units}})",
-    "usage_label": "Usage",
-    "volume_title": "OpenShift volume usage and requests",
-    "volume_trend_title": "Daily usage and requests comparison ({{units}})",
-    "widget_subtitle": "{{startDate}} $t(months.{{month}})",
-    "widget_subtitle_plural": "{{startDate}}-{{endDate}} $t(months.{{month}})"
+    "usage_label": "Usage"
   },
   "ocp_dashboard": {
     "cost_title": "All OpenShift cost",
@@ -881,22 +879,6 @@
   "percent": "{{value}}%",
   "percent_of_cost": "{{value}} % of cost",
   "percent_of_total": "{{value}} {{units}} ({{percent}}%)",
-  "providers": {
-    "add_source": "Add sources",
-    "bucket_error": "Bucket name cannot contain spaces, special chars and be more than 255 characters",
-    "bucket_label": "Bucket Name",
-    "cancel": "Cancel",
-    "cluster_id_error": "Cluster ID is invalid",
-    "cluster_id_label": "Cluster ID",
-    "confirm": "Confirm",
-    "default_error": "Cannot create account",
-    "empty_state_desc": "Add a source, like an Amazon Web Services account, to see a total cost breakdown as well as usage information like instance counts and storage.",
-    "name_error": "Provider name is invalid",
-    "name_label": "Provider name",
-    "resource_name_error": "Provider resource name must begin with \"arn:aws:\"",
-    "resource_name_label": "Provider resource name",
-    "type_label": "Provider type"
-  },
   "rbac": {
     "error_description": "There was a problem receiving user permissions. Refreshing this page may fix it. If it does not, please contact your admin.",
     "error_title": "Failed to get RBAC information"
@@ -905,46 +887,9 @@
   "since_date": "{{startDate}} $t(months.{{month}})",
   "since_date_plural": "{{startDate}}-{{endDate}} $t(months.{{month}})",
   "source_details": {
-    "add_source": "Add source",
-    "arn": "ARN",
-    "cluster_id": "Cluster ID",
-    "column": {
-      "added_by": "Added by",
-      "date_added": "Date added",
-      "name": "Name",
-      "type": "Type"
-    },
-    "currency": "Price",
-    "date_added": "Date added",
-    "delete": {
-      "cancel": "No, I would like to keep it",
-      "delete": "Yes, please delete this source",
-      "error": "Ops! There was a problem while deleting the source.",
-      "message": "Are you sure you want to delete this source? This action will remove any data related to this source permanently.",
-      "title": "Delete Source"
-    },
     "filter": {
-      "placeholder": "Filter by source {{value}}",
-      "results": {
-        "active": "Active Filters",
-        "clear": "Clear all filters",
-        "count": "{{count}} Results",
-        "name": "name",
-        "type": "type"
-      },
-      "section_above": "filter controllers",
-      "section_below": "filter results",
-      "type_aria_label": "select property to use for filtering",
-      "type_options_aria_label": "select source type"
+      "placeholder": "Filter by source {{value}}"
     },
-    "no_sources": {
-      "action": "Add source",
-      "desc": "To use Cost Management to manage your cloud costs, you must connect the application to at least one data source.",
-      "sub_desc": "Add an AWS account or an OpenShift Container Platform cluster to get started.",
-      "title": "No sources are configured"
-    },
-    "remove_source": "Remove source",
-    "title": "Cost management sources",
     "type": {
       "AWS": "AWS",
       "AZURE": "Microsoft Azure",
