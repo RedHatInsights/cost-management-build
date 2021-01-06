@@ -132,6 +132,7 @@
     "usage_cost_title": "Usage cost"
   },
   "chart": {
+    "cos_infrastructuret_forecast_legend_label_plural": "Infrastructure forecast ({{startDate}}-{{endDate}} $t(months_abbr.{{month}}))",
     "cost_forecast_cone_legend_label": "Cost confidence ({{startDate}} $t(months_abbr.{{month}}))",
     "cost_forecast_cone_legend_label_plural": "Cost confidence ({{startDate}}-{{endDate}} $t(months_abbr.{{month}}))",
     "cost_forecast_cone_legend_tooltip": "Cost confidence ($t(months_abbr.{{month}}))",
@@ -139,6 +140,12 @@
     "cost_forecast_legend_label": "Cost forecast ({{startDate}} $t(months_abbr.{{month}}))",
     "cost_forecast_legend_label_plural": "Cost forecast ({{startDate}}-{{endDate}} $t(months_abbr.{{month}}))",
     "cost_forecast_legend_tooltip": "Cost forecast ($t(months_abbr.{{month}}))",
+    "cost_infrastructure_forecast_cone_legend_label": "Infrastructure confidence ({{startDate}} $t(months_abbr.{{month}}))",
+    "cost_infrastructure_forecast_cone_legend_label_plural": "Infrastructure confidence ({{startDate}}-{{endDate}} $t(months_abbr.{{month}}))",
+    "cost_infrastructure_forecast_cone_legend_tooltip": "Infrastructure confidence ($t(months_abbr.{{month}}))",
+    "cost_infrastructure_forecast_cone_tooltip": "{{value0}} - {{value1}}",
+    "cost_infrastructure_forecast_legend_label": "Infrastructure forecast ({{startDate}} $t(months_abbr.{{month}}))",
+    "cost_infrastructure_forecast_legend_tooltip": "Infrastructure forecast ($t(months_abbr.{{month}}))",
     "cost_infrastructure_legend_label": "Infrastructure cost ({{startDate}} $t(months_abbr.{{month}}))",
     "cost_infrastructure_legend_label_plural": "Infrastructure cost ({{startDate}}-{{endDate}} $t(months_abbr.{{month}}))",
     "cost_infrastructure_legend_tooltip": "Infrastructure cost ($t(months_abbr.{{month}}))",
@@ -165,24 +172,12 @@
   },
   "cost_management": "Cost Management",
   "cost_models": {
-    "CPU": "CPU",
-    "Cluster": "Cluster",
-    "Currency": "Price ({{units}})",
-    "GB-hours": "GB-hours",
-    "GB-month": "GB-month",
-    "Infrastructure": "Infrastructure",
-    "Memory": "Memory",
-    "Node": "Node",
-    "Persistent volume claims": "Persistent volume claims",
-    "Request": "Request ({{units}})",
-    "Storage": "Storage",
-    "Supplementary": "Supplementary",
-    "Usage": "Usage ({{units}})",
     "add_rate_form": {
       "calculation_type": "Calculation type",
       "default_label": "Default",
       "default_option": "Select...",
       "description": "Description",
+      "description_too_long": "Should not exceed 500 characters",
       "duplicate": "This tag key is already in used",
       "error_message": "Rate should be a positive number",
       "infrastructure": "Infrastructure",
@@ -196,10 +191,9 @@
       "save_rate_button": "Save rate",
       "supplementary": "Supplementary",
       "tag_key": "Filter by tag",
+      "tag_too_long": "Should not exceed 100 characters",
       "tag_value": "Tag value"
     },
-    "core-hours": "core-hours",
-    "for_every": "${{rate}} per {{units}}",
     "infra_cost_switch": "Use this rate to calculate infrastructure cost",
     "infra_no": "No",
     "infra_yes": "Yes",
@@ -323,8 +317,11 @@
     "finish_button": "Finish",
     "general_info": {
       "description_label": "Description",
+      "description_too_long": "Should not exceed 500 characters",
       "learn_more": "Learn more",
       "name_label": "Name",
+      "name_required": "This field is required",
+      "name_too_long": "Should not exceed 100 characters",
       "source_type_empty_value_label": "Select source type",
       "source_type_label": "Source type",
       "title": "Enter general information"
@@ -746,7 +743,6 @@
     "ocp_details_breakdown": "OpenShift Details Breakdown",
     "overview": "Cost Management Overview"
   },
-  "navigation_toggle": "navigation toggle",
   "no_auth_state": {
     "aws_service_name": "Amazon Web Services in Cost Management",
     "azure_service_name": "Microsoft Azure in Cost Management",
@@ -841,23 +837,14 @@
     "widget_subtitle_plural": "{{startDate}}-{{endDate}} $t(months.{{month}})"
   },
   "ocp_usage_dashboard": {
-    "compute_title": "Compute services usage",
-    "compute_trend_title": "Daily usage comparison ({{units}})",
-    "cost_label": "Cost",
     "cost_title": "OpenShift usage cost",
     "cost_trend_title": "Metering cumulative cost comparison ({{units}})",
     "cpu_title": "OpenShift CPU usage and requests",
     "cpu_trend_title": "Daily usage and requests comparison ({{units}})",
     "cumulative_cost_label": "Cumulative cost",
-    "database_title": "Database services cost",
-    "database_trend_title": "Cumulative cost comparison ({{units}})",
     "memory_title": "OpenShift memory usage and requests",
     "memory_trend_title": "Daily usage and requests comparison ({{units}})",
-    "network_title": "Network services cost",
-    "network_trend_title": "Cumulative cost comparison ({{units}})",
     "requests_label": "Requests",
-    "storage_title": "Storage services usage",
-    "storage_trend_title": "Daily usage comparison ({{units}})",
     "usage_label": "Usage",
     "volume_title": "OpenShift volume usage and requests",
     "volume_trend_title": "Daily usage and requests comparison ({{units}})",
@@ -938,12 +925,7 @@
       "measurement": "Measurement",
       "measurement_placeholder": "Filter by measurements",
       "metric": "Metric",
-      "metric_placeholder": "Filter by metrics",
-      "options": {
-        "Currency": "Price",
-        "Request": "Request",
-        "Usage": "Usage"
-      }
+      "metric_placeholder": "Filter by metrics"
     },
     "sources": {
       "assign_sources": "Assign source",
