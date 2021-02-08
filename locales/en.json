@@ -13,9 +13,7 @@
     "network_trend_title": "Cumulative cost comparison ({{units}})",
     "storage_title": "Storage services usage",
     "storage_trend_title": "Daily usage comparison ({{units}})",
-    "usage_label": "Usage",
-    "widget_subtitle": "{{startDate}} $t(months.{{month}})",
-    "widget_subtitle_plural": "{{startDate}}-{{endDate}} $t(months.{{month}})"
+    "usage_label": "Usage"
   },
   "aws_dashboard": {
     "compute_title": "Compute (EC2) instances usage",
@@ -31,9 +29,7 @@
     "network_trend_title": "Cumulative cost comparison ({{units}})",
     "storage_title": "Storage services usage",
     "storage_trend_title": "Daily usage comparison ({{units}})",
-    "usage_label": "Usage",
-    "widget_subtitle": "{{startDate}} $t(months.{{month}})",
-    "widget_subtitle_plural": "{{startDate}}-{{endDate}} $t(months.{{month}})"
+    "usage_label": "Usage"
   },
   "aws_details": {
     "change_column_title": "Month over month change",
@@ -57,9 +53,7 @@
     "network_trend_title": "Cumulative cost comparison ({{units}})",
     "storage_title": "Storage services usage",
     "storage_trend_title": "Daily usage comparison ({{units}})",
-    "usage_label": "Usage",
-    "widget_subtitle": "{{startDate}} $t(months.{{month}})",
-    "widget_subtitle_plural": "{{startDate}}-{{endDate}} $t(months.{{month}})"
+    "usage_label": "Usage"
   },
   "azure_dashboard": {
     "compute_title": "Virtual machines usage",
@@ -75,9 +69,7 @@
     "network_trend_title": "Cumulative cost comparison ({{units}})",
     "storage_title": "Storage services usage",
     "storage_trend_title": "Daily usage comparison ({{units}})",
-    "usage_label": "Usage",
-    "widget_subtitle": "{{startDate}} $t(months.{{month}})",
-    "widget_subtitle_plural": "{{startDate}}-{{endDate}} $t(months.{{month}})"
+    "usage_label": "Usage"
   },
   "azure_details": {
     "change_column_title": "Month over month change",
@@ -166,6 +158,7 @@
     "cost_supplementary_legend_label_no_data": "Supplementary cost (no data)",
     "cost_supplementary_legend_label_plural": "Supplementary cost ({{startDate}}-{{endDate}} $t(months_abbr.{{month}}))",
     "cost_supplementary_legend_tooltip": "Supplementary cost ($t(months_abbr.{{month}}))",
+    "date": "{{date}}-$t(months_abbr.{{month}})",
     "date_range": "{{startDate}} $t(months_abbr.{{month}}) {{year}}",
     "date_range_plural": "{{startDate}}-{{endDate}} $t(months_abbr.{{month}}) {{year}}",
     "day_of_month_title": "Day {{day}}",
@@ -389,7 +382,9 @@
     "warning_sources": "Cannot assign cost model to a source that is already assigned to another one"
   },
   "dashboard": {
-    "total_cost_tooltip": "This total cost is the sum of the infrastructure cost {{infrastructureCost}} and supplementary cost {{supplementaryCost}}"
+    "total_cost_tooltip": "This total cost is the sum of the infrastructure cost {{infrastructureCost}} and supplementary cost {{supplementaryCost}}",
+    "widget_subtitle": "{{startDate}} $t(months.{{month}})",
+    "widget_subtitle_plural": "{{startDate}}-{{endDate}} $t(months.{{month}})"
   },
   "details": {
     "actions": {
@@ -463,9 +458,9 @@
     "title": "Delete {{rate.metric.label_metric}}-{{rate.metric.label_measurement}} ({{rate.metric.label_measurement_unit}}) rate?"
   },
   "docs": {
-    "add_ocp_sources": "https://access.redhat.com/documentation/en-us/openshift_container_platform/4.5/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources",
-    "config_cost_models": "https://access.redhat.com/documentation/en-us/openshift_container_platform/4.5/html/using_cost_models/configuring-cost-models",
-    "using_cost_model": "https://access.redhat.com/documentation/en-us/openshift_container_platform/4.5/html/using_cost_models/using_cost_models#cost-model-terminology"
+    "add_ocp_sources": "https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/getting_started_with_cost_management/assembly_adding_sources_cost#assembly_adding_ocp_sources",
+    "config_cost_models": "https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/using_cost_models/configuring-cost-models",
+    "using_cost_model": "https://access.redhat.com/documentation/en-us/cost_management_service/2021/html/using_cost_models/using_cost_models#cost-model-terminology"
   },
   "empty_filter_state": {
     "subtitle": "Sorry, no data with the given filter was found.",
@@ -476,6 +471,20 @@
     "unauthorized_title": "You don't have access to the Cost management application",
     "unexpected_desc": "We encountered an unexpected error. Contact your administrator.",
     "unexpected_title": "Oops!"
+  },
+  "explorer": {
+    "daily_column_title": "{{date}}-$t(months_abbr.{{month}})",
+    "empty_state": "Processing data to generate a list of all services that sums to a total cost...",
+    "name_column_title": "Names",
+    "no_data": "no data",
+    "tag_column_title": "Tag names",
+    "title": {
+      "aws": "Amazon Web Services - All Cost Top 5 Costliest",
+      "azure": "Microsoft Azure - All Cost Top 5 Costliest",
+      "gcp": "Google Cloud Platform - All Cost Top 5 Costliest",
+      "ocp": "OpenShift - All Cost Top 5 Costliest"
+    },
+    "total_cost": "Total cost"
   },
   "export": {
     "aggregate_type": "Select aggregate type",
@@ -600,9 +609,7 @@
     "network_trend_title": "Cumulative cost comparison ({{units}})",
     "storage_title": "Storage services usage",
     "storage_trend_title": "Daily usage comparison ({{units}})",
-    "usage_label": "Usage",
-    "widget_subtitle": "{{startDate}} $t(months.{{month}})",
-    "widget_subtitle_plural": "{{startDate}}-{{endDate}} $t(months.{{month}})"
+    "usage_label": "Usage"
   },
   "gcp_details": {
     "change_column_title": "Month over month change",
@@ -726,6 +733,7 @@
     "azure_details": "Microsoft Azure details",
     "azure_details_breakdown": "Microsoft Azure Details Breakdown",
     "cost_models": "Cost models",
+    "explorer": "Historical Cost Explorer",
     "gcp_details": "Google Cloud Platform Details",
     "gcp_details_breakdown": "Google Cloud Platform Details Breakdown",
     "ocp_details": "OpenShift Details",
@@ -796,9 +804,7 @@
     "requests_label": "Requests",
     "usage_label": "Usage",
     "volume_title": "Volume usage and requests",
-    "volume_trend_title": "Daily usage and requests comparison ({{units}})",
-    "widget_subtitle": "{{startDate}} $t(months.{{month}})",
-    "widget_subtitle_plural": "{{startDate}}-{{endDate}} $t(months.{{month}})"
+    "volume_trend_title": "Daily usage and requests comparison ({{units}})"
   },
   "ocp_details": {
     "change_column_title": "Month over month change",
@@ -829,9 +835,7 @@
     "requests_label": "Requests",
     "usage_label": "Usage",
     "volume_title": "Volume usage and requests",
-    "volume_trend_title": "Daily usage and requests comparison ({{units}})",
-    "widget_subtitle": "{{startDate}} $t(months.{{month}})",
-    "widget_subtitle_plural": "{{startDate}}-{{endDate}} $t(months.{{month}})"
+    "volume_trend_title": "Daily usage and requests comparison ({{units}})"
   },
   "ocp_usage_dashboard": {
     "cost_title": "OpenShift usage cost",
@@ -844,9 +848,7 @@
     "requests_label": "Requests",
     "usage_label": "Usage",
     "volume_title": "OpenShift volume usage and requests",
-    "volume_trend_title": "Daily usage and requests comparison ({{units}})",
-    "widget_subtitle": "{{startDate}} $t(months.{{month}})",
-    "widget_subtitle_plural": "{{startDate}}-{{endDate}} $t(months.{{month}})"
+    "volume_trend_title": "Daily usage and requests comparison ({{units}})"
   },
   "onboarding": {
     "type_label": "Type",
