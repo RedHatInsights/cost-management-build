@@ -12,9 +12,10 @@
 /*!*****************************************************!*\
   !*** ./src/components/icons/costIcon/Cost-icon.svg ***!
   \*****************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"8a2acb5e9233030023f599e0f04ebd7f.svg\";\n\n//# sourceURL=webpack://koku-ui/./src/components/icons/costIcon/Cost-icon.svg?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"6c64594e3aaa32a18532d72ff14cc82e.svg\");\n\n//# sourceURL=webpack://koku-ui/./src/components/icons/costIcon/Cost-icon.svg?");
 
 /***/ }),
 
