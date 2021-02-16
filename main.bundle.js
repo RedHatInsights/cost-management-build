@@ -426,7 +426,7 @@ eval("\n\nvar _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/h
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Notification\": () => (/* binding */ Notification),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ \"./node_modules/@babel/runtime/helpers/extends.js\");\n/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ \"./node_modules/@babel/runtime/helpers/objectWithoutProperties.js\");\n/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ \"./node_modules/@babel/runtime/helpers/classCallCheck.js\");\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ \"./node_modules/@babel/runtime/helpers/createClass.js\");\n/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ \"./node_modules/@babel/runtime/helpers/assertThisInitialized.js\");\n/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ \"./node_modules/@babel/runtime/helpers/inherits.js\");\n/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ \"./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js\");\n/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ \"./node_modules/@babel/runtime/helpers/getPrototypeOf.js\");\n/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ \"./node_modules/@babel/runtime/helpers/defineProperty.js\");\n/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);\n/* harmony import */ var _patternfly_react_core_dist_esm_components_Alert_Alert_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @patternfly/react-core/dist/esm/components/Alert/Alert.js */ \"./node_modules/@patternfly/react-core/dist/esm/components/Alert/Alert.js\");\n/* harmony import */ var _patternfly_react_core_dist_esm_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @patternfly/react-core/dist/esm/components/Text/TextContent.js */ \"./node_modules/@patternfly/react-core/dist/esm/components/Text/TextContent.js\");\n/* harmony import */ var _patternfly_react_core_dist_esm_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @patternfly/react-core/dist/esm/components/Text/Text.js */ \"./node_modules/@patternfly/react-core/dist/esm/components/Text/Text.js\");\n/* harmony import */ var _patternfly_react_core_dist_esm_components_Alert_AlertActionCloseButton_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @patternfly/react-core/dist/esm/components/Alert/AlertActionCloseButton.js */ \"./node_modules/@patternfly/react-core/dist/esm/components/Alert/AlertActionCloseButton.js\");\n/* harmony import */ var _patternfly_react_icons_dist_esm_icons_close_icon__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @patternfly/react-icons/dist/esm/icons/close-icon */ \"./node_modules/@patternfly/react-icons/dist/esm/icons/close-icon.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_10__);\n/* harmony import */ var _Notification_notification_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../Notification/./notification.css */ \"./node_modules/@redhat-cloud-services/frontend-components-notifications/Notification/notification.css\");\n/* harmony import */ var _Notification_notification_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_Notification_notification_css__WEBPACK_IMPORTED_MODULE_11__);\n\n\n\n\n\n\n\n\n\n\nfunction _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default()(this, result); }; }\n\nfunction _isNativeReflectConstruct() { if (typeof Reflect === \"undefined\" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === \"function\") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }\n\n\n\n\n\n\n\n\n\n\n/**\n * Add some enter and dismiss animation later when PF has designs\n */\n\nvar DEFAULT_DELAY = 5000;\nvar Notification = /*#__PURE__*/function (_Component) {\n  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Notification, _Component);\n\n  var _super = _createSuper(Notification);\n\n  function Notification(props) {\n    var _this;\n\n    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, Notification);\n\n    _this = _super.call(this, props);\n\n    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), \"handleDismiss\", function () {\n      _this.props.onDismiss(_this.props.id);\n    });\n\n    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), \"setDismissTimeout\", function () {\n      if (!_this.props.dismissable) {\n        _this.dismissTimeout = setTimeout(function () {\n          return _this.handleDismiss();\n        }, _this.props.dismissDelay);\n      }\n    });\n\n    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), \"clearDismissTimeout\", function () {\n      if (_this.dismissTimeout) {\n        clearTimeout(_this.dismissTimeout);\n      }\n    });\n\n    _this.handleDismiss = _this.handleDismiss.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));\n\n    _this.setDismissTimeout();\n\n    return _this;\n  }\n\n  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(Notification, [{\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      this.clearDismissTimeout();\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var _this$props = this.props,\n          description = _this$props.description,\n          dismissable = _this$props.dismissable,\n          onDismiss = _this$props.onDismiss,\n          dismissDelay = _this$props.dismissDelay,\n          title = _this$props.title,\n          sentryId = _this$props.sentryId,\n          requestId = _this$props.requestId,\n          rest = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1___default()(_this$props, [\"description\", \"dismissable\", \"onDismiss\", \"dismissDelay\", \"title\", \"sentryId\", \"requestId\"]);\n\n      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default().createElement(_patternfly_react_core_dist_esm_components_Alert_Alert_js__WEBPACK_IMPORTED_MODULE_12__.Alert, _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({\n        className: \"notification-item\",\n        title: title && title.replace(/<\\/?[^>]+(>|$)/g, '')\n      }, rest, {\n        actionClose: dismissable ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default().createElement(_patternfly_react_core_dist_esm_components_Alert_AlertActionCloseButton_js__WEBPACK_IMPORTED_MODULE_13__.AlertActionCloseButton, {\n          \"aria-label\": \"close-notification\",\n          variant: \"plain\",\n          onClick: this.handleDismiss\n        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default().createElement(_patternfly_react_icons_dist_esm_icons_close_icon__WEBPACK_IMPORTED_MODULE_14__.default, null)) : null,\n        onMouseEnter: this.clearDismissTimeout,\n        onMouseLeave: this.setDismissTimeout\n      }), typeof description === 'string' ? description.replace(/<\\/?[^>]+(>|$)/g, '') : description, sentryId && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default().createElement(_patternfly_react_core_dist_esm_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_15__.TextContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default().createElement(_patternfly_react_core_dist_esm_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_16__.Text, {\n        component: _patternfly_react_core_dist_esm_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_16__.TextVariants.small\n      }, \"Tracking Id: \", sentryId)), requestId && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default().createElement(_patternfly_react_core_dist_esm_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_15__.TextContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default().createElement(_patternfly_react_core_dist_esm_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_16__.Text, {\n        component: _patternfly_react_core_dist_esm_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_16__.TextVariants.small\n      }, \"Request Id: \", requestId)));\n    }\n  }]);\n\n  return Notification;\n}(react__WEBPACK_IMPORTED_MODULE_9__.Component);\nNotification.propTypes = {\n  dismissable: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().bool),\n  onDismiss: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().func.isRequired),\n  id: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().string.isRequired),\n  variant: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().string.isRequired),\n  title: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().string.isRequired),\n  description: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().node),\n  dismissDelay: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().number),\n  requestId: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().string),\n  sentryId: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().string)\n};\nNotification.defaultProps = {\n  dismissDelay: DEFAULT_DELAY\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Notification);\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components-notifications/esm/Notification/Notification.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Notification\": () => (/* binding */ Notification),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ \"./node_modules/@babel/runtime/helpers/extends.js\");\n/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ \"./node_modules/@babel/runtime/helpers/objectWithoutProperties.js\");\n/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ \"./node_modules/@babel/runtime/helpers/classCallCheck.js\");\n/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ \"./node_modules/@babel/runtime/helpers/createClass.js\");\n/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ \"./node_modules/@babel/runtime/helpers/assertThisInitialized.js\");\n/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ \"./node_modules/@babel/runtime/helpers/inherits.js\");\n/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ \"./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js\");\n/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ \"./node_modules/@babel/runtime/helpers/getPrototypeOf.js\");\n/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ \"./node_modules/@babel/runtime/helpers/defineProperty.js\");\n/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);\n/* harmony import */ var _patternfly_react_core_dist_esm_components_Alert_Alert_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @patternfly/react-core/dist/esm/components/Alert/Alert.js */ \"./node_modules/@patternfly/react-core/dist/esm/components/Alert/Alert.js\");\n/* harmony import */ var _patternfly_react_core_dist_esm_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @patternfly/react-core/dist/esm/components/Text/TextContent.js */ \"./node_modules/@patternfly/react-core/dist/esm/components/Text/TextContent.js\");\n/* harmony import */ var _patternfly_react_core_dist_esm_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @patternfly/react-core/dist/esm/components/Text/Text.js */ \"./node_modules/@patternfly/react-core/dist/esm/components/Text/Text.js\");\n/* harmony import */ var _patternfly_react_core_dist_esm_components_Alert_AlertActionCloseButton_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @patternfly/react-core/dist/esm/components/Alert/AlertActionCloseButton.js */ \"./node_modules/@patternfly/react-core/dist/esm/components/Alert/AlertActionCloseButton.js\");\n/* harmony import */ var _patternfly_react_icons_dist_esm_icons_close_icon__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @patternfly/react-icons/dist/esm/icons/close-icon */ \"./node_modules/@patternfly/react-icons/dist/esm/icons/close-icon.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_10__);\n/* harmony import */ var _Notification_notification_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../Notification/./notification.css */ \"./node_modules/@redhat-cloud-services/frontend-components-notifications/Notification/notification.css\");\n\n\n\n\n\n\n\n\n\n\nfunction _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default()(this, result); }; }\n\nfunction _isNativeReflectConstruct() { if (typeof Reflect === \"undefined\" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === \"function\") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }\n\n\n\n\n\n\n\n\n\n\n/**\n * Add some enter and dismiss animation later when PF has designs\n */\n\nvar DEFAULT_DELAY = 5000;\nvar Notification = /*#__PURE__*/function (_Component) {\n  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Notification, _Component);\n\n  var _super = _createSuper(Notification);\n\n  function Notification(props) {\n    var _this;\n\n    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, Notification);\n\n    _this = _super.call(this, props);\n\n    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), \"handleDismiss\", function () {\n      _this.props.onDismiss(_this.props.id);\n    });\n\n    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), \"setDismissTimeout\", function () {\n      if (!_this.props.dismissable) {\n        _this.dismissTimeout = setTimeout(function () {\n          return _this.handleDismiss();\n        }, _this.props.dismissDelay);\n      }\n    });\n\n    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), \"clearDismissTimeout\", function () {\n      if (_this.dismissTimeout) {\n        clearTimeout(_this.dismissTimeout);\n      }\n    });\n\n    _this.handleDismiss = _this.handleDismiss.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));\n\n    _this.setDismissTimeout();\n\n    return _this;\n  }\n\n  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(Notification, [{\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      this.clearDismissTimeout();\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var _this$props = this.props,\n          description = _this$props.description,\n          dismissable = _this$props.dismissable,\n          onDismiss = _this$props.onDismiss,\n          dismissDelay = _this$props.dismissDelay,\n          title = _this$props.title,\n          sentryId = _this$props.sentryId,\n          requestId = _this$props.requestId,\n          rest = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1___default()(_this$props, [\"description\", \"dismissable\", \"onDismiss\", \"dismissDelay\", \"title\", \"sentryId\", \"requestId\"]);\n\n      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default().createElement(_patternfly_react_core_dist_esm_components_Alert_Alert_js__WEBPACK_IMPORTED_MODULE_12__.Alert, _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({\n        className: \"notification-item\",\n        title: title && title.replace(/<\\/?[^>]+(>|$)/g, '')\n      }, rest, {\n        actionClose: dismissable ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default().createElement(_patternfly_react_core_dist_esm_components_Alert_AlertActionCloseButton_js__WEBPACK_IMPORTED_MODULE_13__.AlertActionCloseButton, {\n          \"aria-label\": \"close-notification\",\n          variant: \"plain\",\n          onClick: this.handleDismiss\n        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default().createElement(_patternfly_react_icons_dist_esm_icons_close_icon__WEBPACK_IMPORTED_MODULE_14__.default, null)) : null,\n        onMouseEnter: this.clearDismissTimeout,\n        onMouseLeave: this.setDismissTimeout\n      }), typeof description === 'string' ? description.replace(/<\\/?[^>]+(>|$)/g, '') : description, sentryId && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default().createElement(_patternfly_react_core_dist_esm_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_15__.TextContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default().createElement(_patternfly_react_core_dist_esm_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_16__.Text, {\n        component: _patternfly_react_core_dist_esm_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_16__.TextVariants.small\n      }, \"Tracking Id: \", sentryId)), requestId && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default().createElement(_patternfly_react_core_dist_esm_components_Text_TextContent_js__WEBPACK_IMPORTED_MODULE_15__.TextContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default().createElement(_patternfly_react_core_dist_esm_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_16__.Text, {\n        component: _patternfly_react_core_dist_esm_components_Text_Text_js__WEBPACK_IMPORTED_MODULE_16__.TextVariants.small\n      }, \"Request Id: \", requestId)));\n    }\n  }]);\n\n  return Notification;\n}(react__WEBPACK_IMPORTED_MODULE_9__.Component);\nNotification.propTypes = {\n  dismissable: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().bool),\n  onDismiss: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().func.isRequired),\n  id: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().string.isRequired),\n  variant: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().string.isRequired),\n  title: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().string.isRequired),\n  description: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().node),\n  dismissDelay: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().number),\n  requestId: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().string),\n  sentryId: (prop_types__WEBPACK_IMPORTED_MODULE_10___default().string)\n};\nNotification.defaultProps = {\n  dismissDelay: DEFAULT_DELAY\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Notification);\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components-notifications/esm/Notification/Notification.js?");
 
 /***/ }),
 
@@ -1866,9 +1866,10 @@ eval("var baseToString = __webpack_require__(/*! ./_baseToString */ \"./node_mod
 /*!*************************************************************************************************************!*\
   !*** ./node_modules/@redhat-cloud-services/frontend-components-notifications/Notification/notification.css ***!
   \*************************************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components-notifications/Notification/notification.css?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components-notifications/Notification/notification.css?");
 
 /***/ }),
 
@@ -1876,9 +1877,10 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack://koku-ui
 /*!*************************************************************************************************************************!*\
   !*** ./node_modules/@redhat-cloud-services/frontend-components-notifications/NotificationPortal/notificationPortal.css ***!
   \*************************************************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components-notifications/NotificationPortal/notificationPortal.css?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components-notifications/NotificationPortal/notificationPortal.css?");
 
 /***/ }),
 
@@ -1886,9 +1888,10 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack://koku-ui
 /*!*****************************************************************************************!*\
   !*** ./node_modules/@redhat-cloud-services/frontend-components-notifications/index.css ***!
   \*****************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components-notifications/index.css?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components-notifications/index.css?");
 
 /***/ }),
 
@@ -1896,9 +1899,10 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack://koku-ui
 /*!**********************************************************************************************!*\
   !*** ./node_modules/@redhat-cloud-services/frontend-components/components/InvalidObject.css ***!
   \**********************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components/components/InvalidObject.css?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components/components/InvalidObject.css?");
 
 /***/ }),
 
@@ -1906,9 +1910,10 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack://koku-ui
 /*!*************************************************************************************!*\
   !*** ./node_modules/@redhat-cloud-services/frontend-components/components/Main.css ***!
   \*************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components/components/Main.css?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components/components/Main.css?");
 
 /***/ }),
 
@@ -1916,9 +1921,10 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack://koku-ui
 /*!**********************************************************************************************!*\
   !*** ./node_modules/@redhat-cloud-services/frontend-components/components/NotAuthorized.css ***!
   \**********************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components/components/NotAuthorized.css?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components/components/NotAuthorized.css?");
 
 /***/ }),
 
@@ -1926,9 +1932,10 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack://koku-ui
 /*!*****************************************************************************************!*\
   !*** ./node_modules/@redhat-cloud-services/frontend-components/components/Skeleton.css ***!
   \*****************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components/components/Skeleton.css?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components/components/Skeleton.css?");
 
 /***/ }),
 
@@ -1936,9 +1943,10 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack://koku-ui
 /*!********************************************************************************************!*\
   !*** ./node_modules/@redhat-cloud-services/frontend-components/components/Unavailable.css ***!
   \********************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components/components/Unavailable.css?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components/components/Unavailable.css?");
 
 /***/ }),
 
@@ -1946,9 +1954,10 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack://koku-ui
 /*!*******************************!*\
   !*** ./src/styles/global.css ***!
   \*******************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack://koku-ui/./src/styles/global.css?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://koku-ui/./src/styles/global.css?");
 
 /***/ }),
 
@@ -3176,7 +3185,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _redhat_cloud_services_frontend_components_notifications__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components-notifications */ \"./node_modules/@redhat-cloud-services/frontend-components-notifications/index.js\");\n/* harmony import */ var api_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! api/api */ \"./src/api/api.ts\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/es/BrowserRouter.js\");\n/* harmony import */ var utils_getBaseName__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! utils/getBaseName */ \"./src/utils/getBaseName.ts\");\n/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app */ \"./src/app.tsx\");\n/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./store */ \"./src/store/index.ts\");\n/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./styles/global.css */ \"./src/styles/global.css\");\n/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_global_css__WEBPACK_IMPORTED_MODULE_8__);\n\n\n\n\n\n\n\n\n\n/*require.resolve*/(/*! @redhat-cloud-services/frontend-components/components/Main.css */ \"./node_modules/@redhat-cloud-services/frontend-components/components/Main.css\");\n/*require.resolve*/(/*! @redhat-cloud-services/frontend-components/components/InvalidObject.css */ \"./node_modules/@redhat-cloud-services/frontend-components/components/InvalidObject.css\");\n/*require.resolve*/(/*! @redhat-cloud-services/frontend-components/components/NotAuthorized.css */ \"./node_modules/@redhat-cloud-services/frontend-components/components/NotAuthorized.css\");\n/*require.resolve*/(/*! @redhat-cloud-services/frontend-components/components/Skeleton.css */ \"./node_modules/@redhat-cloud-services/frontend-components/components/Skeleton.css\");\n/*require.resolve*/(/*! @redhat-cloud-services/frontend-components/components/Unavailable.css */ \"./node_modules/@redhat-cloud-services/frontend-components/components/Unavailable.css\");\n/*require.resolve*/(/*! @redhat-cloud-services/frontend-components-notifications/index.css */ \"./node_modules/@redhat-cloud-services/frontend-components-notifications/index.css\");\n/*require.resolve*/(/*! @patternfly/patternfly/patternfly-addons.css */ \"./node_modules/@patternfly/patternfly/patternfly-addons.css\");\n\n(0,api_api__WEBPACK_IMPORTED_MODULE_1__.initApi)({\n    version: 'v1'\n});\nconst store = (0,_store__WEBPACK_IMPORTED_MODULE_7__.configureStore)({ // session: {\n//   token: getToken(),\n// },\n});\n(0,react_dom__WEBPACK_IMPORTED_MODULE_3__.render)(react__WEBPACK_IMPORTED_MODULE_2___default().createElement(react_redux__WEBPACK_IMPORTED_MODULE_4__.Provider, { store: store },\n    react__WEBPACK_IMPORTED_MODULE_2___default().createElement(_redhat_cloud_services_frontend_components_notifications__WEBPACK_IMPORTED_MODULE_0__.NotificationsPortal, null),\n    react__WEBPACK_IMPORTED_MODULE_2___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.default, { basename: (0,utils_getBaseName__WEBPACK_IMPORTED_MODULE_5__.getBaseName)(window.location.pathname) },\n        react__WEBPACK_IMPORTED_MODULE_2___default().createElement(_app__WEBPACK_IMPORTED_MODULE_6__.default, null))), document.getElementById('root'));\n\n\n//# sourceURL=webpack://koku-ui/./src/index.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _redhat_cloud_services_frontend_components_notifications__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @redhat-cloud-services/frontend-components-notifications */ \"./node_modules/@redhat-cloud-services/frontend-components-notifications/index.js\");\n/* harmony import */ var api_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! api/api */ \"./src/api/api.ts\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/es/BrowserRouter.js\");\n/* harmony import */ var utils_getBaseName__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! utils/getBaseName */ \"./src/utils/getBaseName.ts\");\n/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app */ \"./src/app.tsx\");\n/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./store */ \"./src/store/index.ts\");\n/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./styles/global.css */ \"./src/styles/global.css\");\n\n\n\n\n\n\n\n\n\n/*require.resolve*/(/*! @redhat-cloud-services/frontend-components/components/Main.css */ \"./node_modules/@redhat-cloud-services/frontend-components/components/Main.css\");\n/*require.resolve*/(/*! @redhat-cloud-services/frontend-components/components/InvalidObject.css */ \"./node_modules/@redhat-cloud-services/frontend-components/components/InvalidObject.css\");\n/*require.resolve*/(/*! @redhat-cloud-services/frontend-components/components/NotAuthorized.css */ \"./node_modules/@redhat-cloud-services/frontend-components/components/NotAuthorized.css\");\n/*require.resolve*/(/*! @redhat-cloud-services/frontend-components/components/Skeleton.css */ \"./node_modules/@redhat-cloud-services/frontend-components/components/Skeleton.css\");\n/*require.resolve*/(/*! @redhat-cloud-services/frontend-components/components/Unavailable.css */ \"./node_modules/@redhat-cloud-services/frontend-components/components/Unavailable.css\");\n/*require.resolve*/(/*! @redhat-cloud-services/frontend-components-notifications/index.css */ \"./node_modules/@redhat-cloud-services/frontend-components-notifications/index.css\");\n/*require.resolve*/(/*! @patternfly/patternfly/patternfly-addons.css */ \"./node_modules/@patternfly/patternfly/patternfly-addons.css\");\n\n(0,api_api__WEBPACK_IMPORTED_MODULE_1__.initApi)({\n    version: 'v1'\n});\nconst store = (0,_store__WEBPACK_IMPORTED_MODULE_7__.configureStore)({ // session: {\n//   token: getToken(),\n// },\n});\n(0,react_dom__WEBPACK_IMPORTED_MODULE_3__.render)(react__WEBPACK_IMPORTED_MODULE_2___default().createElement(react_redux__WEBPACK_IMPORTED_MODULE_4__.Provider, { store: store },\n    react__WEBPACK_IMPORTED_MODULE_2___default().createElement(_redhat_cloud_services_frontend_components_notifications__WEBPACK_IMPORTED_MODULE_0__.NotificationsPortal, null),\n    react__WEBPACK_IMPORTED_MODULE_2___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.default, { basename: (0,utils_getBaseName__WEBPACK_IMPORTED_MODULE_5__.getBaseName)(window.location.pathname) },\n        react__WEBPACK_IMPORTED_MODULE_2___default().createElement(_app__WEBPACK_IMPORTED_MODULE_6__.default, null))), document.getElementById('root'));\n\n\n//# sourceURL=webpack://koku-ui/./src/index.tsx?");
 
 /***/ }),
 
@@ -5108,6 +5117,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/get mini-css chunk filename */
+/******/ 	(() => {
+/******/ 		// This function allow to reference all chunks
+/******/ 		__webpack_require__.miniCssF = (chunkId) => {
+/******/ 			// return url for filenames not based on template
+/******/ 			if (chunkId === "vendor") return "" + chunkId + ".css";
+/******/ 			// return url for filenames based on template
+/******/ 			return "" + chunkId + ".css";
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -5211,57 +5231,79 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		__webpack_require__.p = "/apps/cost-management/";
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/compat */
-/******/ 	
-/******/ 	
-/******/ 	// object to store loaded CSS chunks
-/******/ 	var installedCssChunks = {
-/******/ 		"main": 0
-/******/ 	};
-/******/ 	__webpack_require__.f.compat = (chunkId, promises) => {
-/******/ 	
-/******/ 	
-/******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"notFound":1,"aws":1,"azure":1,"gcp":1,"ocp":1,"overview":1};
-/******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
-/******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
-/******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + chunkId + ".css";
-/******/ 				var fullhref = __webpack_require__.p + href;
-/******/ 				var existingLinkTags = document.getElementsByTagName("link");
-/******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
-/******/ 					var tag = existingLinkTags[i];
-/******/ 					var dataHref = tag.getAttribute("data-href") || tag.getAttribute("href");
-/******/ 					if(tag.rel === "stylesheet" && (dataHref === href || dataHref === fullhref)) return resolve();
-/******/ 				}
-/******/ 				var existingStyleTags = document.getElementsByTagName("style");
-/******/ 				for(var i = 0; i < existingStyleTags.length; i++) {
-/******/ 					var tag = existingStyleTags[i];
-/******/ 					var dataHref = tag.getAttribute("data-href");
-/******/ 					if(dataHref === href || dataHref === fullhref) return resolve();
-/******/ 				}
-/******/ 				var linkTag = document.createElement("link");
-/******/ 				linkTag.rel = "stylesheet";
-/******/ 				linkTag.type = "text/css";
-/******/ 				linkTag.onload = resolve;
-/******/ 				linkTag.onerror = function(event) {
-/******/ 					var request = event && event.target && event.target.src || fullhref;
-/******/ 					var err = new Error("Loading CSS chunk " + chunkId + " failed.\n(" + request + ")");
+/******/ 	/* webpack/runtime/css loading */
+/******/ 	(() => {
+/******/ 		var createStylesheet = (chunkId, fullhref, resolve, reject) => {
+/******/ 			var linkTag = document.createElement("link");
+/******/ 		
+/******/ 			linkTag.rel = "stylesheet";
+/******/ 			linkTag.type = "text/css";
+/******/ 			var onLinkComplete = (event) => {
+/******/ 				// avoid mem leaks.
+/******/ 				linkTag.onerror = linkTag.onload = null;
+/******/ 				if (event.type === 'load') {
+/******/ 					resolve();
+/******/ 				} else {
+/******/ 					var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+/******/ 					var realHref = event && event.target && event.target.href || fullhref;
+/******/ 					var err = new Error("Loading CSS chunk " + chunkId + " failed.\n(" + realHref + ")");
 /******/ 					err.code = "CSS_CHUNK_LOAD_FAILED";
-/******/ 					err.request = request;
-/******/ 					delete installedCssChunks[chunkId]
+/******/ 					err.type = errorType;
+/******/ 					err.request = realHref;
 /******/ 					linkTag.parentNode.removeChild(linkTag)
 /******/ 					reject(err);
-/******/ 				};
-/******/ 				linkTag.href = fullhref;
-/******/ 	
-/******/ 				var head = document.getElementsByTagName("head")[0];
-/******/ 				head.appendChild(linkTag);
-/******/ 			}).then(function() {
-/******/ 				installedCssChunks[chunkId] = 0;
-/******/ 			}));
+/******/ 				}
+/******/ 			}
+/******/ 			linkTag.onerror = linkTag.onload = onLinkComplete;
+/******/ 			linkTag.href = fullhref;
+/******/ 		
+/******/ 			document.head.appendChild(linkTag);
+/******/ 			return linkTag;
+/******/ 		};
+/******/ 		var findStylesheet = (href, fullhref) => {
+/******/ 			var existingLinkTags = document.getElementsByTagName("link");
+/******/ 			for(var i = 0; i < existingLinkTags.length; i++) {
+/******/ 				var tag = existingLinkTags[i];
+/******/ 				var dataHref = tag.getAttribute("data-href") || tag.getAttribute("href");
+/******/ 				if(tag.rel === "stylesheet" && (dataHref === href || dataHref === fullhref)) return tag;
+/******/ 			}
+/******/ 			var existingStyleTags = document.getElementsByTagName("style");
+/******/ 			for(var i = 0; i < existingStyleTags.length; i++) {
+/******/ 				var tag = existingStyleTags[i];
+/******/ 				var dataHref = tag.getAttribute("data-href");
+/******/ 				if(dataHref === href || dataHref === fullhref) return tag;
+/******/ 			}
+/******/ 		};
+/******/ 		var loadStylesheet = (chunkId) => {
+/******/ 			return new Promise((resolve, reject) => {
+/******/ 				var href = __webpack_require__.miniCssF(chunkId);
+/******/ 				var fullhref = __webpack_require__.p + href;
+/******/ 				if(findStylesheet(href, fullhref)) return resolve();
+/******/ 				createStylesheet(chunkId, fullhref, resolve, reject);
+/******/ 			});
 /******/ 		}
-/******/ 	};/* webpack/runtime/jsonp chunk loading */
+/******/ 		// object to store loaded CSS chunks
+/******/ 		var installedCssChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		__webpack_require__.f.miniCss = (chunkId, promises) => {
+/******/ 			var cssChunks = {"notFound":1,"aws":1,"azure":1,"gcp":1,"ocp":1,"overview":1};
+/******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
+/******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
+/******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(() => {
+/******/ 					installedCssChunks[chunkId] = 0;
+/******/ 				}, (e) => {
+/******/ 					delete installedCssChunks[chunkId];
+/******/ 					throw e;
+/******/ 				}));
+/******/ 			}
+/******/ 		};
+/******/ 		
+/******/ 		// no hmr
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	(() => {
 /******/ 		// no baseURI
 /******/ 		
