@@ -3,56 +3,28 @@
     "compute_title": "Compute (EC2) instances usage",
     "cost_title": "Amazon Web Services filtered by OpenShift cost",
     "cost_trend_title": "Amazon Web Services cumulative cost comparison ({{units}})",
-    "daily_cost_trend_title": "Amazon Web Services daily cost comparison ({{units}})",
-    "database_title": "Database services cost",
-    "network_title": "Network services cost",
-    "storage_title": "Storage services usage",
-    "usage_label": "Usage"
+    "daily_cost_trend_title": "Amazon Web Services daily cost comparison ({{units}})"
   },
   "aws_dashboard": {
     "compute_title": "Compute (EC2) instances usage",
     "cost_title": "Amazon Web Services cost",
     "cost_trend_title": "Amazon Web Services cumulative cost comparison ({{units}})",
-    "daily_cost_trend_title": "Amazon Web Services daily cost comparison ({{units}})",
-    "database_title": "Database services cost",
-    "network_title": "Network services cost",
-    "storage_title": "Storage services usage",
-    "usage_label": "Usage"
+    "daily_cost_trend_title": "Amazon Web Services daily cost comparison ({{units}})"
   },
   "aws_details": {
-    "change_column_title": "Month over month change",
-    "empty_state": "Processing data to generate a list of all services that sums to a total cost...",
-    "name_column_title": "$t(group_by.values.{{groupBy}}) names",
-    "org_unit_column_title": "Names",
-    "tag_column_title": "Tag names",
-    "total_cost": "Total cost"
+    "org_unit_column_title": "Names"
   },
   "azure_cloud_dashboard": {
     "compute_title": "Virtual machines usage",
     "cost_title": "Microsoft Azure filtered by OpenShift cost",
     "cost_trend_title": "Microsoft Azure cumulative cost comparison ({{units}})",
-    "daily_cost_trend_title": "Microsoft Azure daily cost comparison ({{units}})",
-    "database_title": "Database services cost",
-    "network_title": "Network services cost",
-    "storage_title": "Storage services usage",
-    "usage_label": "Usage"
+    "daily_cost_trend_title": "Microsoft Azure daily cost comparison ({{units}})"
   },
   "azure_dashboard": {
     "compute_title": "Virtual machines usage",
     "cost_title": "Microsoft Azure cost",
     "cost_trend_title": "Microsoft Azure cumulative cost comparison ({{units}})",
-    "daily_cost_trend_title": "Microsoft Azure daily cost comparison ({{units}})",
-    "database_title": "Database services cost",
-    "network_title": "Network services cost",
-    "storage_title": "Storage services usage",
-    "usage_label": "Usage"
-  },
-  "azure_details": {
-    "change_column_title": "Month over month change",
-    "empty_state": "Processing data to generate a list of all services that sums to a total cost...",
-    "name_column_title": "$t(group_by.values.{{groupBy}}) names",
-    "tag_column_title": "Tag names",
-    "total_cost": "Total cost"
+    "daily_cost_trend_title": "Microsoft Azure daily cost comparison ({{units}})"
   },
   "breakdown": {
     "back_to_details": "Back to $t(breakdown.navigation.{{value}}) $t(group_by.top_values.{{groupBy}}) details",
@@ -91,6 +63,7 @@
       "aws": "Amazon Web Services",
       "azure": "Microsoft Azure",
       "gcp": "Google Cloud Platform",
+      "ibm": "IBM Cloud",
       "ocp": "OpenShift"
     },
     "raw_cost_desc": "The costs reported by a cloud provider without any cost model calculations applied.",
@@ -154,6 +127,7 @@
   },
   "cost": "Cost",
   "cost_management": "Cost Management",
+  "cost_management_overview": "$t(cost_management) Overview",
   "cost_models": {
     "add_rate_form": {
       "calculation_type": "Calculation type",
@@ -367,7 +341,11 @@
   "dashboard": {
     "cumulative_cost_comparison": "Cumulative cost comparison ({{units}})",
     "daily_usage_comparison": "Daily usage comparison ({{units}})",
+    "database_title": "Database services cost",
+    "network_title": "Network services cost",
+    "storage_title": "Storage services usage",
     "total_cost_tooltip": "This total cost is the sum of the infrastructure cost {{infrastructureCost}} and supplementary cost {{supplementaryCost}}",
+    "usage": "Usage",
     "widget_subtitle": "{{startDate}} $t(months.{{month}})",
     "widget_subtitle_plural": "{{startDate}}-{{endDate}} $t(months.{{month}})"
   },
@@ -378,6 +356,8 @@
     },
     "clusters_modal_title": "$t(group_by.values.{{groupBy}}) {{name}} clusters",
     "cost_value": "Cost: {{value}}",
+    "empty_state": "Processing data to generate a list of all services that sums to a total cost...",
+    "month_over_month_change": "Month over month change",
     "more_clusters": ", {{value}} more...",
     "more_clusters_plural": ", show all...",
     "more_tags": ", {{value}} more...",
@@ -396,8 +376,11 @@
         "value": "Value"
       }
     },
+    "resource_names": "$t(group_by.values.{{groupBy}}) names",
     "summary_modal_title": "{{name}} $t(group_by.top_values.{{groupBy}})s",
+    "tag_names": "Tag names",
     "tags_modal_title": "$t(group_by.values.{{groupBy}}) {{name}} related tags",
+    "total_cost": "Total cost",
     "usage": {
       "cpu_capacity": "Capacity - {{value}} {{units}}",
       "cpu_limit": "Limit - {{value}} {{units}}",
@@ -465,8 +448,6 @@
       "last_thirty_days": "Last 30 days",
       "previous_month_to_date": "Previous month and month to date"
     },
-    "empty_state": "Processing data to generate a list of all services that sums to a total cost...",
-    "name_column_title": "$t(group_by.values.{{groupBy}}) names",
     "no_data": "no data",
     "org_unit_column_title": "Names",
     "perspective": {
@@ -476,11 +457,11 @@
       "azure": "Microsoft Azure",
       "azure_cloud": "Microsoft Azure filtered by OpenShift",
       "gcp": "Google Cloud Platform",
+      "ibm": "IBM Cloud",
       "ocp": "All OpenShift cost",
       "ocp_supplementary": "OpenShift supplementary cost",
       "ocp_usage": "OpenShift usage"
     },
-    "tag_column_title": "Tag names",
     "title": {
       "all_cloud": "All cloud filtered by OpenShift - Top 5 Costliest",
       "aws": "Amazon Web Services - Top 5 Costliest",
@@ -488,11 +469,11 @@
       "azure": "Microsoft Azure - Top 5 Costliest",
       "azure_cloud": "Microsoft Azure filtered by OpenShift - Top 5 Costliest",
       "gcp": "Google Cloud Platform - Top 5 Costliest",
+      "ibm": "IBM Cloud - Top 5 Costliest",
       "ocp": "All OpenShift cost - Top 5 Costliest",
       "ocp_supplementary": "OpenShift supplementary cost - Top 5 Costliest",
       "ocp_usage": "OpenShift usage - Top 5 Costliest"
-    },
-    "total_cost": "Total cost"
+    }
   },
   "export": {
     "aggregate_type": "Select aggregate type",
@@ -500,7 +481,11 @@
     "cancel": "Cancel",
     "confirm": "Generate and download",
     "daily": "Daily",
-    "file_name": "cost-management-{{provider}}-$t(group_by.top_values.{{groupBy}})-{{date}}",
+    "file": {
+      "daily": "daily",
+      "monthly": "monthly",
+      "name": "{{provider}}-$t(group_by.top_values.{{groupBy}})-$t(export.file.{{resolution}})-{{date}}"
+    },
     "heading": "Aggregates of the following {{groupBy}}s will be exported to a .csv file.",
     "monthly": "Monthly",
     "resolution_daily": "Daily",
@@ -511,11 +496,6 @@
     "time_scope_previous": "Previous ({{date}})",
     "time_scope_title": "Select month",
     "title": "Export"
-  },
-  "federated_modules": {
-    "ocp_overview": {
-      "title": "All OpenShift clusters cost"
-    }
   },
   "filter": {
     "active_filters": "Active filters",
@@ -612,18 +592,7 @@
     "compute_title": "Compute instances usage",
     "cost_title": "Google Cloud Platform Services cost",
     "cost_trend_title": "Google Cloud Platform Services cumulative cost comparison ({{units}})",
-    "daily_cost_trend_title": "Google Cloud Platform Services daily cost comparison ({{units}})",
-    "database_title": "Database services cost",
-    "network_title": "Network services cost",
-    "storage_title": "Storage services usage",
-    "usage_label": "Usage"
-  },
-  "gcp_details": {
-    "change_column_title": "Month over month change",
-    "empty_state": "Processing data to generate a list of all services that sums to a total cost...",
-    "name_column_title": "$t(group_by.values.{{groupBy}}) names",
-    "tag_column_title": "Tag names",
-    "total_cost": "Total cost"
+    "daily_cost_trend_title": "Google Cloud Platform Services daily cost comparison ({{units}})"
   },
   "group_by": {
     "all": "All $t(group_by.values.{{groupBy}}, { 'count': 5 })",
@@ -690,6 +659,12 @@
       "tag_plural": "Tags"
     }
   },
+  "ibm_dashboard": {
+    "compute_title": "Compute instances usage",
+    "cost_title": "IBM Cloud Services cost",
+    "cost_trend_title": "IBM Cloud Services cumulative cost comparison ({{units}})",
+    "daily_cost_trend_title": "IBM Cloud Services daily cost comparison ({{units}})"
+  },
   "inactive_sources": {
     "go_to_sources": "Go to Sources for more information",
     "title": "A problem was detected with {{value}}",
@@ -701,7 +676,7 @@
     "sources_title": "Looking for sources..."
   },
   "maintenance": {
-    "empty_state_desc": "Cost Management is currently undergoing scheduled maintenance and will be unavailable from 13:00 - 19:00 UTC (09:00 AM - 03:00 PM EDT).",
+    "empty_state_desc": "$t(cost_management) is currently undergoing scheduled maintenance and will be unavailable from 13:00 - 19:00 UTC (09:00 AM - 03:00 PM EDT).",
     "empty_state_info": "For more information visit ",
     "empty_state_thanks": "We will be back soon. Thank you for your patience!."
   },
@@ -742,16 +717,18 @@
     "explorer": "Cost Explorer",
     "gcp_details": "Google Cloud Platform Details",
     "gcp_details_breakdown": "Google Cloud Platform Details Breakdown",
+    "ibm_details": "IBM Cloud Details",
+    "ibm_details_breakdown": "IBM Cloud Details Breakdown",
     "ocp_details": "OpenShift Details",
-    "ocp_details_breakdown": "OpenShift Details Breakdown",
-    "overview": "Cost Management Overview"
+    "ocp_details_breakdown": "OpenShift Details Breakdown"
   },
   "no_auth_state": {
-    "aws_service_name": "Amazon Web Services in Cost Management",
-    "azure_service_name": "Microsoft Azure in Cost Management",
-    "cost_models_service_name": "Cost Models in Cost Management",
-    "gcp_service_name": "Google Cloud Platform in Cost Management",
-    "ocp_service_name": "OpenShift in Cost Management"
+    "aws_service_name": "Amazon Web Services in $t(cost_management)",
+    "azure_service_name": "Microsoft Azure in $t(cost_management)",
+    "cost_models_service_name": "Cost Models in $t(cost_management)",
+    "gcp_service_name": "Google Cloud Platform in $t(cost_management)",
+    "ibm_service_name": "IBM Cloud in $t(cost_management)",
+    "ocp_service_name": "OpenShift in $t(cost_management)"
   },
   "no_data_for_date": "No data available for {{startDate}} $t(months_abbr.{{month}})",
   "no_data_for_date_plural": "No data available for {{startDate}}-{{endDate}} $t(months_abbr.{{month}})",
@@ -772,7 +749,9 @@
     "gcp_desc": "Add an Google Cloud Platform account to see a total cost breakdown of your spend by accounts, services, regions, or tags.",
     "gcp_title": "Track your Google Cloud Platform spending!",
     "get_started": "Get started with Sources",
-    "ocp_add_sources": "Add an OpenShift cluster to Cost Management",
+    "ibm_desc": "Add an IBM Cloud account to see a total cost breakdown of your spend by accounts, services, regions, or tags.",
+    "ibm_title": "Track your IBM Cloud spending!",
+    "ocp_add_sources": "Add an OpenShift cluster to $t(cost_management)",
     "ocp_desc": "Add an OpenShift Container Platform cluster to see a total cost breakdown of your pods by cluster, node, project, or labels.",
     "ocp_title": "Track your OpenShift spending!",
     "overview_desc": "Add a source, like an OpenShift Container Platform cluster or a cloud services account, to see a total cost breakdown as well as usage information like instance counts and storage.",
@@ -793,47 +772,34 @@
     "compute_title": "Compute services usage",
     "cost_title": "All cloud filtered by OpenShift cost",
     "cost_trend_title": "All cloud filtered by OpenShift cumulative cost comparison ({{units}})",
-    "daily_cost_trend_title": "All cloud filtered by OpenShift daily cost comparison ({{units}})",
-    "database_title": "Database services cost",
-    "network_title": "Network services cost",
-    "storage_title": "Storage services usage",
-    "usage_label": "Usage"
+    "daily_cost_trend_title": "All cloud filtered by OpenShift daily cost comparison ({{units}})"
   },
   "ocp_dashboard": {
     "cost_title": "All OpenShift cost",
     "cost_trend_title": "All OpenShift cumulative cost comparison ({{units}})",
-    "daily_cost_trend_title": "All OpenShift daily cost comparison ({{units}})",
-    "usage_label": "Usage"
+    "daily_cost_trend_title": "All OpenShift daily cost comparison ({{units}})"
   },
   "ocp_details": {
-    "change_column_title": "Month over month change",
-    "empty_state": "Processing data to generate a list of all services that sums to a total cost...",
     "infrastructure_cost": "Infrastructure cost",
     "infrastructure_cost_desc": "The cost based on raw usage data from the underlying infrastructure.",
-    "name_column_title": "$t(group_by.values.{{groupBy}}) names",
     "supplementary_aria_label": "A description of infrastructure and supplementary cost",
     "supplementary_cost": "Supplementary cost",
     "supplementary_cost_desc": "All costs not directly attributed to the infrastructure. These costs are determined by applying a price list within a cost model to OpenShift cluster metrics.",
-    "tag_column_title": "Tag names",
-    "title": "OpenShift details",
-    "total_cost_tooltip": "This total cost is the sum of the infrastructure cost: {{infrastructureCost}} and supplementary cost: {{supplementaryCost}}"
+    "title": "OpenShift details"
   },
   "ocp_supplementary_dashboard": {
     "cost_title": "OpenShift supplementary cost",
     "cost_trend_title": "OpenShift cumulative supplementary cost comparison ({{units}})",
-    "daily_cost_trend_title": "OpenShift daily supplementary cost comparison ({{units}})",
-    "usage_label": "Usage"
+    "daily_cost_trend_title": "OpenShift daily supplementary cost comparison ({{units}})"
   },
   "ocp_usage_dashboard": {
     "cost_title": "OpenShift usage cost",
     "cost_trend_title": "Metering cumulative cost comparison ({{units}})",
     "cpu_title": "OpenShift CPU usage and requests",
     "memory_title": "OpenShift memory usage and requests",
-    "usage_label": "Usage",
     "volume_title": "OpenShift volume usage and requests"
   },
   "onboarding": {
-    "type_label": "Type",
     "type_options": {
       "aws": "Amazon Web Services (AWS)",
       "azure": "Microsoft Azure",
@@ -848,6 +814,8 @@
     "azure_desc": "Raw cost from Azure infrastructure.",
     "gcp": "Google Cloud Platform",
     "gcp_desc": "Raw cost from Google Cloud Platform infrastructure.",
+    "ibm": "IBM Cloud",
+    "ibm_desc": "Raw cost from IBM Cloud infrastructure.",
     "infrastructure": "Infrastructure",
     "ocp": "OpenShift",
     "ocp_cloud": "OpenShift cloud infrastructure",
@@ -861,12 +829,11 @@
       "azure": "Microsoft Azure",
       "azure_cloud": "Microsoft Azure filtered by OpenShift",
       "gcp": "Google Cloud Platform",
+      "ibm": "IBM Cloud",
       "label": "Perspective",
       "ocp_usage": "OpenShift usage",
       "supplementary": "Supplementary"
-    },
-    "title": "Cost Management overview",
-    "title_aria_label": "A description of OpenShift on AWS, OpenShift, AWS, and Azure"
+    }
   },
   "page_cost_models": {
     "assigned_sources": "Assigned sources",
