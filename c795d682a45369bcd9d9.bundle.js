@@ -1,2 +1,0 @@
-(self.webpackChunkkoku_ui=self.webpackChunkkoku_ui||[]).push([[3894],{53894:(t,u,n)=>{"use strict";function e(t){return function(u){var n=u.dispatch,e=u.getState;return function(u){return function(r){return"function"==typeof r?r(n,e,t):u(r)}}}}n.r(u),n.d(u,{default:()=>c});var r=e();r.withExtraArgument=e;const c=r}}]);
-//# sourceMappingURL=c795d682a45369bcd9d9.bundle.js.map
