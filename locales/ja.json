@@ -341,8 +341,7 @@
     "network_title": "Network services cost",
     "storage_title": "Storage services usage",
     "total_cost_tooltip": "This total cost is the sum of the infrastructure cost {{infrastructureCost}} and supplementary cost {{supplementaryCost}}",
-    "usage": "Usage",
-    "widget_subtitle": "{{startDate}} $t(months.{{month}})"
+    "usage": "Usage"
   },
   "description": "Description",
   "details": {
@@ -463,9 +462,7 @@
       "gcp_ocp": "Google Cloud Platform filtered by OpenShift",
       "ibm": "IBM Cloud",
       "ocp": "All OpenShift cost",
-      "ocp_cloud": "All cloud filtered by OpenShift",
-      "ocp_supplementary": "OpenShift supplementary cost",
-      "ocp_usage": "OpenShift usage"
+      "ocp_cloud": "All cloud filtered by OpenShift"
     },
     "title": {
       "aws": "Amazon Web Services - Top 5 Costliest",
@@ -476,9 +473,7 @@
       "gcp_ocp": "Google Cloud Platform filtered by OpenShift - Top 5 Costliest",
       "ibm": "IBM Cloud - Top 5 Costliest",
       "ocp": "All OpenShift cost - Top 5 Costliest",
-      "ocp_cloud": "All cloud filtered by OpenShift - Top 5 Costliest",
-      "ocp_supplementary": "OpenShift supplementary cost - Top 5 Costliest",
-      "ocp_usage": "OpenShift usage - Top 5 Costliest"
+      "ocp_cloud": "All cloud filtered by OpenShift - Top 5 Costliest"
     }
   },
   "export": {
@@ -775,23 +770,6 @@
     "supplementary_cost_desc": "All costs not directly attributed to the infrastructure. These costs are determined by applying a price list within a cost model to OpenShift cluster metrics.",
     "title": "OpenShift details"
   },
-  "ocp_infrastructure_dashboard": {
-    "cost_title": "OpenShift infrastructure cost",
-    "cost_trend_title": "OpenShift cumulative infrastructure cost comparison ({{units}})",
-    "daily_cost_trend_title": "OpenShift daily infrastructure cost comparison ({{units}})"
-  },
-  "ocp_supplementary_dashboard": {
-    "cost_title": "OpenShift supplementary cost",
-    "cost_trend_title": "OpenShift cumulative supplementary cost comparison ({{units}})",
-    "daily_cost_trend_title": "OpenShift daily supplementary cost comparison ({{units}})"
-  },
-  "ocp_usage_dashboard": {
-    "cost_title": "OpenShift usage cost",
-    "cost_trend_title": "Metering cumulative cost comparison ({{units}})",
-    "cpu_title": "OpenShift CPU usage and requests",
-    "memory_title": "OpenShift memory usage and requests",
-    "volume_title": "OpenShift volume usage and requests"
-  },
   "onboarding": {
     "type_options": {
       "aws": "Amazon Web Services (AWS)",
@@ -824,10 +802,7 @@
       "ibm": "IBM Cloud",
       "label": "Perspective",
       "ocp_all": "All OpenShift",
-      "ocp_ocp": "All cloud filtered by OpenShift",
-      "ocp_infrastructure": "OpenShift infrastructure",
-      "ocp_supplementary": "OpenShift supplementary",
-      "ocp_usage": "OpenShift usage"
+      "ocp_ocp": "All cloud filtered by OpenShift"
     }
   },
   "page_cost_models": {
