@@ -1,0 +1,2 @@
+(self.webpackChunkkoku_ui=self.webpackChunkkoku_ui||[]).push([[344],{28945:(e,t,n)=>{"use strict";n.r(t),n.d(t,{default:()=>w});var a=n(28553),r=n(77724),o=n(97522),s=n.n(o),u=n(43476),c=n(16530),l=n(97828),i=n(4349),k=n(78951);(0,r.g)({version:"v1"});const m=(0,k.x)({}),w=()=>{const e=(0,l.e)(window.location.pathname);return s().createElement(u.Provider,{store:m},s().createElement(a.NotificationsPortal,null),s().createElement(c.BrowserRouter,{basename:e},s().createElement(i.Z,{basename:e})))}}}]);
+//# sourceMappingURL=e1d7795a644a74aa64ea.bundle.js.map
