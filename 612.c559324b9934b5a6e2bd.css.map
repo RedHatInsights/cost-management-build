@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://koku-ui/./node_modules/@redhat-cloud-services/frontend-components/Unavailable/Unavailable.css"],"names":[],"mappings":"AAAA;EACE,0CAA0C;AAC5C,C","file":"612.c559324b9934b5a6e2bd.css","sourcesContent":[".ins-c-empty-state__unavailable svg {\n  color: var(--pf-global--danger-color--100);\n}"],"sourceRoot":""}
