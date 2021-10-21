@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkkoku_ui=self.webpackChunkkoku_ui||[]).push([[121],{67121:(e,o,b)=>{b.d(o,{Z:()=>s}),e=b.hmd(e);const s=(n="undefined"!=typeof self?self:"undefined"!=typeof window?window:void 0!==b.g?b.g:e,"function"==typeof(f=n.Symbol)?f.observable?u=f.observable:(u=f("observable"),f.observable=u):u="@@observable",u);var n,u,f}}]);
+//# sourceMappingURL=44d856e4baed1c70eae1.bundle.js.map
