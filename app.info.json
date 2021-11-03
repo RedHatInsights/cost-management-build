@@ -1,12 +1,12 @@
 {
   "app_name": "cost-management",
-  "src_hash": "a7c7d364307726ed6e35baa9ce38875fd0a95a3f",
+  "src_hash": "099b29702bc65f9e766ad2b8e3a50415d314a0ae",
   "src_tag": "",
   "src_branch": "prod-beta",
   "patternfly_dependencies": ["@patternfly/patternfly@4.151.4","@patternfly/react-charts@6.21.9","@patternfly/react-core@4.168.9","@patternfly/react-icons@4.19.9","@patternfly/react-styles@4.18.9","@patternfly/react-table@4.37.9","@patternfly/react-tokens@4.20.9"],
   "travis": {
     "event_type": "push",
-    "build_number": "4093",
-    "build_web_url": "https://app.travis-ci.com/project-koku/koku-ui/builds/240968237"
+    "build_number": "4100",
+    "build_web_url": "https://app.travis-ci.com/project-koku/koku-ui/builds/241075873"
   }
 }
