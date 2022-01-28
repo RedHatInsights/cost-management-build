@@ -1,2 +1,2 @@
 "use strict";(self.webpackChunkkoku_ui=self.webpackChunkkoku_ui||[]).push([[945],{28945:(e,t,a)=>{a.r(t),a.d(t,{default:()=>b});var n=a(18661),o=a(55323),l=a(77724),r=a(32004),s=a(97522),c=a.n(s),u=a(43476),i=a(73727),m=a(64797),k=a(83130),E=a(6152),d=a(49819);(0,l.g)({version:"v1"});const f=(0,d.x)({}),b=()=>{const e=(0,m.e)(window.location.pathname),t=(0,r.K)();return c().createElement(o.Pj,{defaultLocale:"en",locale:t,messages:k[t],onError:console.log},c().createElement(u.Provider,{store:f},c().createElement(n.NotificationsPortal,null),c().createElement(i.VK,{basename:e},c().createElement(E.Z,{basename:e}))))}}}]);
-//# sourceMappingURL=54f29e8ad5c27eff1f0a.bundle.js.map
+//# sourceMappingURL=21cefd5005785fdfda34.bundle.js.map
