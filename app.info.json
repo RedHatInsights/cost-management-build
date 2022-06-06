@@ -1,14 +1,14 @@
 {
   "app_name": "cost-management",
   "node_version": "unknown",
-  "src_hash": "7a3645d6aad5a3af03b3515f668e5899e1119109",
+  "src_hash": "2b504c134bae717e71231c62d02eaa47018688e1",
   "src_tag": "",
   "src_branch": "main",
-  "patternfly_dependencies": ["@patternfly/patternfly@4.194.4","@patternfly/react-charts@6.67.1","@patternfly/react-core@4.214.1","@patternfly/react-icons@4.65.1","@patternfly/react-styles@4.64.1","@patternfly/react-table@4.83.1","@patternfly/react-tokens@4.66.1"],
-  "rh_cloud_services_dependencies": ["@redhat-cloud-services/frontend-components-notifications@3.2.5","@redhat-cloud-services/frontend-components-translations@3.2.4","@redhat-cloud-services/frontend-components-utilities@3.2.16","@redhat-cloud-services/frontend-components@3.8.12","@redhat-cloud-services/rbac-client@1.0.107"],
+  "patternfly_dependencies": ["@patternfly/patternfly@4.196.7","@patternfly/react-charts@6.74.4","@patternfly/react-core@4.221.4","@patternfly/react-icons@4.72.4","@patternfly/react-styles@4.71.4","@patternfly/react-table@4.90.4","@patternfly/react-tokens@4.73.4"],
+  "rh_cloud_services_dependencies": ["@redhat-cloud-services/frontend-components-notifications@3.2.7","@redhat-cloud-services/frontend-components-translations@3.2.4","@redhat-cloud-services/frontend-components-utilities@3.2.16","@redhat-cloud-services/frontend-components@3.9.2","@redhat-cloud-services/rbac-client@1.0.108"],
   "travis": {
     "event_type": "push",
-    "build_number": "4257",
-    "build_web_url": "https://app.travis-ci.com/project-koku/koku-ui/builds/251515581"
+    "build_number": "4258",
+    "build_web_url": "https://app.travis-ci.com/project-koku/koku-ui/builds/251596129"
   }
 }
