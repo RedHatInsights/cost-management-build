@@ -1,10 +1,10 @@
 {
     "costManagement": {
         "entry": [
-            "/beta/apps/cost-management/costManagement.1659990632602.28b4ede0208fc052f069.js"
+            "/beta/apps/cost-management/costManagement.1660674697582.efe9ba64bbda4999100a.js"
         ],
         "modules": [
-            "/beta/apps/cost-management/a5ef0999fc620baef368.bundle.js",
+            "/beta/apps/cost-management/faa7a6cffe2611317a4b.bundle.js",
             "/beta/apps/cost-management/8945.b2445f7a6d6f79acc814.css"
         ]
     }
