@@ -1,0 +1,11 @@
+.ins-c-empty-state__unavailable svg {
+  color: var(--pf-global--danger-color--100);
+}
+.breadcrumbOverride .pf-c-breadcrumb__item:not(:last-child){margin-left:var(--pf-c-breadcrumb__item--MarginRight);margin-right:0}.breadcrumbOverride .pf-c-breadcrumb__item-divider{margin-left:0;margin-right:var(--pf-c-breadcrumb__item-divider--MarginLeft)}
+.modalOverride .pf-c-modal-box__body{margin-top:var(--pf-global--spacer--lg)}.modalOverride .pf-c-modal-box__footer{display:none}
+.modalOverride.pf-c-modal-box{height:700px;width:600px}.modalOverride .pf-c-modal-box__body{margin-top:var(global_spacer_lg)}.modalOverride .pf-c-modal-box__footer{display:none}
+.drawerOverride .pf-c-drawer__content{background-color:unset}
+.selectOverride.pf-c-select{min-width:250px}
+.monthOverMonthOverride div{display:block;margin-right:0;margin-bottom:var(--pf-global--spacer--xs)}.monthOverMonthOverride div.iconOverride.decrease{color:var(--pf-global--success-color--100)}.monthOverMonthOverride div.iconOverride.increase{color:var(--pf-global--danger-color--100)}.monthOverMonthOverride div.iconOverride .fa-sort-up{margin-left:10px}.monthOverMonthOverride div.iconOverride .fa-sort-down{margin-left:10px}.monthOverMonthOverride div.iconOverride .fa-sort-up::before{color:var(--pf-global--danger-color--100)}.monthOverMonthOverride div.iconOverride .fa-sort-down::before{color:var(--pf-global--success-color--100)}.monthOverMonthOverride div.iconOverride span{margin-right:-17px !important}.tableOverride.pf-c-table thead th+th+th+th{text-align:right}.tableOverride.pf-c-table thead th+th+th+th .pf-c-table__button{margin-left:auto}.tableOverride.pf-c-table tbody td+td+td+td{text-align:right}
+
+/*# sourceMappingURL=6321.c71c85e595b4b146042c.css.map*/
