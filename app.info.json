@@ -1,14 +1,14 @@
 {
   "app_name": "cost-management",
   "node_version": "unknown",
-  "src_hash": "e630ec91e97a76e7a5db503fb2c134c110245ea5",
+  "src_hash": "6569ac7ca1f9906623ea80eea467a792dc545b4b",
   "src_tag": "",
   "src_branch": "main",
   "patternfly_dependencies": ["@patternfly/patternfly@4.210.2","@patternfly/react-charts@6.88.7","@patternfly/react-core@4.235.7","@patternfly/react-icons@4.86.7","@patternfly/react-styles@4.85.7","@patternfly/react-table@4.104.7","@patternfly/react-tokens@4.87.7"],
-  "rh_cloud_services_dependencies": ["@redhat-cloud-services/frontend-components-notifications@3.2.9","@redhat-cloud-services/frontend-components-translations@3.2.4","@redhat-cloud-services/frontend-components-utilities@3.2.24","@redhat-cloud-services/frontend-components@3.9.9","@redhat-cloud-services/rbac-client@1.0.110"],
+  "rh_cloud_services_dependencies": ["@redhat-cloud-services/frontend-components-notifications@3.2.9","@redhat-cloud-services/frontend-components-translations@3.2.4","@redhat-cloud-services/frontend-components-utilities@3.2.24","@redhat-cloud-services/frontend-components@3.9.10","@redhat-cloud-services/rbac-client@1.0.110"],
   "travis": {
     "event_type": "push",
-    "build_number": "4341",
-    "build_web_url": "https://app.travis-ci.com/project-koku/koku-ui/builds/255565697"
+    "build_number": "4343",
+    "build_web_url": "https://app.travis-ci.com/project-koku/koku-ui/builds/255569504"
   }
 }
