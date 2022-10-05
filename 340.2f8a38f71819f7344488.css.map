@@ -1,0 +1,1 @@
+{"version":3,"file":"340.2f8a38f71819f7344488.css","mappings":"AACE,wCACE,4C","sources":["webpack://koku-ui/./src/routes/views/overview/overview.scss"],"sourcesContent":[".headerOverride {\n  &.pf-c-page__main-section {\n    --pf-c-page__main-section--PaddingBottom: 0;\n  }\n}\n"],"names":[],"sourceRoot":""}
