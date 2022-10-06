@@ -1,0 +1,10 @@
+.cost-icon{height:120px}.cost-icon.st0{fill:blue !important}
+.ins-c-empty-state__unavailable svg {
+  color: var(--pf-global--danger-color--100);
+}
+.chartOverride :not(foo) svg{overflow:visible}
+.currencyOverride .pf-c-select__menu{right:0}
+.selectOverride.pf-c-select .pf-c-select__menu-item-description{width:max-content}
+.monthOverMonthOverride div{display:block;margin-right:0;margin-bottom:var(--pf-global--spacer--xs)}.monthOverMonthOverride div.iconOverride.decrease{color:var(--pf-global--success-color--100)}.monthOverMonthOverride div.iconOverride.increase{color:var(--pf-global--danger-color--100)}.monthOverMonthOverride div.iconOverride .fa-sort-up{margin-left:10px}.monthOverMonthOverride div.iconOverride .fa-sort-down{margin-left:10px}.monthOverMonthOverride div.iconOverride .fa-sort-up::before{color:var(--pf-global--danger-color--100)}.monthOverMonthOverride div.iconOverride .fa-sort-down::before{color:var(--pf-global--success-color--100)}.monthOverMonthOverride div.iconOverride span{margin-right:-17px !important}.explorerTableOverride.pf-c-table thead th+th+th{min-width:125px}.explorerTableOverride.pf-c-table thead th:first-child,.explorerTableOverride.pf-c-table tbody td:first-child{background-clip:padding-box;background-color:var(--pf-global--BackgroundColor--light-100);left:0px;position:sticky;z-index:199}.explorerTableOverride.pf-c-table thead th:nth-child(2),.explorerTableOverride.pf-c-table tbody td:nth-child(2){background-clip:padding-box;background-color:var(--pf-global--BackgroundColor--light-100);left:45px;min-width:200px;position:sticky;z-index:199}@media(min-width: 1200px){.explorerTableOverride.pf-c-table thead th:nth-child(2),.explorerTableOverride.pf-c-table tbody td:nth-child(2){left:53px}}
+
+/*# sourceMappingURL=214.2306bbba253abae55e06.css.map*/
