@@ -32,11 +32,6 @@ export default defineMessages({
     description: 'Raw cost from Amazon Web Services infrastructure.',
     id: 'awsDesc',
   },
-  awsDetailsTableAriaLabel: {
-    defaultMessage: 'Amazon Web Services details table',
-    description: 'Amazon Web Services details table',
-    id: 'awsDetailsTable',
-  },
   awsDetailsTitle: {
     defaultMessage: 'Amazon Web Services Details',
     description: 'Amazon Web Services Details',
@@ -76,11 +71,6 @@ export default defineMessages({
     defaultMessage: 'Raw cost from Azure infrastructure.',
     description: 'Raw cost from Azure infrastructure.',
     id: 'azureDesc',
-  },
-  azureDetailsTableAriaLabel: {
-    defaultMessage: 'Microsoft Azure details table',
-    description: 'Microsoft Azure details table',
-    id: 'azureDetailsTable',
   },
   azureDetailsTitle: {
     defaultMessage: 'Microsoft Azure details',
@@ -175,6 +165,7 @@ export default defineMessages({
       'node {Cost by Node} ' +
       'org_unit_id {Cost by organizational units} ' +
       'payer_tenant_id {Cost by accounts} ' +
+      'platform {Cost by default projects} ' +
       'product_service {Cost by services} ' +
       'project {Cost by projects} ' +
       'region {Cost by regions} ' +
@@ -193,22 +184,8 @@ export default defineMessages({
     id: 'breakdownTitle',
   },
   breakdownTotalCostDate: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {{count, plural, one {{value} total cost (January {startDate})} other {{value} total cost (January {startDate}-{endDate})}}} ' +
-      '1 {{count, plural, one {{value} total cost (February {startDate})} other {{value} total cost (February {startDate}-{endDate})}}} ' +
-      '2 {{count, plural, one {{value} total cost (March {startDate})} other {{value} total cost (March {startDate}-{endDate})}}} ' +
-      '3 {{count, plural, one {{value} total cost (April {startDate})} other {{value} total cost (April {startDate}-{endDate})}}} ' +
-      '4 {{count, plural, one {{value} total cost (May {startDate})} other {{value} total cost (May {startDate}-{endDate})}}} ' +
-      '5 {{count, plural, one {{value} total cost (June {startDate})} other {{value} total cost (June {startDate}-{endDate})}}} ' +
-      '6 {{count, plural, one {{value} total cost (July {startDate})} other {{value} total cost (July {startDate}-{endDate})}}} ' +
-      '7 {{count, plural, one {{value} total cost (August {startDate})} other {{value} total cost (August {startDate}-{endDate})}}} ' +
-      '8 {{count, plural, one {{value} total cost (September {startDate})} other {{value} total cost (September {startDate}-{endDate})}}} ' +
-      '9 {{count, plural, one {{value} total cost (October {startDate})} other {{value} total cost (October {startDate}-{endDate})}}} ' +
-      '10 {{count, plural, one {{value} total cost (November {startDate})} other {{value} total cost (November {startDate}-{endDate})}}} ' +
-      '11 {{count, plural, one {{value} total cost (December {startDate})} other {{value} total cost (December {startDate}-{endDate})}}} ' +
-      'other {}}',
-    description: 'Break down total cost by date',
+    defaultMessage: '{value} total cost ({dateRange})',
+    description: '{value} total cost (January 1-31)',
     id: 'breakdownTotalCostDate',
   },
   calculationType: {
@@ -222,22 +199,8 @@ export default defineMessages({
     id: 'cancel',
   },
   chartCostForecastConeLegendLabel: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {{count, plural, one {Cost confidence (Jan {startDate})} other {Cost confidence (Jan {startDate}-{endDate})}}} ' +
-      '1 {{count, plural, one {Cost confidence (Feb {startDate})} other {Cost confidence (Feb {startDate}-{endDate})}}} ' +
-      '2 {{count, plural, one {Cost confidence (Mar {startDate})} other {Cost confidence (Mar {startDate}-{endDate})}}} ' +
-      '3 {{count, plural, one {Cost confidence (Apr {startDate})} other {Cost confidence (Apr {startDate}-{endDate})}}} ' +
-      '4 {{count, plural, one {Cost confidence (May {startDate})} other {Cost confidence (May {startDate}-{endDate})}}} ' +
-      '5 {{count, plural, one {Cost confidence (Jun {startDate})} other {Cost confidence (Jun {startDate}-{endDate})}}} ' +
-      '6 {{count, plural, one {Cost confidence (Jul {startDate})} other {Cost confidence (Jul {startDate}-{endDate})}}} ' +
-      '7 {{count, plural, one {Cost confidence (Aug {startDate})} other {Cost confidence (Aug {startDate}-{endDate})}}} ' +
-      '8 {{count, plural, one {Cost confidence (Sep {startDate})} other {Cost confidence (Sep {startDate}-{endDate})}}} ' +
-      '9 {{count, plural, one {Cost confidence (Oct {startDate})} other {Cost confidence (Oct {startDate}-{endDate})}}} ' +
-      '10 {{count, plural, one {Cost confidence (Nov {startDate})} other {Cost confidence (Nov {startDate}-{endDate})}}} ' +
-      '11 {{count, plural, one {Cost confidence (Dec {startDate})} other {Cost confidence (Dec {startDate}-{endDate})}}} ' +
-      'other {}}',
-    description: 'Cost forecast cone date label',
+    defaultMessage: 'Cost confidence ({dateRange})',
+    description: 'Cost confidence (Jan 1-31)',
     id: 'chartCostForecastConeLegendLabel',
   },
   chartCostForecastConeLegendNoDataLabel: {
@@ -246,22 +209,8 @@ export default defineMessages({
     id: 'chartCostForecastConeLegendNoDataLabel',
   },
   chartCostForecastConeLegendTooltip: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {Cost confidence (Jan)} ' +
-      '1 {Cost confidence (Feb)} ' +
-      '2 {Cost confidence (Mar)} ' +
-      '3 {Cost confidence (Apr)} ' +
-      '4 {Cost confidence (May)} ' +
-      '5 {Cost confidence (Jun)} ' +
-      '6 {Cost confidence (Jul)} ' +
-      '7 {Cost confidence (Aug)} ' +
-      '8 {Cost confidence (Sep)} ' +
-      '9 {Cost confidence (Oct)} ' +
-      '10 {Cost confidence (Nov)} ' +
-      '11 {Cost confidence (Dec)} ' +
-      'other {}}',
-    description: 'Cost forecast confidence date label tooltip',
+    defaultMessage: 'Cost confidence ({month})',
+    description: 'Cost confidence (Jan)',
     id: 'chartCostForecastConeLegendTooltip',
   },
   chartCostForecastConeTooltip: {
@@ -270,22 +219,8 @@ export default defineMessages({
     id: 'chartCostForecastConeTooltip',
   },
   chartCostForecastLegendLabel: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {{count, plural, one {Cost forecast (Jan {startDate})} other {Cost forecast (Jan {startDate}-{endDate})}}} ' +
-      '1 {{count, plural, one {Cost forecast (Feb {startDate})} other {Cost forecast (Feb {startDate}-{endDate})}}} ' +
-      '2 {{count, plural, one {Cost forecast (Mar {startDate})} other {Cost forecast (Mar {startDate}-{endDate})}}} ' +
-      '3 {{count, plural, one {Cost forecast (Apr {startDate})} other {Cost forecast (Apr {startDate}-{endDate})}}} ' +
-      '4 {{count, plural, one {Cost forecast (May {startDate})} other {Cost forecast (May {startDate}-{endDate})}}} ' +
-      '5 {{count, plural, one {Cost forecast (Jun {startDate})} other {Cost forecast (Jun {startDate}-{endDate})}}} ' +
-      '6 {{count, plural, one {Cost forecast (Jul {startDate})} other {Cost forecast (Jul {startDate}-{endDate})}}} ' +
-      '7 {{count, plural, one {Cost forecast (Aug {startDate})} other {Cost forecast (Aug {startDate}-{endDate})}}} ' +
-      '8 {{count, plural, one {Cost forecast (Sep {startDate})} other {Cost forecast (Sep {startDate}-{endDate})}}} ' +
-      '9 {{count, plural, one {Cost forecast (Oct {startDate})} other {Cost forecast (Oct {startDate}-{endDate})}}} ' +
-      '10 {{count, plural, one {Cost forecast (Nov {startDate})} other {Cost forecast (Nov {startDate}-{endDate})}}} ' +
-      '11 {{count, plural, one {Cost forecast (Dec {startDate})} other {Cost forecast (Dec {startDate}-{endDate})}}} ' +
-      'other {}}',
-    description: 'Cost forecast date label',
+    defaultMessage: 'Cost forecast ({dateRange})',
+    description: 'Cost forecast (Jan 1-31)',
     id: 'chartCostForecastLegendLabel',
   },
   chartCostForecastLegendNoDataLabel: {
@@ -294,41 +229,13 @@ export default defineMessages({
     id: 'chartCostForecastLegendNoDataLabel',
   },
   chartCostForecastLegendTooltip: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {Cost forecast (Jan)} ' +
-      '1 {Cost forecast (Feb)} ' +
-      '2 {Cost forecast (Mar)} ' +
-      '3 {Cost forecast (Apr)} ' +
-      '4 {Cost forecast (May)} ' +
-      '5 {Cost forecast (Jun)} ' +
-      '6 {Cost forecast (Jul)} ' +
-      '7 {Cost forecast (Aug)} ' +
-      '8 {Cost forecast (Sep)} ' +
-      '9 {Cost forecast (Oct)} ' +
-      '10 {Cost forecast (Nov)} ' +
-      '11 {Cost forecast (Dec)} ' +
-      'other {}}',
-    description: 'Cost forecast date label tooltip',
+    defaultMessage: 'Cost forecast ({month})',
+    description: 'Cost forecast (Jan 1-31)',
     id: 'chartCostForecastLegendTooltip',
   },
   chartCostLegendLabel: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {{count, plural, one {Cost (Jan {startDate})} other {Cost (Jan {startDate}-{endDate})}}} ' +
-      '1 {{count, plural, one {Cost (Feb {startDate})} other {Cost (Feb {startDate}-{endDate})}}} ' +
-      '2 {{count, plural, one {Cost (Mar {startDate})} other {Cost (Mar {startDate}-{endDate})}}} ' +
-      '3 {{count, plural, one {Cost (Apr {startDate})} other {Cost (Apr {startDate}-{endDate})}}} ' +
-      '4 {{count, plural, one {Cost (May {startDate})} other {Cost (May {startDate}-{endDate})}}} ' +
-      '5 {{count, plural, one {Cost (Jun {startDate})} other {Cost (Jun {startDate}-{endDate})}}} ' +
-      '6 {{count, plural, one {Cost (Jul {startDate})} other {Cost (Jul {startDate}-{endDate})}}} ' +
-      '7 {{count, plural, one {Cost (Aug {startDate})} other {Cost (Aug {startDate}-{endDate})}}} ' +
-      '8 {{count, plural, one {Cost (Sep {startDate})} other {Cost (Sep {startDate}-{endDate})}}} ' +
-      '9 {{count, plural, one {Cost (Oct {startDate})} other {Cost (Oct {startDate}-{endDate})}}} ' +
-      '10 {{count, plural, one {Cost (Nov {startDate})} other {Cost (Nov {startDate}-{endDate})}}} ' +
-      '11 {{count, plural, one {Cost (Dec {startDate})} other {Cost (Dec {startDate}-{endDate})}}} ' +
-      'other {}}',
-    description: 'Cost date label',
+    defaultMessage: 'Cost ({dateRange})',
+    description: 'Cost (Jan 1-31)',
     id: 'chartCostLegendLabel',
   },
   chartCostLegendNoDataLabel: {
@@ -337,41 +244,13 @@ export default defineMessages({
     id: 'chartCostLegendNoDataLabel',
   },
   chartCostLegendTooltip: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {Cost (Jan)} ' +
-      '1 {Cost (Feb)} ' +
-      '2 {Cost (Mar)} ' +
-      '3 {Cost (Apr)} ' +
-      '4 {Cost (May)} ' +
-      '5 {Cost (Jun)} ' +
-      '6 {Cost (Jul)} ' +
-      '7 {Cost (Aug)} ' +
-      '8 {Cost (Sep)} ' +
-      '9 {Cost (Oct)} ' +
-      '10 {Cost (Nov)} ' +
-      '11 {Cost (Dec)} ' +
-      'other {}}',
-    description: 'Cost (month)',
+    defaultMessage: 'Cost ({month})',
+    description: 'Cost (Jan)',
     id: 'chartCostLegendTooltip',
   },
   chartCostSupplementaryLegendLabel: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {{count, plural, one {Supplementary cost (Jan {startDate})} other {Supplementary cost (Jan {startDate}-{endDate})}}} ' +
-      '1 {{count, plural, one {Supplementary cost (Feb {startDate})} other {Supplementary cost (Feb {startDate}-{endDate})}}} ' +
-      '2 {{count, plural, one {Supplementary cost (Mar {startDate})} other {Supplementary cost (Mar {startDate}-{endDate})}}} ' +
-      '3 {{count, plural, one {Supplementary cost (Apr {startDate})} other {Supplementary cost (Apr {startDate}-{endDate})}}} ' +
-      '4 {{count, plural, one {Supplementary cost (May {startDate})} other {Supplementary cost (May {startDate}-{endDate})}}} ' +
-      '5 {{count, plural, one {Supplementary cost (Jun {startDate})} other {Supplementary cost (Jun {startDate}-{endDate})}}} ' +
-      '6 {{count, plural, one {Supplementary cost (Jul {startDate})} other {Supplementary cost (Jul {startDate}-{endDate})}}} ' +
-      '7 {{count, plural, one {Supplementary cost (Aug {startDate})} other {Supplementary cost (Aug {startDate}-{endDate})}}} ' +
-      '8 {{count, plural, one {Supplementary cost (Sep {startDate})} other {Supplementary cost (Sep {startDate}-{endDate})}}} ' +
-      '9 {{count, plural, one {Supplementary cost (Oct {startDate})} other {Supplementary cost (Oct {startDate}-{endDate})}}} ' +
-      '10 {{count, plural, one {Supplementary cost (Nov {startDate})} other {Supplementary cost (Nov {startDate}-{endDate})}}} ' +
-      '11 {{count, plural, one {Supplementary cost (Dec {startDate})} other {Supplementary cost (Dec {startDate}-{endDate})}}} ' +
-      'other {}}',
-    description: 'Supplementary cost date label',
+    defaultMessage: 'Supplementary cost ({dateRange})',
+    description: 'Supplementary cost (Jan 1-31)',
     id: 'chartCostSupplementaryLegendLabel',
   },
   chartCostSupplementaryLegendNoDataLabel: {
@@ -380,42 +259,9 @@ export default defineMessages({
     id: 'chartCostSupplementaryLegendNoDataLabel',
   },
   chartCostSupplementaryLegendTooltip: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {Supplementary cost (Jan)} ' +
-      '1 {Supplementary cost (Feb)} ' +
-      '2 {Supplementary cost (Mar)} ' +
-      '3 {Supplementary cost (Apr)} ' +
-      '4 {Supplementary cost (May)} ' +
-      '5 {Supplementary cost (Jun)} ' +
-      '6 {Supplementary cost (Jul)} ' +
-      '7 {Supplementary cost (Aug)} ' +
-      '8 {Supplementary cost (Sep)} ' +
-      '9 {Supplementary cost (Oct)} ' +
-      '10 {Supplementary cost (Nov)} ' +
-      '11 {Supplementary cost (Dec)} ' +
-      'other {}}',
-    description: 'Supplementary cost (month)',
+    defaultMessage: 'Supplementary cost ({month})',
+    description: 'Supplementary cost (Jan)',
     id: 'chartCostSupplementaryLegendTooltip',
-  },
-  chartDateRange: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {{count, plural, one {Jan {startDate} {year}} other {{startDate}-{endDate} Jan {year}}}} ' +
-      '1 {{count, plural, one {Feb {startDate} {year}} other {{startDate}-{endDate} Feb {year}}}} ' +
-      '2 {{count, plural, one {Mar {startDate} {year}} other {{startDate}-{endDate} Mar {year}}}} ' +
-      '3 {{count, plural, one {Apr {startDate} {year}} other {{startDate}-{endDate} Apr {year}}}} ' +
-      '4 {{count, plural, one {May {startDate} {year}} other {{startDate}-{endDate} May {year}}}} ' +
-      '5 {{count, plural, one {Jun {startDate} {year}} other {{startDate}-{endDate} Jun {year}}}} ' +
-      '6 {{count, plural, one {Jul {startDate} {year}} other {{startDate}-{endDate} Jul {year}}}} ' +
-      '7 {{count, plural, one {Aug {startDate} {year}} other {{startDate}-{endDate} Aug {year}}}} ' +
-      '8 {{count, plural, one {Sep {startDate} {year}} other {{startDate}-{endDate} Sep {year}}}} ' +
-      '9 {{count, plural, one {Oct {startDate} {year}} other {{startDate}-{endDate} Oct {year}}}} ' +
-      '10 {{count, plural, one {Nov {startDate} {year}} other {{startDate}-{endDate} Nov {year}}}} ' +
-      '11 {{count, plural, one {Dec {startDate} {year}} other {{startDate}-{endDate} Dec {year}}}} ' +
-      'other {}}',
-    description: 'Date range that handles singular and plural',
-    id: 'chartDateRange',
   },
   chartDayOfTheMonth: {
     defaultMessage: 'Day {day}',
@@ -423,22 +269,8 @@ export default defineMessages({
     id: 'chartDayOfTheMonth',
   },
   chartLimitLegendLabel: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {{count, plural, one {Limit (Jan {startDate})} other {Limit (Jan {startDate}-{endDate})}}} ' +
-      '1 {{count, plural, one {Limit (Feb {startDate})} other {Limit (Feb {startDate}-{endDate})}}} ' +
-      '2 {{count, plural, one {Limit (Mar {startDate})} other {Limit (Mar {startDate}-{endDate})}}} ' +
-      '3 {{count, plural, one {Limit (Apr {startDate})} other {Limit (Apr {startDate}-{endDate})}}} ' +
-      '4 {{count, plural, one {Limit (May {startDate})} other {Limit (May {startDate}-{endDate})}}} ' +
-      '5 {{count, plural, one {Limit (Jun {startDate})} other {Limit (Jun {startDate}-{endDate})}}} ' +
-      '6 {{count, plural, one {Limit (Jul {startDate})} other {Limit (Jul {startDate}-{endDate})}}} ' +
-      '7 {{count, plural, one {Limit (Aug {startDate})} other {Limit (Aug {startDate}-{endDate})}}} ' +
-      '8 {{count, plural, one {Limit (Sep {startDate})} other {Limit (Sep {startDate}-{endDate})}}} ' +
-      '9 {{count, plural, one {Limit (Oct {startDate})} other {Limit (Oct {startDate}-{endDate})}}} ' +
-      '10 {{count, plural, one {Limit (Nov {startDate})} other {Limit (Nov {startDate}-{endDate})}}} ' +
-      '11 {{count, plural, one {Limit (Dec {startDate})} other {Limit (Dec {startDate}-{endDate})}}} ' +
-      'other {}}',
-    description: 'Limit date label',
+    defaultMessage: 'Limit ({dateRange})',
+    description: 'Limit (Jan 1-31)',
     id: 'chartLimitLegendLabel',
   },
   chartLimitLegendNoDataLabel: {
@@ -447,22 +279,8 @@ export default defineMessages({
     id: 'chartLimitLegendNoDataLabel',
   },
   chartLimitLegendTooltip: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {Limit (Jan)} ' +
-      '1 {Limit (Feb)} ' +
-      '2 {Limit (Mar)} ' +
-      '3 {Limit (Apr)} ' +
-      '4 {Limit (May)} ' +
-      '5 {Limit (Jun)} ' +
-      '6 {Limit (Jul)} ' +
-      '7 {Limit (Aug)} ' +
-      '8 {Limit (Sep)} ' +
-      '9 {Limit (Oct)} ' +
-      '10 {Limit (Nov)} ' +
-      '11 {Limit (Dec)} ' +
-      'other {}}',
-    description: 'Limit (month)',
+    defaultMessage: 'Limit ({month})',
+    description: 'Limit (Jan)',
     id: 'chartLimitLegendTooltip',
   },
   chartNoData: {
@@ -476,22 +294,8 @@ export default defineMessages({
     id: 'chartOthers',
   },
   chartRequestsLegendLabel: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {{count, plural, one {Requests (Jan {startDate})} other {Requests (Jan {startDate}-{endDate})}}} ' +
-      '1 {{count, plural, one {Requests (Feb {startDate})} other {Requests (Feb {startDate}-{endDate})}}} ' +
-      '2 {{count, plural, one {Requests (Mar {startDate})} other {Requests (Mar {startDate}-{endDate})}}} ' +
-      '3 {{count, plural, one {Requests (Apr {startDate})} other {Requests (Apr {startDate}-{endDate})}}} ' +
-      '4 {{count, plural, one {Requests (May {startDate})} other {Requests (May {startDate}-{endDate})}}} ' +
-      '5 {{count, plural, one {Requests (Jun {startDate})} other {Requests (Jun {startDate}-{endDate})}}} ' +
-      '6 {{count, plural, one {Requests (Jul {startDate})} other {Requests (Jul {startDate}-{endDate})}}} ' +
-      '7 {{count, plural, one {Requests (Aug {startDate})} other {Requests (Aug {startDate}-{endDate})}}} ' +
-      '8 {{count, plural, one {Requests (Sep {startDate})} other {Requests (Sep {startDate}-{endDate})}}} ' +
-      '9 {{count, plural, one {Requests (Oct {startDate})} other {Requests (Oct {startDate}-{endDate})}}} ' +
-      '10 {{count, plural, one {Requests (Nov {startDate})} other {Requests (Nov {startDate}-{endDate})}}} ' +
-      '11 {{count, plural, one {Requests (Dec {startDate})} other {Requests (Dec {startDate}-{endDate})}}} ' +
-      'other {}}',
-    description: 'Requests date label',
+    defaultMessage: 'Requests ({dateRange})',
+    description: 'Requests (Jan 1-31)',
     id: 'chartRequestLegendLabel',
   },
   chartRequestsLegendNoDataLabel: {
@@ -500,41 +304,13 @@ export default defineMessages({
     id: 'chartRequestsLegendNoDataLabel',
   },
   chartRequestsLegendTooltip: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {Requests (Jan)} ' +
-      '1 {Requests (Feb)} ' +
-      '2 {Requests (Mar)} ' +
-      '3 {Requests (Apr)} ' +
-      '4 {Requests (May)} ' +
-      '5 {Requests (Jun)} ' +
-      '6 {Requests (Jul)} ' +
-      '7 {Requests (Aug)} ' +
-      '8 {Requests (Sep)} ' +
-      '9 {Requests (Oct)} ' +
-      '10 {Requests (Nov)} ' +
-      '11 {Requests (Dec)} ' +
-      'other {}}',
-    description: 'Requests (month)',
+    defaultMessage: 'Requests ({month})',
+    description: 'Requests (Jan)',
     id: 'chartRequestLegendTooltip',
   },
   chartUsageLegendLabel: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {{count, plural, one {Usage (Jan {startDate})} other {Usage (Jan {startDate}-{endDate})}}} ' +
-      '1 {{count, plural, one {Usage (Feb {startDate})} other {Usage (Feb {startDate}-{endDate})}}} ' +
-      '2 {{count, plural, one {Usage (Mar {startDate})} other {Usage (Mar {startDate}-{endDate})}}} ' +
-      '3 {{count, plural, one {Usage (Apr {startDate})} other {Usage (Apr {startDate}-{endDate})}}} ' +
-      '4 {{count, plural, one {Usage (May {startDate})} other {Usage (May {startDate}-{endDate})}}} ' +
-      '5 {{count, plural, one {Usage (Jun {startDate})} other {Usage (Jun {startDate}-{endDate})}}} ' +
-      '6 {{count, plural, one {Usage (Jul {startDate})} other {Usage (Jul {startDate}-{endDate})}}} ' +
-      '7 {{count, plural, one {Usage (Aug {startDate})} other {Usage (Aug {startDate}-{endDate})}}} ' +
-      '8 {{count, plural, one {Usage (Sep {startDate})} other {Usage (Sep {startDate}-{endDate})}}} ' +
-      '9 {{count, plural, one {Usage (Oct {startDate})} other {Usage (Oct {startDate}-{endDate})}}} ' +
-      '10 {{count, plural, one {Usage (Nov {startDate})} other {Usage (Nov {startDate}-{endDate})}}} ' +
-      '11 {{count, plural, one {Usage (Dec {startDate})} other {Usage (Dec {startDate}-{endDate})}}} ' +
-      'other {}}',
-    description: 'Usage (month {startDate})',
+    defaultMessage: 'Usage ({dateRange})',
+    description: 'Usage (Jan 1-31)',
     id: 'chartUsageLegendLabel',
   },
   chartUsageLegendNoDataLabel: {
@@ -543,22 +319,8 @@ export default defineMessages({
     id: 'chartUsageLegendNoDataLabel',
   },
   chartUsageLegendTooltip: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {Usage (Jan)} ' +
-      '1 {Usage (Feb)} ' +
-      '2 {Usage (Mar)} ' +
-      '3 {Usage (Apr)} ' +
-      '4 {Usage (May)} ' +
-      '5 {Usage (Jun)} ' +
-      '6 {Usage (Jul)} ' +
-      '7 {Usage (Aug)} ' +
-      '8 {Usage (Sep)} ' +
-      '9 {Usage (Oct)} ' +
-      '10 {Usage (Nov)} ' +
-      '11 {Usage (Dec)} ' +
-      'other {}}',
-    description: 'Usage (month)',
+    defaultMessage: 'Usage ({month})',
+    description: 'Usage (Jan)',
     id: 'chartUsageLegendTooltip',
   },
   close: {
@@ -580,6 +342,16 @@ export default defineMessages({
     defaultMessage: 'Cost calculations',
     description: 'Cost calculations',
     id: 'costCalculations',
+  },
+  costCalculationsOptional: {
+    defaultMessage: 'Cost calculations (optional)',
+    description: 'Cost calculations (optional)',
+    id: 'costCalculationsOptional',
+  },
+  costDistribution: {
+    defaultMessage: 'Cost distribution',
+    description: 'Cost distribution',
+    id: 'costDistribution',
   },
   costManagement: {
     defaultMessage: 'Cost Management',
@@ -876,11 +648,6 @@ export default defineMessages({
     defaultMessage: 'Tag rates',
     description: 'Tag rates',
     id: 'costModelsTagRateTableAriaLabel',
-  },
-  costModelsTagRateTableDefault: {
-    defaultMessage: 'Default',
-    description: 'Default',
-    id: 'costModelsTagRateTableDefault',
   },
   costModelsTagRateTableKey: {
     defaultMessage: 'Tag key',
@@ -1264,6 +1031,36 @@ export default defineMessages({
     description: 'total cost is the sum of the infrastructure cost and supplementary cost',
     id: 'dashboardTotalCostTooltip',
   },
+  dataTableAriaLabel: {
+    defaultMessage: 'Details table',
+    description: 'Details table',
+    id: 'dataTableAriaLabel',
+  },
+  datePickerAfterError: {
+    defaultMessage: 'Date is after the allowable range',
+    description: 'Date is after the allowable range',
+    id: 'datePickerAfterError',
+  },
+  datePickerBeforeError: {
+    defaultMessage: 'Date is before the allowable range',
+    description: 'Date is before the allowable range',
+    id: 'datePickerBeforeError',
+  },
+  datePickerEndDateAriaLabel: {
+    defaultMessage: 'End date',
+    description: 'End date',
+    id: 'datePickerEndDateAriaLabel',
+  },
+  datePickerStartDateAriaLabel: {
+    defaultMessage: 'Start date',
+    description: 'Start date',
+    id: 'datePickerStartDateAriaLabel',
+  },
+  default: {
+    defaultMessage: 'Default',
+    description: 'Default',
+    id: 'default',
+  },
   delete: {
     defaultMessage: 'Delete',
     description: 'Delete',
@@ -1428,6 +1225,20 @@ export default defineMessages({
     description: 'Discount (-)',
     id: 'discountMinus',
   },
+  distribute: {
+    defaultMessage: 'Distribute',
+    description: 'Distribute',
+    id: 'distribute',
+  },
+  distributeCosts: {
+    defaultMessage:
+      '{value, select, ' +
+      'true {Distribute {type, select, platform {platform} workers {workers} other {}} costs}' +
+      'false {Do not distribute {type, select, platform {platform} workers {workers} other {}} costs}' +
+      'other {}}',
+    description: 'distribute costs',
+    id: 'distributeCosts',
+  },
   distributionModelDesc: {
     defaultMessage:
       'This choice is for users to direct how their raw costs are distributed either by CPU or Memory on the project level breakdowns.',
@@ -1439,6 +1250,16 @@ export default defineMessages({
     defaultMessage: 'Distribution type',
     description: 'Distribution type',
     id: 'distributionType',
+  },
+  distributionTypeDescription: {
+    defaultMessage: 'Distribute costs based on {type} usage',
+    description: 'Distribution type description',
+    id: 'distributionTypeDescription',
+  },
+  doNotDistribute: {
+    defaultMessage: 'Do not distribute',
+    description: 'Do not distribute',
+    id: 'doNotDistribute',
   },
   docsAddOcpSources: {
     defaultMessage:
@@ -1460,6 +1281,18 @@ export default defineMessages({
     description:
       'https://access.redhat.com/documentation/en-us/cost_management_service/2022/html-single/using_cost_models/index#cost-model-terminology',
     id: 'docsCostModelTerminology',
+  },
+  docsCostModelsDistribution: {
+    defaultMessage:
+      'https://access.redhat.com/documentation/en-us/cost_management_service/2022/html/using_cost_models/assembly-setting-up-cost-models#creating-an-AWS-Azure-cost-model_setting-up-cost-models',
+    description: 'url for cost models distribution',
+    id: 'docsCostModelsDistribution',
+  },
+  docsCostModelsMarkup: {
+    defaultMessage:
+      'https://access.redhat.com/documentation/en-us/cost_management_service/2022/html/using_cost_models/assembly-setting-up-cost-models#creating-an-AWS-Azure-cost-model_setting-up-cost-models',
+    description: 'url for cost models markup',
+    id: 'docsCostModelsMarkup',
   },
   docsUsingCostModels: {
     defaultMessage:
@@ -1507,6 +1340,11 @@ export default defineMessages({
     defaultMessage: 'No match found',
     description: 'No match found',
     id: 'emptyFilterStateTitle',
+  },
+  end: {
+    defaultMessage: 'End',
+    description: 'End',
+    id: 'end',
   },
   equalsSymbol: {
     defaultMessage: '=',
@@ -1558,25 +1396,6 @@ export default defineMessages({
     description: 'Cost Explorer Chart',
     id: 'explorerChartAriaTitle',
   },
-  explorerChartDate: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {Jan {date}} ' +
-      '1 {Feb {date}} ' +
-      '2 {Mar {date}} ' +
-      '3 {Apr {date}} ' +
-      '4 {May {date}} ' +
-      '5 {Jun {date}} ' +
-      '6 {Jul {date}} ' +
-      '7 {Aug {date}} ' +
-      '8 {Sep {date}} ' +
-      '9 {Oct {date}} ' +
-      '10 {Nov {date}} ' +
-      '11 {Dec {date}} ' +
-      'other {}}',
-    description: 'Month {date}',
-    id: 'explorerDateColumn',
-  },
   explorerChartTitle: {
     defaultMessage:
       '{value, select, ' +
@@ -1598,10 +1417,12 @@ export default defineMessages({
   explorerDateRange: {
     defaultMessage:
       '{value, select, ' +
+      'custom {Custom}' +
       'current_month_to_date {Month to date} ' +
       'last_ninety_days {Last 90 days} ' +
       'last_sixty_days {Last 60 days} ' +
       'last_thirty_days {Last 30 days} ' +
+      'previous_month {Previous month} ' +
       'previous_month_to_date {Previous month and month to date} ' +
       'other {}}',
     description: 'Date range based on {value}',
@@ -1952,22 +1773,8 @@ export default defineMessages({
     id: 'filterByValues',
   },
   forDate: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {{count, plural, one {{value} for January {startDate}} other {{value} for January {startDate}-{endDate}}}} ' +
-      '1 {{count, plural, one {{value} for February {startDate}} other {{value} for February {startDate}-{endDate}}}} ' +
-      '2 {{count, plural, one {{value} for March {startDate}} other {{value} for March {startDate}-{endDate}}}} ' +
-      '3 {{count, plural, one {{value} for April {startDate}} other {{value} for April {startDate}-{endDate}}}} ' +
-      '4 {{count, plural, one {{value} for May {startDate}} other {{value} for May {startDate}-{endDate}}}} ' +
-      '5 {{count, plural, one {{value} for June {startDate}} other {{value} for June {startDate}-{endDate}}}} ' +
-      '6 {{count, plural, one {{value} for July {startDate}} other {{value} for July {startDate}-{endDate}}}} ' +
-      '7 {{count, plural, one {{value} for August {startDate}} other {{value} for August {startDate}-{endDate}}}} ' +
-      '8 {{count, plural, one {{value} for September {startDate}} other {{value} for September {startDate}-{endDate}}}} ' +
-      '9 {{count, plural, one {{value} for October {startDate}} other {{value} for October {startDate}-{endDate}}}} ' +
-      '10 {{count, plural, one {{value} for November {startDate}} other {{value} for November {startDate}-{endDate}}}} ' +
-      '11 {{count, plural, one {{value} for December {startDate}} other {{value} for December {startDate}-{endDate}}}} ' +
-      'other {}}',
-    description: '{value} for date range',
+    defaultMessage: '{value} for {dateRange}',
+    description: '{value} for {Jan 1-31}',
     id: 'forDate',
   },
   gcp: {
@@ -1999,11 +1806,6 @@ export default defineMessages({
     defaultMessage: 'Raw cost from Google Cloud Platform infrastructure.',
     description: 'Raw cost from Google Cloud Platform infrastructure.',
     id: 'gcpDesc',
-  },
-  gcpDetailsTableAriaLabel: {
-    defaultMessage: 'Google Cloud Platform details table',
-    description: 'Google Cloud Platform details table',
-    id: 'gcpDetailsTable',
   },
   gcpDetailsTitle: {
     defaultMessage: 'Google Cloud Platform Details',
@@ -2178,11 +1980,6 @@ export default defineMessages({
     defaultMessage: 'Raw cost from IBM Cloud infrastructure.',
     description: 'Raw cost from IBM Cloud infrastructure.',
     id: 'ibmDesc',
-  },
-  ibmDetailsTableAriaLabel: {
-    defaultMessage: 'IBM Cloud details table',
-    description: 'IBM Cloud details table',
-    id: 'ibmDetailsTable',
   },
   ibmDetailsTitle: {
     defaultMessage: 'IBM Cloud Details',
@@ -2386,22 +2183,8 @@ export default defineMessages({
     id: 'no',
   },
   noDataForDate: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {{count, plural, one {No data available for Jan {startDate}} other {No data available for Jan {startDate}-{endDate}}}} ' +
-      '1 {{count, plural, one {No data available for Feb {startDate}} other {No data available for Feb {startDate}-{endDate}}}} ' +
-      '2 {{count, plural, one {No data available for Mar {startDate}} other {No data available for Mar {startDate}-{endDate}}}} ' +
-      '3 {{count, plural, one {No data available for Apr {startDate}} other {No data available for Apr {startDate}-{endDate}}}} ' +
-      '4 {{count, plural, one {No data available for May {startDate}} other {No data available for May {startDate}-{endDate}}}} ' +
-      '5 {{count, plural, one {No data available for Jun {startDate}} other {No data available for Jun {startDate}-{endDate}}}} ' +
-      '6 {{count, plural, one {No data available for Jul {startDate}} other {No data available for Jul {startDate}-{endDate}}}} ' +
-      '7 {{count, plural, one {No data available for Aug {startDate}} other {No data available for Aug {startDate}-{endDate}}}} ' +
-      '8 {{count, plural, one {No data available for Sep {startDate}} other {No data available for Sep {startDate}-{endDate}}}} ' +
-      '9 {{count, plural, one {No data available for Oct {startDate}} other {No data available for Oct {startDate}-{endDate}}}} ' +
-      '10 {{count, plural, one {No data available for Nov {startDate}} other {No data available for Nov {startDate}-{endDate}}}} ' +
-      '11 {{count, plural, one {No data available for Dec {startDate}} other {No data available for Dec {startDate}-{endDate}}}} ' +
-      'other {}}',
-    description: 'No data available for date range',
+    defaultMessage: 'No data available for {dateRange}',
+    description: 'No data available for Jan 1-31',
     id: 'noDataForDate',
   },
   noDataStateDesc: {
@@ -2589,11 +2372,6 @@ export default defineMessages({
     description: 'Raw cost from Oracle Cloud Infrastructure.',
     id: 'ociDesc',
   },
-  ociDetailsTableAriaLabel: {
-    defaultMessage: 'Oracle Cloud Infrastructure details table',
-    description: 'Oracle Cloud Infrastructure details table',
-    id: 'ociDetailsTable',
-  },
   ociDetailsTitle: {
     defaultMessage: 'Oracle Cloud Infrastructure details',
     description: 'Oracle Cloud Infrastructure details',
@@ -2680,11 +2458,6 @@ export default defineMessages({
     description:
       'All costs not directly attributed to the infrastructure. These costs are determined by applying a price list within a cost model to OpenShift cluster metrics.',
     id: 'ocpDetailsSupplementaryCostDesc',
-  },
-  ocpDetailsTableAriaLabel: {
-    defaultMessage: 'OpenShift details table',
-    description: 'OpenShift details table',
-    id: 'ocpDetailsTable',
   },
   ocpDetailsTitle: {
     defaultMessage: 'OpenShift details',
@@ -2887,6 +2660,16 @@ export default defineMessages({
     description: 'Perspective values',
     id: 'perspectiveValues',
   },
+  platformUnallocatedCapacity: {
+    defaultMessage: 'Platform unallocated capacity',
+    description: 'Platform unallocated capacity',
+    id: 'platformUnallocatedCapacity',
+  },
+  platformUnallocatedCapacityDescription: {
+    defaultMessage: 'Distribute the cost of running the OpenShift services to projects',
+    description: 'Platform unallocated capacity description',
+    id: 'platformUnallocatedCapacityDescription',
+  },
   priceList: {
     defaultMessage: 'Price list',
     description: 'Price list',
@@ -2936,7 +2719,7 @@ export default defineMessages({
   priceListPosNumberRate: {
     defaultMessage: 'Rate must be a positive number',
     description: 'Rate must be a positive number',
-    id: 'PriceListPosNumberRate',
+    id: 'priceListPosNumberRate',
   },
   rate: {
     defaultMessage: 'Rate',
@@ -3000,28 +2783,19 @@ export default defineMessages({
     id: 'selected',
   },
   sinceDate: {
-    defaultMessage:
-      '{month, select, ' +
-      '0 {{count, plural, one {January {startDate}} other {January {startDate}-{endDate}}}} ' +
-      '1 {{count, plural, one {February {startDate}} other {February {startDate}-{endDate}}}} ' +
-      '2 {{count, plural, one {March {startDate}} other {March {startDate}-{endDate}}}} ' +
-      '3 {{count, plural, one {April {startDate}} other {April {startDate}-{endDate}}}} ' +
-      '4 {{count, plural, one {May {startDate}} other {May {startDate}-{endDate}}}} ' +
-      '5 {{count, plural, one {June {startDate}} other {June {startDate}-{endDate}}}} ' +
-      '6 {{count, plural, one {July {startDate}} other {July {startDate}-{endDate}}}} ' +
-      '7 {{count, plural, one {August {startDate}} other {August {startDate}-{endDate}}}} ' +
-      '8 {{count, plural, one {September {startDate}} other {September {startDate}-{endDate}}}} ' +
-      '9 {{count, plural, one {October {startDate}} other {October {startDate}-{endDate}}}} ' +
-      '10 {{count, plural, one {November {startDate}} other {November {startDate}-{endDate}}}} ' +
-      '11 {{count, plural, one {December {startDate}} other {December {startDate}-{endDate}}}} ' +
-      'other {}}',
-    description: 'Monthly date range',
+    defaultMessage: '{dateRange}',
+    description: 'Jan 1-31',
     id: 'sinceDate',
   },
   sources: {
     defaultMessage: 'Sources',
     description: 'Sources',
     id: 'sources',
+  },
+  start: {
+    defaultMessage: 'Start',
+    description: 'Start',
+    id: 'start',
   },
   status: {
     defaultMessage: '{value, select, ' + 'pending {Pending} ' + 'running {Running} ' + 'failed {Failed} ' + 'other {}}',
@@ -3037,6 +2811,11 @@ export default defineMessages({
     defaultMessage: 'Suggestions',
     description: 'Suggestions',
     id: 'suggestions',
+  },
+  sumPlatformCosts: {
+    defaultMessage: 'Sum platform costs',
+    description: 'Sum platform costs',
+    id: 'sumPlatformCosts',
   },
   supplementary: {
     defaultMessage: 'Supplementary',
@@ -3067,6 +2846,11 @@ export default defineMessages({
     defaultMessage: 'Time of export',
     description: 'Time of export',
     id: 'timeOfExport',
+  },
+  to: {
+    defaultMessage: 'to',
+    description: 'start date to end date',
+    id: 'to',
   },
   toolBarBulkSelectAll: {
     defaultMessage: 'Select all ({value} items)',
@@ -3163,6 +2947,16 @@ export default defineMessages({
     defaultMessage: 'Volume',
     description: 'Volume',
     id: 'volumeTitle',
+  },
+  workersUnallocatedCapacity: {
+    defaultMessage: 'Workers unallocated capacity',
+    description: 'Workers unallocated capcity',
+    id: 'workersUnallocatedCapacity',
+  },
+  workersUnallocatedCapacityDescription: {
+    defaultMessage: 'Distribute unused and non-reserved resource costs to projects',
+    description: 'Workers unallocated capacity description',
+    id: 'workersUnallocatedCapacityDescription',
   },
   yes: {
     defaultMessage: 'Yes',
