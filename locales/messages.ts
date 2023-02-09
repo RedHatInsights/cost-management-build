@@ -73,8 +73,8 @@ export default defineMessages({
     id: 'azureDesc',
   },
   azureDetailsTitle: {
-    defaultMessage: 'Microsoft Azure details',
-    description: 'Microsoft Azure details',
+    defaultMessage: 'Microsoft Azure Details',
+    description: 'Microsoft Azure Details',
     id: 'azureDetailsTitle',
   },
   azureOcpDashboardCostTitle: {
@@ -2342,6 +2342,16 @@ export default defineMessages({
     description: 'OpenShift in Cost Management',
     id: 'notAuthorizedStateOcp',
   },
+  notAuthorizedStateRecommendations: {
+    defaultMessage: 'Recommendations in Cost Management',
+    description: 'Recommendations in Cost Management',
+    id: 'notAuthorizedStateRecommendations',
+  },
+  notAuthorizedStateRhel: {
+    defaultMessage: 'RHEL in Cost Management',
+    description: 'RHEL in Cost Management',
+    id: 'notAuthorizedStateRhel',
+  },
   oci: {
     defaultMessage: 'Oracle Cloud Infrastructure',
     description: 'Oracle Cloud Infrastructure',
@@ -2373,8 +2383,8 @@ export default defineMessages({
     id: 'ociDesc',
   },
   ociDetailsTitle: {
-    defaultMessage: 'Oracle Cloud Infrastructure details',
-    description: 'Oracle Cloud Infrastructure details',
+    defaultMessage: 'Oracle Cloud Infrastructure Details',
+    description: 'Oracle Cloud Infrastructure Details',
     id: 'ociDetailsTitle',
   },
   ocpCloudDashboardComputeTitle: {
@@ -2460,8 +2470,8 @@ export default defineMessages({
     id: 'ocpDetailsSupplementaryCostDesc',
   },
   ocpDetailsTitle: {
-    defaultMessage: 'OpenShift details',
-    description: 'OpenShift details title',
+    defaultMessage: 'OpenShift Details',
+    description: 'OpenShift Details',
     id: 'ocpDetailsTitle',
   },
   ocpInfrastructureCostTitle: {
@@ -2838,8 +2848,8 @@ export default defineMessages({
     id: 'rhelDetailsSupplementaryCostDesc',
   },
   rhelDetailsTitle: {
-    defaultMessage: 'RHEL details',
-    description: 'RHEL details title',
+    defaultMessage: 'RHEL Details',
+    description: 'RHEL Details',
     id: 'rhelDetailsTitle',
   },
   rhelInfrastructureCostTitle: {
