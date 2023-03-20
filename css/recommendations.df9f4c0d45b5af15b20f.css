@@ -1,0 +1,2 @@
+.costManagement{@import"~@patternfly/patternfly/base/patternfly-variables.css"}.costManagement .cost-icon{height:120px}.costManagement .cost-icon.st0{fill:blue !important}
+.ins-c-empty-state__unavailable svg{color:var(--pf-global--danger-color--100)}
