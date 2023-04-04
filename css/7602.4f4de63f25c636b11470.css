@@ -1,0 +1,2 @@
+.costManagement{@import"~@patternfly/patternfly/base/patternfly-variables.css"}.costManagement .currencyOverride .pf-c-select__menu{right:0}
+.ins-c-empty-state__unavailable svg{color:var(--pf-global--danger-color--100)}
