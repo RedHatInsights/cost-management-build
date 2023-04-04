@@ -113,6 +113,11 @@ export default defineMessages({
     description: 'Back to details',
     id: 'breakdownBackToDetailsAriaLabel',
   },
+  breakdownBackToOptimizations: {
+    defaultMessage: 'Back to optimizations',
+    description: 'Back to optimizations',
+    id: 'breakdownBackToOptimizations',
+  },
   breakdownBackToTitles: {
     defaultMessage:
       '{value, select, ' +
@@ -197,6 +202,11 @@ export default defineMessages({
     defaultMessage: 'Cancel',
     description: 'Cancel',
     id: 'cancel',
+  },
+  change: {
+    defaultMessage: 'Change',
+    description: 'Change',
+    id: 'change',
   },
   chartCostForecastConeLegendLabel: {
     defaultMessage: 'Cost confidence ({dateRange})',
@@ -332,6 +342,11 @@ export default defineMessages({
     defaultMessage: 'Clusters',
     description: 'Clusters',
     id: 'clusters',
+  },
+  container: {
+    defaultMessage: 'Container',
+    description: 'Container',
+    id: 'container',
   },
   cost: {
     defaultMessage: 'Cost',
@@ -895,6 +910,11 @@ export default defineMessages({
     description: 'CPU',
     id: 'cpuTitle',
   },
+  cpuUnits: {
+    defaultMessage: 'CPU ({units})',
+    description: 'CPU (mCores)',
+    id: 'cpuUnits',
+  },
   create: {
     defaultMessage: 'Create',
     description: 'Create',
@@ -999,6 +1019,11 @@ export default defineMessages({
       'other {}}',
     description: 'return the proper unit label based on key: "units"',
     id: 'currencyUnits',
+  },
+  current: {
+    defaultMessage: 'Current',
+    description: 'Current',
+    id: 'current',
   },
   dashboardCumulativeCostComparison: {
     defaultMessage: 'Cumulative cost comparison ({units})',
@@ -1263,42 +1288,42 @@ export default defineMessages({
   },
   docsAddOcpSources: {
     defaultMessage:
-      'https://access.redhat.com/documentation/en-us/cost_management_service/2022/html-single/adding_an_openshift_container_platform_source_to_cost_management',
+      'https://access.redhat.com/documentation/en-us/cost_management_service/2023/html-single/adding_an_openshift_container_platform_source_to_cost_management',
     description:
-      'https://access.redhat.com/documentation/en-us/cost_management_service/2022/html-single/adding_an_openshift_container_platform_source_to_cost_management',
+      'https://access.redhat.com/documentation/en-us/cost_management_service/2023/html-single/adding_an_openshift_container_platform_source_to_cost_management',
     id: 'docsAddOcpSources',
   },
   docsConfigCostModels: {
     defaultMessage:
-      'https://access.redhat.com/documentation/en-us/cost_management_service/2022/html-single/using_cost_models/index#assembly-setting-up-cost-models',
+      'https://access.redhat.com/documentation/en-us/cost_management_service/2023/html-single/using_cost_models/index#assembly-setting-up-cost-models',
     description:
-      'https://access.redhat.com/documentation/en-us/cost_management_service/2022/html-single/using_cost_models/index#assembly-setting-up-cost-models',
+      'https://access.redhat.com/documentation/en-us/cost_management_service/2023/html-single/using_cost_models/index#assembly-setting-up-cost-models',
     id: 'docsConfigCostModels',
   },
   docsCostModelTerminology: {
     defaultMessage:
-      'https://access.redhat.com/documentation/en-us/cost_management_service/2022/html-single/using_cost_models/index#cost-model-terminology',
+      'https://access.redhat.com/documentation/en-us/cost_management_service/2023/html-single/using_cost_models/index#cost-model-terminology',
     description:
-      'https://access.redhat.com/documentation/en-us/cost_management_service/2022/html-single/using_cost_models/index#cost-model-terminology',
+      'https://access.redhat.com/documentation/en-us/cost_management_service/2023/html-single/using_cost_models/index#cost-model-terminology',
     id: 'docsCostModelTerminology',
   },
   docsCostModelsDistribution: {
     defaultMessage:
-      'https://access.redhat.com/documentation/en-us/cost_management_service/2022/html/using_cost_models/assembly-setting-up-cost-models#creating-an-AWS-Azure-cost-model_setting-up-cost-models',
+      'https://access.redhat.com/documentation/en-us/cost_management_service/2023/html/using_cost_models/assembly-setting-up-cost-models#creating-an-AWS-Azure-cost-model_setting-up-cost-models',
     description: 'url for cost models distribution',
     id: 'docsCostModelsDistribution',
   },
   docsCostModelsMarkup: {
     defaultMessage:
-      'https://access.redhat.com/documentation/en-us/cost_management_service/2022/html/using_cost_models/assembly-setting-up-cost-models#creating-an-AWS-Azure-cost-model_setting-up-cost-models',
+      'https://access.redhat.com/documentation/en-us/cost_management_service/2023/html/using_cost_models/assembly-setting-up-cost-models#creating-an-AWS-Azure-cost-model_setting-up-cost-models',
     description: 'url for cost models markup',
     id: 'docsCostModelsMarkup',
   },
   docsUsingCostModels: {
     defaultMessage:
-      'https://access.redhat.com/documentation/en-us/cost_management_service/2022/html-single/using_cost_models/index',
+      'https://access.redhat.com/documentation/en-us/cost_management_service/2023/html-single/using_cost_models/index',
     description:
-      'https://access.redhat.com/documentation/en-us/cost_management_service/2022/html-single/using_cost_models/index',
+      'https://access.redhat.com/documentation/en-us/cost_management_service/2023/html-single/using_cost_models/index',
     id: 'docsUsingCostModels',
   },
   download: {
@@ -1755,6 +1780,7 @@ export default defineMessages({
       '{value, select, ' +
       'account {Account} ' +
       'cluster {Cluster} ' +
+      'container {Container} ' +
       'gcp_project {GCP project} ' +
       'name {Name} ' +
       'node {Node} ' +
@@ -1768,6 +1794,8 @@ export default defineMessages({
       'service_name {Service} ' +
       'subscription_guid {Account} ' +
       'tag {Tag} ' +
+      'workload {Workload} ' +
+      'workload_type {Workload type} ' +
       'other {}}',
     description: 'Filter by values',
     id: 'filterByValues',
@@ -2006,10 +2034,20 @@ export default defineMessages({
     description: 'Infrastructure',
     id: 'infrastructure',
   },
+  lastReported: {
+    defaultMessage: 'Last reported',
+    description: 'Last reported',
+    id: 'lastReported',
+  },
   learnMore: {
     defaultMessage: 'Learn more',
     description: 'Learn more',
     id: 'learnMore',
+  },
+  limits: {
+    defaultMessage: 'Limits',
+    description: 'Limits',
+    id: 'limits',
   },
   loadingStateDesc: {
     defaultMessage: 'Searching for your sources. Do not refresh the browser',
@@ -2138,6 +2176,11 @@ export default defineMessages({
     defaultMessage: 'Memory',
     description: 'Memory',
     id: 'memoryTitle',
+  },
+  memoryUnits: {
+    defaultMessage: 'Memory ({units})',
+    description: 'Memory (MB)',
+    id: 'memoryUnits',
   },
   metric: {
     defaultMessage: 'Metric',
@@ -2342,10 +2385,10 @@ export default defineMessages({
     description: 'OpenShift in Cost Management',
     id: 'notAuthorizedStateOcp',
   },
-  notAuthorizedStateRecommendations: {
-    defaultMessage: 'Recommendations in Cost Management',
-    description: 'Recommendations in Cost Management',
-    id: 'notAuthorizedStateRecommendations',
+  notAuthorizedStateOptimizations: {
+    defaultMessage: 'Optimizations in Cost Management',
+    description: 'Optimizations in Cost Management',
+    id: 'notAuthorizedStateOptimizations',
   },
   notAuthorizedStateRhel: {
     defaultMessage: 'RHEL in Cost Management',
@@ -2553,6 +2596,42 @@ export default defineMessages({
       'Total cost for OpenShift Container Platform, comprising the infrastructure cost and cost calculated from metrics.',
     id: 'openShiftDesc',
   },
+  optimizations: {
+    defaultMessage: 'Optimizations',
+    description: 'Optimizations',
+    id: 'optimizations',
+  },
+  optimizationsDetails: {
+    defaultMessage: '{count, plural, =0 {No optimizations} =1 {{count} optimization} other {{count} optimizations}}',
+    description: 'Recommendation details',
+    id: 'optimizationsDetails',
+  },
+  optimizationsNames: {
+    defaultMessage:
+      '{value, select, ' +
+      'cluster {Cluster names} ' +
+      'container {Container names} ' +
+      'last_reported {Last reported} ' +
+      'project {Project names} ' +
+      'workload {Workload names} ' +
+      'workload_type {Workload types} ' +
+      'other {}}',
+    description: 'Selected items for export',
+    id: 'optimizationsNames',
+  },
+  optimizationsValues: {
+    defaultMessage:
+      '{value, select, ' +
+      'cluster {Cluster name} ' +
+      'container {Container name} ' +
+      'last_reported {Last reported} ' +
+      'project {Project name} ' +
+      'workload {Workload name} ' +
+      'workload_type {Workload type} ' +
+      'other {}}',
+    description: 'Selected items for export',
+    id: 'optimizationsValues',
+  },
   overviewInfoArialLabel: {
     defaultMessage: 'A description of perspectives',
     description: 'A description of perspectives',
@@ -2732,6 +2811,11 @@ export default defineMessages({
     description: 'Rate must be a positive number',
     id: 'priceListPosNumberRate',
   },
+  project: {
+    defaultMessage: 'Project',
+    description: 'Project',
+    id: 'project',
+  },
   rate: {
     defaultMessage: 'Rate',
     description: 'Rate',
@@ -2757,6 +2841,41 @@ export default defineMessages({
     defaultMessage: 'Failed to get RBAC information',
     description: 'RBAC error title',
     id: 'rbacErrorTitle',
+  },
+  recommendationsLongTerm: {
+    defaultMessage: 'Last 15 days',
+    description: 'Last 15 days',
+    id: 'recommendationsLongTerm',
+  },
+  recommendationsMediumTerm: {
+    defaultMessage: 'Last 7 days',
+    description: 'Last 7 days',
+    id: 'recommendationsMediumTerm',
+  },
+  recommendationsPerspective: {
+    defaultMessage: 'View recommendation based on',
+    description: 'View recommendation based on',
+    id: 'recommendationsPerspective',
+  },
+  recommendationsShortTerm: {
+    defaultMessage: 'Last 24 hrs',
+    description: 'Last 24 hrs',
+    id: 'recommendationsShortTerm',
+  },
+  recommendationsTableAriaLabel: {
+    defaultMessage: 'Recommendations table',
+    description: 'Recommendations table',
+    id: 'recommendationsTableAriaLabel',
+  },
+  recommendationsViewAll: {
+    defaultMessage: 'View all recommendations for this project',
+    description: 'View all recommendations for this project',
+    id: 'recommendationsViewAll',
+  },
+  recommended: {
+    defaultMessage: 'Recommended',
+    description: 'Recommended',
+    id: 'recommended',
   },
   redHatStatusUrl: {
     defaultMessage: 'https://status.redhat.com',
@@ -2906,11 +3025,6 @@ export default defineMessages({
     defaultMessage: 'Volume usage and requests',
     description: 'Volume usage and requests',
     id: 'rhelVolumeUsageAndRequests',
-  },
-  rosRecommendationsTitle: {
-    defaultMessage: 'Recommendations',
-    description: 'Recommendations',
-    id: 'rosRecommendationsTitle',
   },
   save: {
     defaultMessage: 'Save',
@@ -3117,6 +3231,16 @@ export default defineMessages({
     defaultMessage: 'Distribute unused and non-reserved resource costs to projects',
     description: 'Workers unallocated capacity description',
     id: 'workersUnallocatedCapacityDescription',
+  },
+  workload: {
+    defaultMessage: 'Workload',
+    description: 'Workload',
+    id: 'workload',
+  },
+  workloadType: {
+    defaultMessage: 'Workload type',
+    description: 'Workload type',
+    id: 'workloadType',
   },
   yes: {
     defaultMessage: 'Yes',
