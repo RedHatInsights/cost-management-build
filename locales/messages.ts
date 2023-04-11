@@ -1726,6 +1726,7 @@ export default defineMessages({
       '{value, select, ' +
       'account {Filter by account} ' +
       'cluster {Filter by cluster} ' +
+      'container {Filter by container} ' +
       'description {Filter by description} ' +
       'gcp_project {Filter by GCP project} ' +
       'name {Filter by name} ' +
@@ -1740,6 +1741,8 @@ export default defineMessages({
       'service_name {Filter by service} ' +
       'source_type {Filter by source type} ' +
       'subscription_guid {Filter by account} ' +
+      'workload {Filter by workload} ' +
+      'workload_type {Filter by workload type} ' +
       'tag {Filter by tag} ' +
       'other {}}',
     description: 'Filter by "value"',
@@ -2251,6 +2254,16 @@ export default defineMessages({
     description: 'There are no export files available',
     id: 'NoExportsStateTitle',
   },
+  noOptimizationsDesc: {
+    defaultMessage: 'There is not enough data available to generate an optimization.',
+    description: 'There is not enough data available to generate an optimization.',
+    id: 'noOptimizationsDesc',
+  },
+  noOptimizationsTitle: {
+    defaultMessage: 'No optimizations available',
+    description: 'No optimizations available',
+    id: 'noOptimizationsTitle',
+  },
   noProvidersStateAwsDesc: {
     defaultMessage:
       'Add an Amazon Web Services account to see a total cost breakdown of your spend by accounts, organizational units, services, regions, or tags.',
@@ -2606,6 +2619,26 @@ export default defineMessages({
     description: 'Recommendation details',
     id: 'optimizationsDetails',
   },
+  optimizationsEmptyState: {
+    defaultMessage: 'There is not enough data available to generate a recommendation.',
+    description: 'There is not enough data available to generate a recommendation.',
+    id: 'optimizationsEmptyState',
+  },
+  optimizationsInfo: {
+    defaultMessage: 'Assess and monitor your usage so you can optimize your OpenShift resources.',
+    description: 'Assess and monitor your usage so you can optimize your OpenShift resources.',
+    id: 'optimizationsInfo',
+  },
+  optimizationsInfoArialLabel: {
+    defaultMessage: 'A description of optimizations',
+    description: 'A description of optimizations',
+    id: 'optimizationsInfoArialLabel',
+  },
+  optimizationsInfoButtonArialLabel: {
+    defaultMessage: 'A dialog with a description of optimizations',
+    description: 'A dialog with a description of optimizations',
+    id: 'optimizationsInfoButtonArialLabel',
+  },
   optimizationsNames: {
     defaultMessage:
       '{value, select, ' +
@@ -2648,54 +2681,64 @@ export default defineMessages({
     id: 'overviewTitle',
   },
   pageTitleAws: {
-    defaultMessage: 'Amazon Web Services - Cost Management | Red Hat OpenShift Cluster Manager',
-    description: 'Amazon Web Services - Cost Management | Red Hat OpenShift Cluster Manager',
+    defaultMessage: 'Amazon Web Services - Cost Management | OpenShift',
+    description: 'Amazon Web Services - Cost Management | OpenShift',
     id: 'pageTitleAws',
   },
   pageTitleAzure: {
-    defaultMessage: 'Microsoft Azure - Cost Management | Red Hat OpenShift Cluster Manager',
-    description: 'Microsoft Azure - Cost Management | Red Hat OpenShift Cluster Manager',
+    defaultMessage: 'Microsoft Azure - Cost Management | OpenShift',
+    description: 'Microsoft Azure - Cost Management | OpenShift',
     id: 'pageTitleAzure',
   },
   pageTitleCostModels: {
-    defaultMessage: 'Cost Models - Cost Management | Red Hat OpenShift Cluster Manager',
-    description: 'Cost Models - Cost Management | Red Hat OpenShift Cluster Manager',
+    defaultMessage: 'Cost Models - Cost Management | OpenShift',
+    description: 'Cost Models - Cost Management | OpenShift',
     id: 'pageTitleCostModels',
   },
   pageTitleDefault: {
-    defaultMessage: 'Cost Management | Red Hat OpenShift Cluster Manager',
-    description: 'Cost Management | Red Hat OpenShift Cluster Manager',
+    defaultMessage: 'Cost Management | OpenShift',
+    description: 'Cost Management | OpenShift',
     id: 'pageTitleDefault',
   },
   pageTitleExplorer: {
-    defaultMessage: 'Cost Explorer - Cost Management | Red Hat OpenShift Cluster Manager',
-    description: 'Cost Explorer - Cost Management | Red Hat OpenShift Cluster Manager',
+    defaultMessage: 'Cost Explorer - Cost Management | OpenShift',
+    description: 'Cost Explorer - Cost Management | OpenShift',
     id: 'pageTitleExplorer',
   },
   pageTitleGcp: {
-    defaultMessage: 'Google Cloud Platform - Cost Management | Red Hat OpenShift Cluster Manager',
-    description: 'Google Cloud Platform - Cost Management | Red Hat OpenShift Cluster Manager',
+    defaultMessage: 'Google Cloud Platform - Cost Management | OpenShift',
+    description: 'Google Cloud Platform - Cost Management | OpenShift',
     id: 'pageTitleGcp',
   },
   pageTitleIbm: {
-    defaultMessage: 'IBM Cloud - Cost Management | Red Hat OpenShift Cluster Manager',
-    description: 'IBM Cloud - Cost Management | Red Hat OpenShift Cluster Manager',
+    defaultMessage: 'IBM Cloud - Cost Management | OpenShift',
+    description: 'IBM Cloud - Cost Management | OpenShift',
     id: 'pageTitleIbm',
   },
   pageTitleOci: {
-    defaultMessage: 'Oracle Cloud Infrastructure - Cost Management | Red Hat OpenShift Cluster Manager',
-    description: 'Oracle Cloud Infrastructure - Cost Management | Red Hat OpenShift Cluster Manager',
+    defaultMessage: 'Oracle Cloud Infrastructure - Cost Management | OpenShift',
+    description: 'Oracle Cloud Infrastructure - Cost Management | OpenShift',
     id: 'pageTitleOci',
   },
   pageTitleOcp: {
-    defaultMessage: 'OpenShift - Cost Management | Red Hat OpenShift Cluster Manager',
-    description: 'OpenShift - Cost Management | Red Hat OpenShift Cluster Manager',
+    defaultMessage: 'OpenShift - Cost Management | OpenShift',
+    description: 'OpenShift - Cost Management | OpenShift',
     id: 'pageTitleOcp',
   },
+  pageTitleOptimizations: {
+    defaultMessage: 'Optimizations - Cost Management | OpenShift',
+    description: 'Optimizations - Cost Management | OpenShift',
+    id: 'pageTitleOptimizations',
+  },
   pageTitleOverview: {
-    defaultMessage: 'Overview - Cost Management | Red Hat OpenShift Cluster Manager',
-    description: 'Overview - Cost Management | Red Hat OpenShift Cluster Manager',
+    defaultMessage: 'Overview - Cost Management | OpenShift',
+    description: 'Overview - Cost Management | OpenShift',
     id: 'pageTitleOverview',
+  },
+  pageTitleRhel: {
+    defaultMessage: 'RHEL - Cost Management | OpenShift',
+    description: 'RHEL - Cost Management | OpenShift',
+    id: 'pageTitleRhel',
   },
   paginationTitle: {
     defaultMessage:
