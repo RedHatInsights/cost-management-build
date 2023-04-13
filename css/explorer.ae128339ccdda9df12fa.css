@@ -1,0 +1,7 @@
+.costManagement{@import"~@patternfly/patternfly/base/patternfly-variables.css"}.costManagement .cost-icon{height:120px}.costManagement .cost-icon.st0{fill:blue !important}
+.ins-c-empty-state__unavailable svg{color:var(--pf-global--danger-color--100)}
+.costManagement{@import"~@patternfly/patternfly/base/patternfly-variables.css"}.costManagement .chartOverride :not(foo) svg{overflow:visible}
+.costManagement{@import"~@patternfly/patternfly/base/patternfly-variables.css"}.costManagement .currencyOverride .pf-c-select__menu{right:0}
+.costManagement{@import"~@patternfly/patternfly/base/patternfly-variables.css"}.costManagement .selectOverride.pf-c-select .pf-c-select__menu-item-description{width:max-content}
+.costManagement{@import"~@patternfly/patternfly/base/patternfly-variables.css"}.costManagement .selectOverride.pf-c-select .pf-c-select__menu-item-description{width:max-content}
+.costManagement{@import"~@patternfly/patternfly/base/patternfly-variables.css"}.costManagement .explorerTableOverride.pf-c-table .pf-c-table__sticky-column{z-index:99}
