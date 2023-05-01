@@ -2,6 +2,11 @@
 import { defineMessages } from 'react-intl';
 
 export default defineMessages({
+  allOtherProjectCosts: {
+    defaultMessage: 'Project (All other costs)',
+    description: 'Project (All other costs)',
+    id: 'allOtherProjectCosts',
+  },
   aws: {
     defaultMessage: 'Amazon Web Services',
     description: 'Amazon Web Services',
@@ -91,6 +96,7 @@ export default defineMessages({
     defaultMessage:
       '{groupBy, select, ' +
       'account {Back to {value} account details} ' +
+      'aws_category {Back to {value} cost category details} ' +
       'cluster {Back to {value} cluster details} ' +
       'gcp_project {Back to {value} GCP project details} ' +
       'node {Back to {value} node details} ' +
@@ -131,26 +137,6 @@ export default defineMessages({
     description: 'Breakdown back to page titles',
     id: 'breakdownBackToTitles',
   },
-  breakdownCostBreakdownAriaLabel: {
-    defaultMessage: 'A description of markup, raw cost and usage cost',
-    description: 'A description of markup, raw cost and usage cost',
-    id: 'breakdownCostBreakdownAriaLabel',
-  },
-  breakdownCostBreakdownTitle: {
-    defaultMessage: 'Cost breakdown',
-    description: 'A description of markup, raw cost and usage cost',
-    id: 'breakdownCostBreakdownTitle',
-  },
-  breakdownCostChartAriaDesc: {
-    defaultMessage: 'Breakdown of markup, raw, and usage costs',
-    description: 'Breakdown of markup, raw, and usage costs',
-    id: 'breakdownCostChartAriaDesc',
-  },
-  breakdownCostChartTooltip: {
-    defaultMessage: '{name}: {value}',
-    description: '{name}: {value}',
-    id: 'breakdownCostChartTooltip',
-  },
   breakdownCostOverviewTitle: {
     defaultMessage: 'Cost overview',
     description: 'Cost overview',
@@ -165,6 +151,7 @@ export default defineMessages({
     defaultMessage:
       '{value, select, ' +
       'account {Cost by accounts} ' +
+      'aws_category {Cost by category} ' +
       'cluster {Cost by clusters} ' +
       'gcp_project {Cost by GCP projects} ' +
       'node {Cost by Node} ' +
@@ -306,7 +293,7 @@ export default defineMessages({
   chartRequestsLegendLabel: {
     defaultMessage: 'Requests ({dateRange})',
     description: 'Requests (Jan 1-31)',
-    id: 'chartRequestLegendLabel',
+    id: 'chartRequestsLegendLabel',
   },
   chartRequestsLegendNoDataLabel: {
     defaultMessage: 'Requests (no data)',
@@ -316,7 +303,7 @@ export default defineMessages({
   chartRequestsLegendTooltip: {
     defaultMessage: 'Requests ({month})',
     description: 'Requests (Jan)',
-    id: 'chartRequestLegendTooltip',
+    id: 'chartRequestsLegendTooltip',
   },
   chartUsageLegendLabel: {
     defaultMessage: 'Usage ({dateRange})',
@@ -333,6 +320,16 @@ export default defineMessages({
     description: 'Usage (Jan)',
     id: 'chartUsageLegendTooltip',
   },
+  chooseKeyPlaceholder: {
+    defaultMessage: 'Choose key',
+    description: 'Choose key',
+    id: 'chooseKeyPlaceholder',
+  },
+  chooseValuePlaceholder: {
+    defaultMessage: 'Choose value',
+    description: 'Choose value',
+    id: 'chooseValuePlaceholder',
+  },
   close: {
     defaultMessage: 'Close',
     description: 'Close',
@@ -343,15 +340,30 @@ export default defineMessages({
     description: 'Clusters',
     id: 'clusters',
   },
-  container: {
-    defaultMessage: 'Container',
-    description: 'Container',
-    id: 'container',
-  },
   cost: {
     defaultMessage: 'Cost',
     description: 'Cost',
     id: 'cost',
+  },
+  costBreakdownAriaDesc: {
+    defaultMessage: 'Breakdown of markup, raw, and usage costs',
+    description: 'Breakdown of markup, raw, and usage costs',
+    id: 'costBreakdownAriaDesc',
+  },
+  costBreakdownAriaLabel: {
+    defaultMessage: 'A description of markup, raw cost and usage cost',
+    description: 'A description of markup, raw cost and usage cost',
+    id: 'costBreakdownAriaLabel',
+  },
+  costBreakdownTitle: {
+    defaultMessage: 'Cost breakdown',
+    description: 'A description of markup, raw cost and usage cost',
+    id: 'costBreakdownTitle',
+  },
+  costBreakdownTooltip: {
+    defaultMessage: '{name}: {value}',
+    description: '{name}: {value}',
+    id: 'costBreakdownTooltip',
   },
   costCalculations: {
     defaultMessage: 'Cost calculations',
@@ -363,10 +375,44 @@ export default defineMessages({
     description: 'Cost calculations (optional)',
     id: 'costCalculationsOptional',
   },
+  costCategoryNames: {
+    defaultMessage: 'Cost category names',
+    description: 'Cost category names',
+    id: 'costCategoryNames',
+  },
   costDistribution: {
     defaultMessage: 'Cost distribution',
     description: 'Cost distribution',
     id: 'costDistribution',
+  },
+  costDistributionAriaDesc: {
+    defaultMessage: 'Overhead cost breakdown of platform, worker unallocated, and total costs',
+    description: 'Overhead cost breakdown of platform, worker unallocated, and total costs',
+    id: 'costDistributionAriaDesc',
+  },
+  costDistributionAriaLabel: {
+    defaultMessage: 'A description of platform, worker unallocated, and total costs',
+    description: 'A description of platform, worker unallocated, and total costs',
+    id: 'costDistributionAriaLabel',
+  },
+  costDistributionLabel: {
+    defaultMessage: 'Overhead cost',
+    description: 'Overhead cost',
+    id: 'costDistributionLabel',
+  },
+  costDistributionTitle: {
+    defaultMessage: 'Overhead cost breakdown',
+    description: 'Overhead cost breakdown',
+    id: 'costDistributionTitle',
+  },
+  costDistributionType: {
+    defaultMessage:
+      '{value, select, ' +
+      'distributed {Distribute through cost models} ' +
+      "total {Don't distribute overhead costs} " +
+      'other {}}',
+    description: 'Cost distribution type',
+    id: 'costDistributionType',
   },
   costManagement: {
     defaultMessage: 'Cost Management',
@@ -393,11 +439,11 @@ export default defineMessages({
     description: 'Assign sources -- plural or singular',
     id: 'costModelsAssignSources',
   },
-  costModelsAssignSourcesErrorDescription: {
+  costModelsAssignSourcesErrorDesc: {
     defaultMessage:
       'You cannot assign a source at this time. Try refreshing this page. If the problem persists, contact your organization administrator or visit our {url} for known outages.',
     description: 'You cannot assign a source at this time',
-    id: 'costModelsAssignSourcesErrorDescription',
+    id: 'costModelsAssignSourcesErrorDesc',
   },
   costModelsAssignSourcesErrorTitle: {
     defaultMessage: 'This action is temporarily unavailable',
@@ -449,11 +495,6 @@ export default defineMessages({
     description: 'Should not exceed 500 characters',
     id: 'costModelsDescTooLong',
   },
-  costModelsDetailsAssignSourcesTitle: {
-    defaultMessage: 'Assign sources',
-    description: 'Assign sources',
-    id: 'costModelsDetailsAssignSourcesTitle',
-  },
   costModelsDetailsTitle: {
     defaultMessage: 'Cost Model Details',
     description: 'Cost Model Details',
@@ -488,10 +529,10 @@ export default defineMessages({
     description: 'Read about setting up a cost model',
     id: 'costModelsEmptyStateLearnMore',
   },
-  costModelsEnterTagDescription: {
+  costModelsEnterTagDesc: {
     defaultMessage: 'Enter a tag description',
     description: 'Enter a tag description',
-    id: 'costModelsEnterTagDescription',
+    id: 'costModelsEnterTagDesc',
   },
   costModelsEnterTagKey: {
     defaultMessage: 'Enter a tag key',
@@ -642,12 +683,7 @@ export default defineMessages({
   costModelsSourceTableAriaLabel: {
     defaultMessage: 'Sources table',
     description: 'Sources table',
-    id: 'costModelsSourcesTableAriaLabel',
-  },
-  costModelsSourceTablePaginationAriaLabel: {
-    defaultMessage: 'Sources table pagination controls',
-    description: 'Sources table pagination controls',
-    id: 'costModelsSourceTablePaginationAriaLabel',
+    id: 'costModelsSourceTableAriaLabel',
   },
   costModelsSourceType: {
     defaultMessage: 'Source type',
@@ -659,20 +695,10 @@ export default defineMessages({
     description: 'Cost models table',
     id: 'costModelsTableAriaLabel',
   },
-  costModelsTagRateTableAriaLabel: {
-    defaultMessage: 'Tag rates',
-    description: 'Tag rates',
-    id: 'costModelsTagRateTableAriaLabel',
-  },
   costModelsTagRateTableKey: {
     defaultMessage: 'Tag key',
     description: 'Tag key',
     id: 'costModelsTagRateTableKey',
-  },
-  costModelsTagRateTableRate: {
-    defaultMessage: 'Rate',
-    description: 'Rate',
-    id: 'costModelsTagRateTableRate',
   },
   costModelsTagRateTableValue: {
     defaultMessage: 'Tag value',
@@ -708,11 +734,6 @@ export default defineMessages({
     defaultMessage: 'Select source type',
     description: 'Select source type',
     id: 'costModelsWizardEmptySourceTypeLabel',
-  },
-  costModelsWizardEmptyStateCreate: {
-    defaultMessage: 'To create a price list, begin by clicking the {value} button.',
-    description: 'To create a price list, begin by clicking the {Create rate} button.',
-    id: 'costModelsWizardEmptyStateCreate',
   },
   costModelsWizardEmptyStateOtherTime: {
     defaultMessage: 'You can create a price list or modify one at a later time.',
@@ -797,11 +818,11 @@ export default defineMessages({
     description: 'Select from the following {value} sources:',
     id: 'costModelsWizardSourceCaption',
   },
-  costModelsWizardSourceErrorDescription: {
+  costModelsWizardSourceErrorDesc: {
     defaultMessage:
       'Try refreshing this step or you can skip this step (as it is optional) and assign the source to the cost model at a later time. If the problem persists, contact your organization administrator or visit our {url} for known outages.',
     description: 'This step is temporarily unavailable',
-    id: 'costModelsWizardSourceErrorDescription',
+    id: 'costModelsWizardSourceErrorDesc',
   },
   costModelsWizardSourceErrorTitle: {
     defaultMessage: 'This step is temporarily unavailable',
@@ -844,11 +865,6 @@ export default defineMessages({
     defaultMessage: 'Enter information',
     description: 'Enter information',
     id: 'costModelsWizardStepsGenInfo',
-  },
-  costModelsWizardStepsPriceList: {
-    defaultMessage: 'Price list',
-    description: 'Price list',
-    id: 'costModelsWizardStepsPriceList',
   },
   costModelsWizardStepsReview: {
     defaultMessage: 'Review details',
@@ -1110,6 +1126,7 @@ export default defineMessages({
     defaultMessage:
       '{groupBy, select, ' +
       'account {account {name} clusters} ' +
+      'aws_category {cost category {name} clusters} ' +
       'cluster {cluster {name} clusters} ' +
       'gcp_project {GCP project {name} clusters} ' +
       'node {node {name} clusters} ' +
@@ -1151,6 +1168,7 @@ export default defineMessages({
     defaultMessage:
       '{value, select, ' +
       'account {Account names} ' +
+      'aws_category {Cost category names} ' +
       'cluster {Cluster names} ' +
       'gcp_project {GCP project names} ' +
       'node {Node names} ' +
@@ -1172,6 +1190,7 @@ export default defineMessages({
     defaultMessage:
       '{groupBy, select, ' +
       'account {{name} accounts} ' +
+      'aws_category {{name} cost categories} ' +
       'cluster {{name} clusters} ' +
       'gcp_project {{name} GCP projects} ' +
       'node {{name} nodes} ' +
@@ -1197,7 +1216,7 @@ export default defineMessages({
   detailsUnusedUnits: {
     defaultMessage: '{units} ({percentage}% of capacity)',
     description: '{units} ({percentage}% of capacity)',
-    id: 'detailsUnusedUsageUnits',
+    id: 'detailsUnusedUnits',
   },
   detailsUnusedUsageLabel: {
     defaultMessage: 'Unused capacity',
@@ -1228,6 +1247,7 @@ export default defineMessages({
     defaultMessage:
       '{value, select, ' +
       'account {View all accounts} ' +
+      'aws_category {View all cost categories} ' +
       'cluster {View all clusters} ' +
       'gcp_project {View all GCP projects} ' +
       'node {View all nodes} ' +
@@ -1258,8 +1278,8 @@ export default defineMessages({
   distributeCosts: {
     defaultMessage:
       '{value, select, ' +
-      'true {Distribute {type, select, platform {platform} workers {workers} other {}} costs}' +
-      'false {Do not distribute {type, select, platform {platform} workers {workers} other {}} costs}' +
+      'true {Distribute {type, select, platform {platform} worker {worker} other {}} unallocated capacity}' +
+      'false {Do not distribute {type, select, platform {platform} worker {worker} other {}} unallocated capacity}' +
       'other {}}',
     description: 'distribute costs',
     id: 'distributeCosts',
@@ -1276,10 +1296,14 @@ export default defineMessages({
     description: 'Distribution type',
     id: 'distributionType',
   },
-  distributionTypeDescription: {
-    defaultMessage: 'Distribute costs based on {type} usage',
+  distributionTypeDesc: {
+    defaultMessage:
+      '{type, select, ' +
+      'cpu {Distribute costs based on CPU usage}' +
+      'memory {Distribute costs based on memory usage}' +
+      'other {}}',
     description: 'Distribution type description',
-    id: 'distributionTypeDescription',
+    id: 'distributionTypeDesc',
   },
   doNotDistribute: {
     defaultMessage: 'Do not distribute',
@@ -1399,7 +1423,7 @@ export default defineMessages({
   examplesTitle: {
     defaultMessage: 'Examples',
     description: 'Examples',
-    id: 'ExamplesTitle',
+    id: 'examplesTitle',
   },
   excludeLabel: {
     defaultMessage: 'Excludes: {value}',
@@ -1453,11 +1477,6 @@ export default defineMessages({
     description: 'Date range based on {value}',
     id: 'explorerDateRange',
   },
-  explorerMonthDate: {
-    defaultMessage: '{month} {date}',
-    description: 'Cost {month} {date}',
-    id: 'explorerMonthDate',
-  },
   explorerTableAriaLabel: {
     defaultMessage: 'Cost Explorer table',
     description: 'Cost Explorer table',
@@ -1493,6 +1512,7 @@ export default defineMessages({
     defaultMessage:
       '{groupBy, select, ' +
       'account {{resolution, select, daily {{provider}_accounts_daily_{startDate}_{endDate}} monthly {{provider}_accounts_monthly_{startDate}_{endDate}} other {}}} ' +
+      'aws_category {{resolution, select, daily {{provider}_cost_category_daily_{startDate}_{endDate}} monthly {{provider}_cost_category_monthly_{startDate}_{endDate}} other {}}} ' +
       'cluster {{resolution, select, daily {{provider}_clusters_daily_{startDate}_{endDate}} monthly {{provider}_clusters_monthly_{startDate}_{endDate}} other {}}} ' +
       'gcp_project {{resolution, select, daily {{provider}_gcp-projects_daily_{startDate}_{endDate}} monthly {{provider}_gcp-projects_monthly_{startDate}_{endDate}} other {}}} ' +
       'node {{resolution, select, daily {{provider}_node_daily_{startDate}_{endDate}} monthly {{provider}_node_monthly_{startDate}_{endDate}} other {}}} ' +
@@ -1529,6 +1549,7 @@ export default defineMessages({
     defaultMessage:
       '{groupBy, select, ' +
       'account {Aggregates of the following accounts will be exported to a .csv file.} ' +
+      'aws_category {Aggregates of the following cost categories will be exported to a .csv file.} ' +
       'cluster {Aggregates of the following clusters will be exported to a .csv file.} ' +
       'gcp_project {Aggregates of the following GCP projects will be exported to a .csv file.} ' +
       'node {Aggregates of the following nodes will be exported to a .csv file.} ' +
@@ -1550,6 +1571,7 @@ export default defineMessages({
     defaultMessage:
       '{groupBy, select, ' +
       'account {{provider, select, aws {Amazon Web Services grouped by Account} aws_ocp {Amazon Web Services filtered by OpenShift grouped by Account} azure {Microsoft Azure grouped by Account} oci {Oracle Cloud Infrastructure grouped by Account} azure_ocp {Microsoft Azure filtered by OpenShift grouped by Account} gcp {Google Cloud Platform grouped by Account} gcp_ocp {Google Cloud Platform filtered by OpenShift grouped by Account} ibm {IBM Cloud grouped by Account} ibm_ocp {IBM Cloud filtered by OpenShift grouped by Account} ocp {OpenShift grouped by Account} ocp_cloud {All cloud filtered by OpenShift grouped by Account} other {}}} ' +
+      'aws_category {{provider, select, aws {Amazon Web Services grouped by Cost category} aws_ocp {Amazon Web Services filtered by OpenShift grouped by Cost category} azure {Microsoft Azure grouped by Cost category} oci {Oracle Cloud Infrastructure grouped by Cost category} azure_ocp {Microsoft Azure filtered by OpenShift grouped by Cost category} gcp {Google Cloud Platform grouped by Cost category} gcp_ocp {Google Cloud Platform filtered by OpenShift grouped by Cost category} ibm {IBM Cloud grouped by Cost category} ibm_ocp {IBM Cloud filtered by OpenShift grouped by Cost category} ocp {OpenShift grouped by Cost category} ocp_cloud {All cloud filtered by OpenShift grouped by Cost category} other {}}} ' +
       'cluster {{provider, select, aws {Amazon Web Services grouped by Cluster} aws_ocp {Amazon Web Services filtered by OpenShift grouped by Cluster} azure {Microsoft Azure grouped by Cluster} oci {Oracle Cloud Infrastructure grouped by Cluster} azure_ocp {Microsoft Azure filtered by OpenShift grouped by Cluster} gcp {Google Cloud Platform grouped by Cluster} gcp_ocp {Google Cloud Platform filtered by OpenShift grouped by Cluster} ibm {IBM Cloud grouped by Cluster} ibm_ocp {IBM Cloud filtered by OpenShift grouped by Cluster} ocp {OpenShift grouped by Cluster} ocp_cloud {All cloud filtered by OpenShift grouped by Cluster} other {}}} ' +
       'gcp_project {{provider, select, aws {Amazon Web Services grouped by GCP Project} aws_ocp {Amazon Web Services filtered by OpenShift grouped by GCP Project} azure {Microsoft Azure grouped by GCP Project} oci {Oracle Cloud Infrastructure grouped by GCP Project} azure_ocp {Microsoft Azure filtered by OpenShift grouped by GCP Project} gcp {Google Cloud Platform grouped by GCP Project} gcp_ocp {Google Cloud Platform filtered by OpenShift grouped by GCP Project} ibm {IBM Cloud grouped by GCP Project} ibm_ocp {IBM Cloud filtered by OpenShift grouped by GCP Project} ocp {OpenShift grouped by GCP Project} ocp_cloud {All cloud filtered by OpenShift grouped by GCP Project} other {}}} ' +
       'node {{provider, select, aws {Amazon Web Services grouped by Node} aws_ocp {Amazon Web Services filtered by OpenShift grouped by Node} azure {Microsoft Azure grouped by Node} oci {Oracle Cloud Infrastructure grouped by Node} azure_ocp {Microsoft Azure filtered by OpenShift grouped by Node} gcp {Google Cloud Platform grouped by Node} gcp_ocp {Google Cloud Platform filtered by OpenShift grouped by Node} ibm {IBM Cloud grouped by Node} ibm_ocp {IBM Cloud filtered by OpenShift grouped by Node} ocp {OpenShift grouped by Node} ocp_cloud {All cloud filtered by OpenShift grouped by Node} other {}}} ' +
@@ -1586,6 +1608,7 @@ export default defineMessages({
     defaultMessage:
       '{groupBy, select, ' +
       'account {Selected accounts ({count})} ' +
+      'aws_category {Selected cost categories ({count})} ' +
       'cluster {Selected clusters ({count})} ' +
       'gcp_project {Selected GCP projects ({count})} ' +
       'node {Selected nodes ({count})} ' +
@@ -1671,6 +1694,7 @@ export default defineMessages({
     defaultMessage:
       '{value, select, ' +
       'account {Filter button for account name} ' +
+      'aws_category {Filter button for cost category name} ' +
       'cluster {Filter button for cluster name} ' +
       'gcp_project {Filter button for GCP project name} ' +
       'name {Filter button for name name} ' +
@@ -1689,10 +1713,26 @@ export default defineMessages({
     description: 'Filter button for "value" name',
     id: 'filterByButtonAriaLabel',
   },
+  filterByCostCategoryKeyAriaLabel: {
+    defaultMessage: 'Cost category keys',
+    description: 'Cost category keys',
+    id: 'filterByCostCategoryKeyAriaLabel',
+  },
+  filterByCostCategoryValueAriaLabel: {
+    defaultMessage: 'Cost category values',
+    description: 'Cost category values',
+    id: 'filterByCostCategoryValueAriaLabel',
+  },
+  filterByCostCategoryValueButtonAriaLabel: {
+    defaultMessage: 'Filter button for cost category value',
+    description: 'Filter button for cost category value',
+    id: 'filterByCostCategoryValueButtonAriaLabel',
+  },
   filterByInputAriaLabel: {
     defaultMessage:
       '{value, select, ' +
       'account {Input for account name} ' +
+      'aws_category {Input for cost category name} ' +
       'cluster {Input for cluster name} ' +
       'gcp_project {Input for GCP project name} ' +
       'name {Input for name name} ' +
@@ -1725,6 +1765,7 @@ export default defineMessages({
     defaultMessage:
       '{value, select, ' +
       'account {Filter by account} ' +
+      'aws_category {Filter by cost category} ' +
       'cluster {Filter by cluster} ' +
       'container {Filter by container} ' +
       'description {Filter by description} ' +
@@ -1741,7 +1782,7 @@ export default defineMessages({
       'service_name {Filter by service} ' +
       'source_type {Filter by source type} ' +
       'subscription_guid {Filter by account} ' +
-      'workload {Filter by workload} ' +
+      'workload {Filter by workload name} ' +
       'workload_type {Filter by workload type} ' +
       'tag {Filter by tag} ' +
       'other {}}',
@@ -1753,11 +1794,6 @@ export default defineMessages({
     description: 'Tag keys',
     id: 'filterByTagKeyAriaLabel',
   },
-  filterByTagKeyPlaceholder: {
-    defaultMessage: 'Choose key',
-    description: 'Choose key',
-    id: 'filterByTagKeyPlaceholder',
-  },
   filterByTagValueAriaLabel: {
     defaultMessage: 'Tag values',
     description: 'Tag values',
@@ -1768,20 +1804,16 @@ export default defineMessages({
     description: 'Filter button for tag value',
     id: 'filterByTagValueButtonAriaLabel',
   },
-  filterByTagValueInputPlaceholder: {
+  filterByValuePlaceholder: {
     defaultMessage: 'Filter by value',
     description: 'Filter by value',
-    id: 'filterByTagValueInputPlaceholder',
-  },
-  filterByTagValuePlaceholder: {
-    defaultMessage: 'Choose value',
-    description: 'Choose value',
-    id: 'filterByTagValuePlaceholder',
+    id: 'filterByValuePlaceholder',
   },
   filterByValues: {
     defaultMessage:
       '{value, select, ' +
       'account {Account} ' +
+      'aws_category {Cost category} ' +
       'cluster {Cluster} ' +
       'container {Container} ' +
       'gcp_project {GCP project} ' +
@@ -1797,11 +1829,16 @@ export default defineMessages({
       'service_name {Service} ' +
       'subscription_guid {Account} ' +
       'tag {Tag} ' +
-      'workload {Workload} ' +
+      'workload {Workload name} ' +
       'workload_type {Workload type} ' +
       'other {}}',
     description: 'Filter by values',
     id: 'filterByValues',
+  },
+  filterByWorkloadTypeAriaLabel: {
+    defaultMessage: 'Workload types',
+    description: 'Workload types',
+    id: 'filterByWorkloadTypeAriaLabel',
   },
   forDate: {
     defaultMessage: '{value} for {dateRange}',
@@ -1847,6 +1884,7 @@ export default defineMessages({
     defaultMessage:
       '{value, select, ' +
       'account {{count, plural, one {All account} other {All accounts}}} ' +
+      'aws_category {{count, plural, one {All cost category} other {All cost categories}}} ' +
       'cluster {{count, plural, one {All cluster} other {All clusters}}} ' +
       'gcp_project {{count, plural, one {All GCP project} other {All GCP projects}}} ' +
       'node {{count, plural, one {All node} other {All nodes}}} ' +
@@ -1873,6 +1911,7 @@ export default defineMessages({
     defaultMessage:
       '{value, select, ' +
       'account {{count, plural, one {Top account} other {Top accounts}}} ' +
+      'aws_category {{count, plural, one {Top cost category} other {Top cost categories}}} ' +
       'cluster {{count, plural, one {Top cluster} other {Top clusters}}} ' +
       'gcp_project {{count, plural, one {Top GCP project} other {Top GCP projects}}} ' +
       'node {{count, plural, one {Top node} other {Top node}}} ' +
@@ -1894,6 +1933,7 @@ export default defineMessages({
     defaultMessage:
       '{groupBy, select, ' +
       'account {Account names} ' +
+      'aws_category {Cost category names} ' +
       'cluster {Cluster names} ' +
       'gcp_project {GCP project names} ' +
       'node {Node names} ' +
@@ -1915,6 +1955,7 @@ export default defineMessages({
     defaultMessage:
       '{value, select, ' +
       'account {{count, plural, one {account} other {accounts}}} ' +
+      'aws_category {{count, plural, one {cost category} other {cost categories}}} ' +
       'cluster {{count, plural, one {cluster} other {clusters}}} ' +
       'gcp_project {{count, plural, one {GCP project} other {GCP projects}}} ' +
       'node {{count, plural, one {node} other {node}}} ' +
@@ -1936,6 +1977,7 @@ export default defineMessages({
     defaultMessage:
       '{value, select, ' +
       'account {{count, plural, one {Account} other {Accounts}}} ' +
+      'aws_category {{count, plural, one {Cost category} other {Cost categories}}} ' +
       'cluster {{count, plural, one {Cluster} other {Clusters}}} ' +
       'gcp_project {{count, plural, one {GCP project} other {GCP projects}}} ' +
       'node {{count, plural, one {Node} other {Node}}} ' +
@@ -2025,7 +2067,7 @@ export default defineMessages({
   inactiveSourcesTitle: {
     defaultMessage: 'A problem was detected with {value}',
     description: 'A problem was detected with {value}',
-    id: 'inactiveSourcesGoTitle',
+    id: 'inactiveSourcesTitle',
   },
   inactiveSourcesTitleMultiplier: {
     defaultMessage: 'A problem was detected with the following sources',
@@ -2036,11 +2078,6 @@ export default defineMessages({
     defaultMessage: 'Infrastructure',
     description: 'Infrastructure',
     id: 'infrastructure',
-  },
-  lastReported: {
-    defaultMessage: 'Last reported',
-    description: 'Last reported',
-    id: 'lastReported',
   },
   learnMore: {
     defaultMessage: 'Learn more',
@@ -2093,12 +2130,12 @@ export default defineMessages({
     description: 'Manage columns',
     id: 'manageColumnsTitle',
   },
-  markupDescription: {
+  markupDesc: {
     defaultMessage:
       'The portion of cost calculated by applying markup or discount to infrastructure raw cost in the cost management application',
     description:
       'The portion of cost calculated by applying markup or discount to infrastructure raw cost in the cost management application',
-    id: 'markupDescription',
+    id: 'markupDesc',
   },
   markupOrDiscount: {
     defaultMessage: 'Markup or Discount',
@@ -2252,7 +2289,7 @@ export default defineMessages({
   noExportsStateTitle: {
     defaultMessage: 'There are no export files available',
     description: 'There are no export files available',
-    id: 'NoExportsStateTitle',
+    id: 'noExportsStateTitle',
   },
   noOptimizationsDesc: {
     defaultMessage: 'There is not enough data available to generate an optimization.',
@@ -2317,18 +2354,6 @@ export default defineMessages({
     description: 'Track your IBM Cloud spending!',
     id: 'noProvidersStateIbmTitle',
   },
-  noProvidersStateOciDesc: {
-    defaultMessage:
-      'Add an Oracle Cloud Infrastructure account to see a total cost breakdown of your spend by accounts, services, regions, or tags.',
-    description:
-      'Add an Oracle Cloud Infrastructure account to see a total cost breakdown of your spend by accounts, services, regions, or tags.',
-    id: 'noProvidersStateOciDesc',
-  },
-  noProvidersStateOciTitle: {
-    defaultMessage: 'Track your Oracle Cloud Infrastructure spending!',
-    description: 'Track your Oracle Cloud Infrastructure spending!',
-    id: 'noProvidersStateOciTitle',
-  },
   noProvidersStateOcpAddSources: {
     defaultMessage: 'Add an OpenShift cluster to Cost Management',
     description: 'Add an OpenShift cluster to Cost Management',
@@ -2366,7 +2391,7 @@ export default defineMessages({
   notAuthorizedStateAws: {
     defaultMessage: 'Amazon Web Services in Cost Management',
     description: 'Amazon Web Services in Cost Management',
-    id: 'noAuthorizedStateAws',
+    id: 'notAuthorizedStateAws',
   },
   notAuthorizedStateAzure: {
     defaultMessage: 'Microsoft Azure in Cost Management',
@@ -2483,25 +2508,10 @@ export default defineMessages({
     description: 'All OpenShift cumulative cost comparison in units',
     id: 'ocpDashboardCostTrendTitle',
   },
-  ocpDashboardCpuUsageAndRequests: {
-    defaultMessage: 'OpenShift CPU usage and requests',
-    description: 'OpenShift CPU usage and requests',
-    id: 'ocpDashboardCpuUsageAndRequests',
-  },
   ocpDashboardDailyCostTitle: {
     defaultMessage: 'All OpenShift daily cost comparison ({units})',
     description: 'All OpenShift daily cost comparison in units',
     id: 'ocpDashboardDailyCostTitle',
-  },
-  ocpDashboardMemoryUsageAndRequests: {
-    defaultMessage: 'OpenShift Memory usage and requests',
-    description: 'OpenShift Memory usage and requests',
-    id: 'ocpDashboardMemoryUsageAndRequests',
-  },
-  ocpDashboardVolumeUsageAndRequests: {
-    defaultMessage: 'OpenShift Volume usage and requests',
-    description: 'OpenShift Volume usage and requests',
-    id: 'ocpUsageAndRequests',
   },
   ocpDetailsInfrastructureCost: {
     defaultMessage: 'Infrastructure cost',
@@ -2530,55 +2540,10 @@ export default defineMessages({
     description: 'OpenShift Details',
     id: 'ocpDetailsTitle',
   },
-  ocpInfrastructureCostTitle: {
-    defaultMessage: 'OpenShift infrastructure cost',
-    description: 'OpenShift infrastructure cost',
-    id: 'ocpInfrastructureCostTitle',
-  },
-  ocpInfrastructureCostTrendTitle: {
-    defaultMessage: 'OpenShift cumulative infrastructure cost comparison ({units})',
-    description: 'OpenShift cumulative infrastructure cost comparison with units',
-    id: 'ocpInfrastructureCostTrendTitle',
-  },
-  ocpInfrastructureDailyCostTrendTitle: {
-    defaultMessage: 'OpenShift daily infrastructure cost comparison ({units})',
-    description: 'OpenShift daily infrastructure cost comparison with units',
-    id: 'ocpInfrastructureDailyCostTrendTitle',
-  },
   ocpMemoryUsageAndRequests: {
     defaultMessage: 'Memory usage and requests',
     description: 'Memory usage and requests',
     id: 'ocpMemoryUsageAndRequests',
-  },
-  ocpSupplementaryCostTitle: {
-    defaultMessage: 'OpenShift supplementary cost',
-    description: 'OpenShift supplementary cost',
-    id: 'ocpSupplementaryCostTitle',
-  },
-  ocpSupplementaryCostTrendTitle: {
-    defaultMessage: 'OpenShift cumulative supplementary cost comparison ({units})',
-    description: 'OpenShift cumulative supplementary cost comparison with units',
-    id: 'ocpSupplementaryCostTrendTitle',
-  },
-  ocpSupplementaryDailyCostTrendTitle: {
-    defaultMessage: 'OpenShift daily supplementary cost comparison ({units})',
-    description: 'OpenShift daily supplementary cost comparison with units',
-    id: 'ocpSupplementaryDailyCostTrendTitle',
-  },
-  ocpUsageCostTitle: {
-    defaultMessage: 'OpenShift usage cost',
-    description: 'OpenShift usage cost',
-    id: 'ocpUsageCostTitle',
-  },
-  ocpUsageDashboardCostTrendTitle: {
-    defaultMessage: 'Metering cumulative cost comparison ({units})',
-    description: 'Metering cumulative cost comparison with units',
-    id: 'ocpUsageDashboardCostTrendTitle',
-  },
-  ocpUsageDashboardCpuTitle: {
-    defaultMessage: 'OpenShift CPU usage and requests',
-    description: 'OpenShift CPU usage and requests',
-    id: 'ocpUsageDashboardCpuTitle',
   },
   ocpVolumeUsageAndRequests: {
     defaultMessage: 'Volume usage and requests',
@@ -2619,11 +2584,6 @@ export default defineMessages({
     description: 'Recommendation details',
     id: 'optimizationsDetails',
   },
-  optimizationsEmptyState: {
-    defaultMessage: 'There is not enough data available to generate a recommendation.',
-    description: 'There is not enough data available to generate a recommendation.',
-    id: 'optimizationsEmptyState',
-  },
   optimizationsInfo: {
     defaultMessage: 'Assess and monitor your usage so you can optimize your OpenShift resources.',
     description: 'Assess and monitor your usage so you can optimize your OpenShift resources.',
@@ -2639,6 +2599,16 @@ export default defineMessages({
     description: 'A dialog with a description of optimizations',
     id: 'optimizationsInfoButtonArialLabel',
   },
+  optimizationsLongTerm: {
+    defaultMessage: 'Last 15 days',
+    description: 'Last 15 days',
+    id: 'optimizationsLongTerm',
+  },
+  optimizationsMediumTerm: {
+    defaultMessage: 'Last 7 days',
+    description: 'Last 7 days',
+    id: 'optimizationsMediumTerm',
+  },
   optimizationsNames: {
     defaultMessage:
       '{value, select, ' +
@@ -2652,6 +2622,21 @@ export default defineMessages({
     description: 'Selected items for export',
     id: 'optimizationsNames',
   },
+  optimizationsPerspective: {
+    defaultMessage: 'View optimizations based on',
+    description: 'View optimizations based on',
+    id: 'optimizationsPerspective',
+  },
+  optimizationsShortTerm: {
+    defaultMessage: 'Last 24 hrs',
+    description: 'Last 24 hrs',
+    id: 'optimizationsShortTerm',
+  },
+  optimizationsTableAriaLabel: {
+    defaultMessage: 'Optimizations table',
+    description: 'Optimizations table',
+    id: 'optimizationsTableAriaLabel',
+  },
   optimizationsValues: {
     defaultMessage:
       '{value, select, ' +
@@ -2664,6 +2649,26 @@ export default defineMessages({
       'other {}}',
     description: 'Selected items for export',
     id: 'optimizationsValues',
+  },
+  optimizationsViewAll: {
+    defaultMessage: 'View all optimizations for this project',
+    description: 'View all optimizations for this project',
+    id: 'optimizationsViewAll',
+  },
+  optimizationsViewAllDisabled: {
+    defaultMessage: 'This project has not reported data this month.',
+    description: 'This project has not reported data this month.',
+    id: 'optimizationsViewAllDisabled',
+  },
+  overhead: {
+    defaultMessage: 'Overhead',
+    description: 'Overhead',
+    id: 'overhead',
+  },
+  overheadDesc: {
+    defaultMessage: 'Includes distributed costs',
+    description: 'Includes distributed costs',
+    id: 'overheadDesc',
   },
   overviewInfoArialLabel: {
     defaultMessage: 'A description of perspectives',
@@ -2793,15 +2798,20 @@ export default defineMessages({
     description: 'Perspective values',
     id: 'perspectiveValues',
   },
-  platformUnallocatedCapacity: {
-    defaultMessage: 'Platform unallocated capacity',
-    description: 'Platform unallocated capacity',
-    id: 'platformUnallocatedCapacity',
+  platform: {
+    defaultMessage: 'Platform',
+    description: 'Platform',
+    id: 'platform',
   },
-  platformUnallocatedCapacityDescription: {
+  platformDesc: {
     defaultMessage: 'Distribute the cost of running the OpenShift services to projects',
-    description: 'Platform unallocated capacity description',
-    id: 'platformUnallocatedCapacityDescription',
+    description: 'Distribute the cost of running the OpenShift services to projects',
+    id: 'platformDesc',
+  },
+  platformDistributed: {
+    defaultMessage: 'Platform distributed',
+    description: 'Platform distributed',
+    id: 'platformDistributed',
   },
   priceList: {
     defaultMessage: 'Price list',
@@ -2822,7 +2832,7 @@ export default defineMessages({
     defaultMessage:
       '{count, plural, one {This action will remove {metric} rate from {costModel}} other {This action will remove {metric} rate from {costModel}, which is assigned to the following sources:}}',
     description: 'This action will remove {metric} rate from {costModel}, which is assigned to the following sources:',
-    id: 'priceListDesc',
+    id: 'priceListDeleteRateDesc',
   },
   priceListDuplicate: {
     defaultMessage: 'This tag key is already in use',
@@ -2854,66 +2864,31 @@ export default defineMessages({
     description: 'Rate must be a positive number',
     id: 'priceListPosNumberRate',
   },
-  project: {
-    defaultMessage: 'Project',
-    description: 'Project',
-    id: 'project',
-  },
   rate: {
     defaultMessage: 'Rate',
     description: 'Rate',
     id: 'rate',
   },
-  rawCostDescription: {
+  rawCostDesc: {
     defaultMessage: 'The costs reported by a cloud provider without any cost model calculations applied.',
     description: 'The costs reported by a cloud provider without any cost model calculations applied.',
-    id: 'rawCostDescription',
+    id: 'rawCostDesc',
   },
   rawCostTitle: {
     defaultMessage: 'Raw cost',
     description: 'Raw cost',
     id: 'rawCostTitle',
   },
-  rbacErrorDescription: {
+  rbacErrorDesc: {
     defaultMessage:
       'There was a problem receiving user permissions. Refreshing this page may fix it. If it does not, please contact your admin.',
     description: 'rbac error description',
-    id: 'rbacErrorDescription',
+    id: 'rbacErrorDesc',
   },
   rbacErrorTitle: {
     defaultMessage: 'Failed to get RBAC information',
     description: 'RBAC error title',
     id: 'rbacErrorTitle',
-  },
-  recommendationsLongTerm: {
-    defaultMessage: 'Last 15 days',
-    description: 'Last 15 days',
-    id: 'recommendationsLongTerm',
-  },
-  recommendationsMediumTerm: {
-    defaultMessage: 'Last 7 days',
-    description: 'Last 7 days',
-    id: 'recommendationsMediumTerm',
-  },
-  recommendationsPerspective: {
-    defaultMessage: 'View recommendation based on',
-    description: 'View recommendation based on',
-    id: 'recommendationsPerspective',
-  },
-  recommendationsShortTerm: {
-    defaultMessage: 'Last 24 hrs',
-    description: 'Last 24 hrs',
-    id: 'recommendationsShortTerm',
-  },
-  recommendationsTableAriaLabel: {
-    defaultMessage: 'Recommendations table',
-    description: 'Recommendations table',
-    id: 'recommendationsTableAriaLabel',
-  },
-  recommendationsViewAll: {
-    defaultMessage: 'View all recommendations for this project',
-    description: 'View all recommendations for this project',
-    id: 'recommendationsViewAll',
   },
   recommended: {
     defaultMessage: 'Recommended',
@@ -2960,25 +2935,10 @@ export default defineMessages({
     description: 'All RHEL cumulative cost comparison in units',
     id: 'rhelDashboardCostTrendTitle',
   },
-  rhelDashboardCpuUsageAndRequests: {
-    defaultMessage: 'RHEL CPU usage and requests',
-    description: 'RHEL CPU usage and requests',
-    id: 'rhelDashboardCpuUsageAndRequests',
-  },
   rhelDashboardDailyCostTitle: {
     defaultMessage: 'All RHEL daily cost comparison ({units})',
     description: 'All RHEL daily cost comparison in units',
     id: 'rhelDashboardDailyCostTitle',
-  },
-  rhelDashboardMemoryUsageAndRequests: {
-    defaultMessage: 'RHEL Memory usage and requests',
-    description: 'RHEL Memory usage and requests',
-    id: 'rhelDashboardMemoryUsageAndRequests',
-  },
-  rhelDashboardVolumeUsageAndRequests: {
-    defaultMessage: 'RHEL Volume usage and requests',
-    description: 'RHEL Volume usage and requests',
-    id: 'rhelUsageAndRequests',
   },
   rhelDesc: {
     defaultMessage:
@@ -2992,77 +2952,20 @@ export default defineMessages({
     description: 'Infrastructure cost',
     id: 'rhelDetailsInfrastructureCost',
   },
-  rhelDetailsInfrastructureCostDesc: {
-    defaultMessage: 'The cost based on raw usage data from the underlying infrastructure.',
-    description: 'The cost based on raw usage data from the underlying infrastructure.',
-    id: 'rhelDetailsInfrastructureCostDesc',
-  },
   rhelDetailsSupplementaryCost: {
     defaultMessage: 'Supplementary cost',
     description: 'Supplementary cost',
     id: 'rhelDetailsSupplementaryCost',
-  },
-  rhelDetailsSupplementaryCostDesc: {
-    defaultMessage:
-      'All costs not directly attributed to the infrastructure. These costs are determined by applying a price list within a cost model to RHEL cluster metrics.',
-    description:
-      'All costs not directly attributed to the infrastructure. These costs are determined by applying a price list within a cost model to RHEL cluster metrics.',
-    id: 'rhelDetailsSupplementaryCostDesc',
   },
   rhelDetailsTitle: {
     defaultMessage: 'RHEL Details',
     description: 'RHEL Details',
     id: 'rhelDetailsTitle',
   },
-  rhelInfrastructureCostTitle: {
-    defaultMessage: 'RHEL infrastructure cost',
-    description: 'RHEL infrastructure cost',
-    id: 'rhelInfrastructureCostTitle',
-  },
-  rhelInfrastructureCostTrendTitle: {
-    defaultMessage: 'RHEL cumulative infrastructure cost comparison ({units})',
-    description: 'RHEL cumulative infrastructure cost comparison with units',
-    id: 'rhelInfrastructureCostTrendTitle',
-  },
-  rhelInfrastructureDailyCostTrendTitle: {
-    defaultMessage: 'RHEL daily infrastructure cost comparison ({units})',
-    description: 'RHEL daily infrastructure cost comparison with units',
-    id: 'rhelInfrastructureDailyCostTrendTitle',
-  },
   rhelMemoryUsageAndRequests: {
     defaultMessage: 'Memory usage and requests',
     description: 'Memory usage and requests',
     id: 'rhelMemoryUsageAndRequests',
-  },
-  rhelSupplementaryCostTitle: {
-    defaultMessage: 'RHEL supplementary cost',
-    description: 'RHEL supplementary cost',
-    id: 'rhelSupplementaryCostTitle',
-  },
-  rhelSupplementaryCostTrendTitle: {
-    defaultMessage: 'RHEL cumulative supplementary cost comparison ({units})',
-    description: 'RHEL cumulative supplementary cost comparison with units',
-    id: 'rhelSupplementaryCostTrendTitle',
-  },
-  rhelSupplementaryDailyCostTrendTitle: {
-    defaultMessage: 'RHEL daily supplementary cost comparison ({units})',
-    description: 'RHEL daily supplementary cost comparison with units',
-    id: 'rhelSupplementaryDailyCostTrendTitle',
-  },
-  rhelUsageCostTitle: {
-    defaultMessage: 'RHEL usage cost',
-    description: 'RHEL usage cost',
-    id: 'rhelUsageCostTitle',
-  },
-  rhelUsageDashboardCostTrendTitle: {
-    defaultMessage: 'Metering cumulative cost comparison ({units})',
-    description: 'Metering cumulative cost comparison with units',
-    id: 'rhelUsageDashboardCostTrendTitle',
-  },
-  rhelUsageDashboardCpuTitle: {
-    defaultMessage: 'RHEL CPU usage and requests',
-    description: 'RHEL CPU usage and requests',
-    id: 'rhelUsageDashboardCpuTitle',
   },
   rhelVolumeUsageAndRequests: {
     defaultMessage: 'Volume usage and requests',
@@ -3245,10 +3148,10 @@ export default defineMessages({
     description: 'Usage',
     id: 'usage',
   },
-  usageCostDescription: {
+  usageCostDesc: {
     defaultMessage: 'The portion of cost calculated by applying hourly and/or monthly price list rates to metrics.',
     description: 'The portion of cost calculated by applying hourly and/or monthly price list rates to metrics.',
-    id: 'usageCostDescription',
+    id: 'usageCostDesc',
   },
   usageCostTitle: {
     defaultMessage: 'Usage cost',
@@ -3265,25 +3168,15 @@ export default defineMessages({
     description: 'Volume',
     id: 'volumeTitle',
   },
-  workersUnallocatedCapacity: {
-    defaultMessage: 'Workers unallocated capacity',
-    description: 'Workers unallocated capcity',
-    id: 'workersUnallocatedCapacity',
+  workerUnallocated: {
+    defaultMessage: 'Worker unallocated',
+    description: 'Worker unallocated',
+    id: 'workerUnallocated',
   },
-  workersUnallocatedCapacityDescription: {
+  workerUnallocatedDesc: {
     defaultMessage: 'Distribute unused and non-reserved resource costs to projects',
-    description: 'Workers unallocated capacity description',
-    id: 'workersUnallocatedCapacityDescription',
-  },
-  workload: {
-    defaultMessage: 'Workload',
-    description: 'Workload',
-    id: 'workload',
-  },
-  workloadType: {
-    defaultMessage: 'Workload type',
-    description: 'Workload type',
-    id: 'workloadType',
+    description: 'Distribute unused and non-reserved resource costs to projects',
+    id: 'workerUnallocatedDesc',
   },
   yes: {
     defaultMessage: 'Yes',
