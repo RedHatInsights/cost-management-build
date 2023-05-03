@@ -13,3 +13,4 @@
 .costManagement{@import"~@patternfly/patternfly/base/patternfly-variables.css"}.costManagement .chart{margin-nottom:var(--pf-global--spacer--sm)}
 .costManagement{@import"~@patternfly/patternfly/base/patternfly-variables.css"}.costManagement .chart{margin-bottom:var(--pf-global--spacer--sm)}
 .costManagement{@import"~@patternfly/patternfly/base/patternfly-variables.css"}.costManagement .skeleton{height:125px;margin-bottom:var(--pf-global--spacer--md);margin-top:var(--pf-global--spacer--md)}.costManagement .summary{height:100%}
+.costManagement .tabsOverride .pf-c-tabs{--pf-c-tabs--before--border-width--base: 0px}
