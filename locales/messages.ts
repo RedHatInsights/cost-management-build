@@ -990,6 +990,11 @@ export default defineMessages({
     description: 'str.match(/([\\D]*)([\\d.,]+)([\\D]*)/)',
     id: 'currencyAbbreviations',
   },
+  currencyCalcuations: {
+    defaultMessage: 'Currency and calculations',
+    description: 'Currency and calculations',
+    id: 'currencyCalcuations',
+  },
   // See https://www.localeplanet.com/icu/currency.html
   currencyOptions: {
     defaultMessage:
@@ -1013,6 +1018,7 @@ export default defineMessages({
     description: 'return the proper unit label based on key: "units"',
     id: 'currencyOptions',
   },
+
   // See https://www.localeplanet.com/icu/currency.html
   currencyUnits: {
     defaultMessage:
@@ -1036,6 +1042,7 @@ export default defineMessages({
     description: 'return the proper unit label based on key: "units"',
     id: 'currencyUnits',
   },
+
   current: {
     defaultMessage: 'Current',
     description: 'Current',
@@ -2292,8 +2299,10 @@ export default defineMessages({
     id: 'noExportsStateTitle',
   },
   noOptimizationsDesc: {
-    defaultMessage: 'There is not enough data available to generate an optimization.',
-    description: 'There is not enough data available to generate an optimization.',
+    defaultMessage:
+      "There's not enough data available to generate an optimization or your organization isn't in the Technical Preview program, contact your TAM for more information. Submit a feedback form if you want in and we'll consider.",
+    description:
+      "There's not enough data available to generate an optimization or your organization isn't in the Technical Preview program, contact your TAM for more information. Submit a feedback form if you want in and we'll consider.",
     id: 'noOptimizationsDesc',
   },
   noOptimizationsTitle: {
@@ -2997,6 +3006,11 @@ export default defineMessages({
     description: '{value} selected',
     id: 'selected',
   },
+  settingsTitle: {
+    defaultMessage: 'Cost Management Settings',
+    description: 'Cost Management Settings',
+    id: 'settingsTitle',
+  },
   sinceDate: {
     defaultMessage: '{dateRange}',
     description: 'Jan 1-31',
@@ -3056,6 +3070,11 @@ export default defineMessages({
     defaultMessage: 'Value',
     description: 'Value',
     id: 'tagHeadingValue',
+  },
+  tagLabels: {
+    defaultMessage: 'Tags and labels',
+    description: 'Tags and labels',
+    id: 'tagLabels',
   },
   tagNames: {
     defaultMessage: 'Tag names',
