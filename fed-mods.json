@@ -1,10 +1,10 @@
 {
     "costManagement": {
         "entry": [
-            "/apps/cost-management/costManagement.528e3f5c83ea652f2239.js"
+            "/apps/cost-management/costManagement.b552fc60a23b2f09245e.js"
         ],
         "modules": [
-            "/apps/cost-management/js/2806.528e3f5c83ea652f2239.js",
+            "/apps/cost-management/js/2806.b552fc60a23b2f09245e.js",
             "/apps/cost-management/css/2806.4c59d6fde45f0565a342.css"
         ]
     }
