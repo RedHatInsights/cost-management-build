@@ -1,14 +1,14 @@
 {
   "app_name": "cost-management",
   "node_version": ">=18.15.0",
-  "src_hash": "4769d807c049dde97af0aeb18fc8e94d17c908e3",
+  "src_hash": "b2bdeba8a4a1eccf5f2e1e37671f63b043ed39fe",
   "src_tag": "",
   "src_branch": "main",
   "patternfly_dependencies": ["@patternfly/patternfly@4.224.2","@patternfly/react-charts@6.94.19","@patternfly/react-core@4.276.8","@patternfly/react-icons@4.93.6","@patternfly/react-styles@4.92.6","@patternfly/react-table@4.113.0","@patternfly/react-tokens@4.94.6"],
   "rh_cloud_services_dependencies": ["@redhat-cloud-services/frontend-components-notifications@3.2.14","@redhat-cloud-services/frontend-components-translations@3.2.6","@redhat-cloud-services/frontend-components-utilities@3.5.0","@redhat-cloud-services/frontend-components@3.9.35","@redhat-cloud-services/rbac-client@1.2.3"],
   "travis": {
     "event_type": "push",
-    "build_number": "5637",
-    "build_web_url": "https://app.travis-ci.com/project-koku/koku-ui/builds/262911746"
+    "build_number": "5643",
+    "build_web_url": "https://app.travis-ci.com/project-koku/koku-ui/builds/262940345"
   }
 }
