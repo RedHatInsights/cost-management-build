@@ -375,10 +375,22 @@ export default defineMessages({
     description: 'Cost calculations (optional)',
     id: 'costCalculationsOptional',
   },
+  costCategoryDesc: {
+    defaultMessage:
+      'Enable your data source labels to be used as AWS category keys for report grouping and filtering. Changes will be reflected within 24 hours. {learnMore}',
+    description:
+      'Enable your data source labels to be used as AWS category keys for report grouping and filtering. Changes will be reflected within 24 hours. {learnMore}',
+    id: 'costCategoryDesc',
+  },
   costCategoryNames: {
     defaultMessage: 'Cost category names',
     description: 'Cost category names',
     id: 'costCategoryNames',
+  },
+  costCategoryTitle: {
+    defaultMessage: 'Cost categories',
+    description: 'Cost categories',
+    id: 'costCategoryTitle',
   },
   costDistribution: {
     defaultMessage: 'Cost distribution',
@@ -1004,10 +1016,10 @@ export default defineMessages({
     description: 'str.match(/([\\D]*)([\\d.,]+)([\\D]*)/)',
     id: 'currencyAbbreviations',
   },
-  currencyCalcuations: {
+  currencyCalcuationsTitle: {
     defaultMessage: 'Currency and calculations',
     description: 'Currency and calculations',
-    id: 'currencyCalcuations',
+    id: 'currencyCalcuationsTitle',
   },
   currencyDesc: {
     defaultMessage: 'Select the preferred currency view for your organization',
@@ -1294,10 +1306,15 @@ export default defineMessages({
     description: 'View all {value}',
     id: 'detailsViewAll',
   },
-  disabled: {
-    defaultMessage: 'Disabled',
-    description: 'Disabled',
-    id: 'disabled',
+  disableCategories: {
+    defaultMessage: 'Disable categories',
+    description: 'Disable categories',
+    id: 'disableCategories',
+  },
+  disableTags: {
+    defaultMessage: 'Disable tags',
+    description: 'Disable tags',
+    id: 'disableTags',
   },
   discountMinus: {
     defaultMessage: 'Discount (-)',
@@ -1351,12 +1368,26 @@ export default defineMessages({
       'https://access.redhat.com/documentation/en-us/cost_management_service/2023/html-single/adding_an_openshift_container_platform_source_to_cost_management',
     id: 'docsAddOcpSources',
   },
+  docsConfigCostCategory: {
+    defaultMessage:
+      'https://access.redhat.com/documentation/en-us/cost_management_service/2023/html/managing_cost_data_using_tagging/assembly-configuring-tags-and-labels-in-cost-management',
+    description:
+      'https://access.redhat.com/documentation/en-us/cost_management_service/2023/html/managing_cost_data_using_tagging/assembly-configuring-tags-and-labels-in-cost-management',
+    id: 'docsConfigCostCategory',
+  },
   docsConfigCostModels: {
     defaultMessage:
       'https://access.redhat.com/documentation/en-us/cost_management_service/2023/html-single/using_cost_models/index#assembly-setting-up-cost-models',
     description:
       'https://access.redhat.com/documentation/en-us/cost_management_service/2023/html-single/using_cost_models/index#assembly-setting-up-cost-models',
     id: 'docsConfigCostModels',
+  },
+  docsConfigTags: {
+    defaultMessage:
+      'https://access.redhat.com/documentation/en-us/cost_management_service/2023/html/managing_cost_data_using_tagging/assembly-configuring-tags-and-labels-in-cost-management',
+    description:
+      'https://access.redhat.com/documentation/en-us/cost_management_service/2023/html/managing_cost_data_using_tagging/assembly-configuring-tags-and-labels-in-cost-management',
+    id: 'docsConfigTags',
   },
   docsCostModelTerminology: {
     defaultMessage:
@@ -1423,6 +1454,16 @@ export default defineMessages({
     defaultMessage: 'No match found',
     description: 'No match found',
     id: 'emptyFilterStateTitle',
+  },
+  enableCategories: {
+    defaultMessage: 'Enable categories',
+    description: 'Enabled categories',
+    id: 'enableCategories',
+  },
+  enableTags: {
+    defaultMessage: 'Enable tags',
+    description: 'Enabled tags',
+    id: 'enableTags',
   },
   enabled: {
     defaultMessage: 'Enabled',
@@ -1820,6 +1861,7 @@ export default defineMessages({
       'service {Filter by service} ' +
       'service_name {Filter by service} ' +
       'source_type {Filter by source type} ' +
+      'status {Filter by status} ' +
       'subscription_guid {Filter by account} ' +
       'workload {Filter by workload name} ' +
       'workload_type {Filter by workload type} ' +
@@ -1866,6 +1908,8 @@ export default defineMessages({
       'resource_location {Region} ' +
       'service {Service} ' +
       'service_name {Service} ' +
+      'status {Status} ' +
+      'source_type {Source type} ' +
       'subscription_guid {Account} ' +
       'tag {Tag} ' +
       'workload {Workload name} ' +
@@ -2474,6 +2518,11 @@ export default defineMessages({
     description: 'RHEL in Cost Management',
     id: 'notAuthorizedStateRhel',
   },
+  notAuthorizedStateSettings: {
+    defaultMessage: 'Settings in Cost Management',
+    description: 'Settings in Cost Management',
+    id: 'notAuthorizedStateSettings',
+  },
   oci: {
     defaultMessage: 'Oracle Cloud Infrastructure',
     description: 'Oracle Cloud Infrastructure',
@@ -2951,11 +3000,6 @@ export default defineMessages({
     description: 'Requests',
     id: 'requests',
   },
-  reset: {
-    defaultMessage: 'Reset',
-    description: 'Reset',
-    id: 'reset',
-  },
   rhel: {
     defaultMessage: 'RHEL',
     description: 'RHEL',
@@ -3033,10 +3077,20 @@ export default defineMessages({
     description: 'Select all',
     id: 'selectAll',
   },
+  selectCategories: {
+    defaultMessage: 'Select categories to enable or disable',
+    description: 'Select categories to enable or disable',
+    id: 'selectCategories',
+  },
   selectRow: {
     defaultMessage: 'Select row {value}',
     description: 'Select row {value}',
     id: 'selectRow',
+  },
+  selectTags: {
+    defaultMessage: 'Select tags to enable or disable',
+    description: 'Select tags to enable or disable',
+    id: 'selectTags',
   },
   selected: {
     defaultMessage: '{value} selected',
@@ -3118,6 +3172,13 @@ export default defineMessages({
     description: 'Supplementary',
     id: 'supplementary',
   },
+  tagDesc: {
+    defaultMessage:
+      'Enable your data source labels to be used as tag keys for report grouping and filtering. Changes will be reflected within 24 hours. {learnMore}',
+    description:
+      'Enable your data source labels to be used as tag keys for report grouping and filtering. Changes will be reflected within 24 hours. {learnMore}',
+    id: 'tagDesc',
+  },
   tagHeadingKey: {
     defaultMessage: 'Key',
     description: 'Key',
@@ -3133,7 +3194,7 @@ export default defineMessages({
     description: 'Value',
     id: 'tagHeadingValue',
   },
-  tagLabels: {
+  tagLabelsTitle: {
     defaultMessage: 'Tags and labels',
     description: 'Tags and labels',
     id: 'tagLabels',
