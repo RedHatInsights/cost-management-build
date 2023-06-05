@@ -1,11 +1,11 @@
 {
-    "costManagement": {
-        "entry": [
-            "/apps/cost-management/costManagement.95ed72b4dd66df82ffce.js"
-        ],
-        "modules": [
-            "/apps/cost-management/js/2557.95ed72b4dd66df82ffce.js",
-            "/apps/cost-management/css/2557.4c59d6fde45f0565a342.css"
-        ]
-    }
+  "name": "costManagement",
+  "version": "1.0.0",
+  "extensions": [],
+  "registrationMethod": "callback",
+  "baseURL": "/apps/cost-management/",
+  "loadScripts": [
+    "costManagement.c2b2a93090f0f29f5206.js"
+  ],
+  "buildHash": "c2b2a93090f0f29f52060ca27bbd482d"
 }
