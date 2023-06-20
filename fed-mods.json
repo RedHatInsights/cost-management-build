@@ -5,7 +5,7 @@
   "registrationMethod": "callback",
   "baseURL": "/beta/apps/cost-management/",
   "loadScripts": [
-    "costManagement.b537f165d1b7e5375256.js"
+    "costManagement.238f5ae606efd975df10.js"
   ],
-  "buildHash": "b537f165d1b7e53752562951d314e026"
+  "buildHash": "238f5ae606efd975df108b4db1ed1484"
 }
